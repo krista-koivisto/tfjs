@@ -336,7 +336,7 @@ Now the package can be published to npm with `bazel run //tfjs-core:tfjs-core_pk
 
 
 ### Configure Publishing to npm
-With a `pkg_npm` rule defined, we add a script to `package.json` to run it. This script will be used by the main script that publishes the monorepo. 
+With a `pkg_npm` rule defined, we add a script to `package.json` to run it. This script will be used by the main script that publishes the monorepo.
 
 ```json
 "scripts" {
@@ -369,7 +369,7 @@ Add your package to the `PACKAGES` list in the `build_deps.ts` script in `link-p
 ```typescript
 const PACKAGES: ReadonlySet<string> = new Set([
   ..., 'tfjs-foo',
-]);  
+]);
 ```
 
 #### Change Downstream Dependency `package.json` Paths
@@ -377,8 +377,8 @@ Update all downstream dependencies that depend on the package to point to its lo
 
 ```json
 "devDependencies": {
-  "@tensorflow/tfjs-core": "link:../link-package/node_modules/@tensorflow/tfjs-core",
-  "@tensorflow/tfjs-foo": "link:../link-package/node_modules/@tensorflow/tfjs-foo",
+  "@tensorflow/tfjs-core": "*",
+  "@tensorflow/tfjs-foo": "*",
 },
 ```
 

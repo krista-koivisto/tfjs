@@ -21,11 +21,10 @@ import './register_all_kernels';
 import * as tf from '@tensorflow/tfjs';
 import * as path from 'path';
 
-import {ProgbarLogger} from './callbacks';
-import {nodeFileSystemRouter} from './io/file_system';
+import { nodeFileSystemRouter } from './io/file_system';
 import * as nodeIo from './io/index';
-import {NodeJSKernelBackend} from './nodejs_kernel_backend';
-import {TFJSBinding} from './tfjs_binding';
+import { NodeJSKernelBackend } from './nodejs_kernel_backend';
+import { TFJSBinding } from './tfjs_binding';
 import * as nodeVersion from './version';
 
 // tslint:disable-next-line:no-require-imports
@@ -83,4 +82,4 @@ tf.io.registerLoadRouter(nodeFileSystemRouter);
 tf.io.registerSaveRouter(nodeFileSystemRouter);
 
 // Register the ProgbarLogger for Model.fit() at verbosity level 1.
-tf.registerCallbackConstructor(1, ProgbarLogger);
+// tf.registerCallbackConstructor(1, ProgbarLogger);

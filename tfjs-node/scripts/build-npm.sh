@@ -17,9 +17,9 @@
 set -e
 
 # Clean the build.
-yarn rimraf dist/
-yarn rimraf deps/
-yarn rimraf lib/
+yarn rm -rf dist/
+yarn rm -rf deps/
+yarn rm -rf lib/
 
 # Download the tensorflow headers and lib.
 yarn install

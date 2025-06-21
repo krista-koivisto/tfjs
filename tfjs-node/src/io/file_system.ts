@@ -17,9 +17,9 @@
 
 import * as tf from '@tensorflow/tfjs';
 import * as fs from 'fs';
-import {dirname, join, resolve} from 'path';
-import {promisify} from 'util';
-import {toArrayBuffer} from './io_utils';
+import { dirname, join, resolve } from 'path';
+import { promisify } from 'util';
+import { toArrayBuffer } from './io_utils';
 
 const stat = promisify(fs.stat);
 const writeFile = promisify(fs.writeFile);
@@ -115,7 +115,7 @@ export class NodeFileSystem implements tf.io.IOHandler {
       const modelJSONPath = join(this.path, this.MODEL_JSON_FILENAME);
       await writeFile(modelJSONPath, JSON.stringify(modelJSON), 'utf8');
       await writeFile(
-          weightsBinPath, Buffer.from(modelArtifacts.weightData), 'binary');
+          weightsBinPath, Buffer.from(modelArtifacts.weightData as ArrayBuffer), 'binary');
 
       return {
         // TODO(cais): Use explicit tf.io.ModelArtifactsInfo type below once it

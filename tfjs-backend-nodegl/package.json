@@ -23,8 +23,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "~2.8.6",
-    "@types/node": "^10.5.1",
-    "@types/rimraf": "~2.0.2",
+    "@types/node": "^18.0.0",
     "clang-format": "^1.2.4",
     "jasmine": "~3.1.0",
     "ts-node": "^8.1.0",

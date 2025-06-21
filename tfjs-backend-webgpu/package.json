@@ -27,9 +27,9 @@
   },
   "devDependencies": {
     "@babel/polyfill": "^7.8.7",
-    "@tensorflow/tfjs-core": "link:../link-package/node_modules/@tensorflow/tfjs-core",
-    "jasmine": "link:../node_modules/jasmine",
-    "jasmine-core": "link:../node_modules/jasmine-core",
+    "@tensorflow/tfjs-core": "*",
+    "jasmine": "*",
+    "jasmine-core": "*",
     "karma": "~6.4.0",
     "karma-browserstack-launcher": "~1.6.0",
     "karma-chrome-launcher": "~3.1.1",
@@ -40,9 +40,9 @@
     "karma-typescript-es6-transform": "^5.0.2"
   },
   "dependencies": {
-    "@tensorflow/tfjs-backend-cpu": "link:../link-package/node_modules/@tensorflow/tfjs-backend-cpu"
+    "@tensorflow/tfjs-backend-cpu": "*"
   },
   "peerDependencies": {
-    "@tensorflow/tfjs-core": "link:../link-package/node_modules/@tensorflow/tfjs-core"
+    "@tensorflow/tfjs-core": "*"
   }
 }

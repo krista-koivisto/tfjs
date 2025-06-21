@@ -16,7 +16,7 @@
 
 set -e
 
-yarn rimraf dist/
+yarn rm -rf dist/
 yarn
 yarn build
 yarn rollup -c

@@ -19,10 +19,8 @@
  * Public API symbols under the tf.node.* namespace.
  */
 
-import {tensorBoard} from './callbacks';
-import {decodeBmp, decodeGif, decodeImage, decodeJpeg, decodePng, encodeJpeg, encodePng} from './image';
-import {getMetaGraphsFromSavedModel, getNumOfSavedModels, loadSavedModel} from './saved_model';
-import {summaryFileWriter} from './tensorboard';
+import { decodeBmp, decodeGif, decodeImage, decodeJpeg, decodePng, encodeJpeg, encodePng } from './image';
+import { summaryFileWriter } from './tensorboard';
 
 export const node = {
   decodeImage,
@@ -33,8 +31,4 @@ export const node = {
   encodeJpeg,
   encodePng,
   summaryFileWriter,
-  tensorBoard,
-  getMetaGraphsFromSavedModel,
-  getNumOfSavedModels,
-  loadSavedModel
 };

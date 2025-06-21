@@ -17,7 +17,7 @@
 set -e
 
 yarn
-yarn rimraf dist/
+yarn rm -rf dist/
 yarn tsc
 ./scripts/build-wasm.sh
 yarn rollup -c --npm

@@ -23,8 +23,8 @@
     "yarn": ">= 1.3.2"
   },
   "peerDependencies": {
-    "@tensorflow/tfjs-core": "link:../link-package/node_modules/@tensorflow/tfjs-core",
-    "@tensorflow/tfjs-converter": "link:../link-package/node_modules/@tensorflow/tfjs-converter"
+    "@tensorflow/tfjs-core": "*",
+    "@tensorflow/tfjs-converter": "*"
   },
   "devDependencies": {
     "@bazel/bazelisk": "^1.12.0"

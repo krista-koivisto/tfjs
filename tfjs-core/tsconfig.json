@@ -1,12 +1,9 @@
 {
-  "extends": "../tsconfig",
-  "include": [
-    "src/"
-  ],
-  "exclude": [
-    "node_modules/"
-  ],
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist"
-  }
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*_test.ts"]
 }

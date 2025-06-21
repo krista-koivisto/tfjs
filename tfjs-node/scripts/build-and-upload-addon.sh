@@ -22,7 +22,7 @@
 set -e
 
 # get package name based on os and processor
-PACKAGE_NAME=$(node scripts/get-addon-name.js)
+PACKAGE_NAME=$(node scripts/get-addon-name.cjs)
 # get NAPI version
 NAPI_VERSION=`node -p "process.versions.napi"`
 # remove the pre-built addon tarball if it already exist

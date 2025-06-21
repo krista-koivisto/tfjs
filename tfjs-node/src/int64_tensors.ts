@@ -15,8 +15,10 @@
  * =============================================================================
  */
 
-import {Shape, util} from '@tensorflow/tfjs';
-import {endianness} from 'os';
+import { util } from '@tensorflow/tfjs';
+import { endianness } from 'os';
+
+export type Shape = Array<null | number>;
 
 const INT32_MAX = 2147483648;
 

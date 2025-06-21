@@ -1,9 +1,10 @@
 {
   "name": "@tensorflow/tfjs-backend-cpu",
-  "version": "0.0.0",
+  "version": "4.2.22",
   "description": "Vanilla JavaScript backend for TensorFlow.js",
-  "private": false,
-  "main": "dist/tf-backend-cpu.node.js",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
   "jsdelivr": "dist/tf-backend-cpu.min.js",
   "unpkg": "dist/tf-backend-cpu.min.js",
   "types": "dist/index.d.ts",
@@ -19,36 +20,24 @@
     "directory": "tfjs-backend-cpu"
   },
   "license": "Apache-2.0",
-  "devDependencies": {
-    "@bazel/bazelisk": "^1.12.0",
-    "@bazel/ibazel": "^0.16.2"
-  },
   "scripts": {
-    "build": "bazel build :tfjs-backend-cpu_pkg",
-    "publish-npm": "bazel run :tfjs-backend-cpu_pkg.publish",
-    "coverage": "bazel coverage :tfjs-backend-cpu_test",
-    "test": "bazel test :tests --test_output=streamed",
-    "test-debug": "bazel run :tfjs-backend-cpu_test --config=debug",
-    "test-dev": "ibazel run :tests --test-output=streamed"
+    "build": "tsc -p .",
+    "clean": "rm -rf dist && rm -rf node_modules",
+    "publish-local": "yarn version patch && yalc publish --push"
   },
   "dependencies": {
     "@types/seedrandom": "^2.4.28",
     "seedrandom": "^3.0.5"
   },
   "peerDependencies": {
-    "@tensorflow/tfjs-core": "link:../link-package/node_modules/@tensorflow/tfjs-core"
+    "@tensorflow/tfjs-core": "*"
   },
   "browser": {
-    "util": false,
-    "crypto": false
+    "crypto": false,
+    "util": false
   },
   "sideEffects": [
-    "./dist/register_all_kernels.js",
-    "./dist/base.js",
-    "./dist/index.js",
-    "./src/register_all_kernels.mjs",
-    "./src/base.mjs",
-    "./src/index.mjs"
+    "./dist/index.js"
   ],
   "resolutions": {
     "minimist": "1.2.6"

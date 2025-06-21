@@ -17,7 +17,7 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-yarn rimraf dist/
+yarn rm -rf dist/
 yarn
 yarn build-ci
 yarn rollup -c --visualize --npm

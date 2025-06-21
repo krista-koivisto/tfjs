@@ -19,11 +19,11 @@ import * as tf from '@tensorflow/tfjs';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as rimraf from 'rimraf';
-import {promisify} from 'util';
+import { promisify } from 'util';
 
 import * as tfn from '../index';
 
-import {NodeFileSystem, nodeFileSystemRouter} from './file_system';
+import { NodeFileSystem, nodeFileSystemRouter } from './file_system';
 
 describe('File system IOHandler', () => {
   const mkdtemp = promisify(fs.mkdtemp);

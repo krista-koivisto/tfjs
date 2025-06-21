@@ -15,12 +15,12 @@
  * =============================================================================
  */
 
+import { env } from './environment';
 import * as tf from './index';
-import {ALL_ENVS, describeWithFlags} from './jasmine_util';
-import {complex, scalar, tensor2d} from './ops/ops';
-import {inferShape} from './tensor_util_env';
+import { ALL_ENVS, describeWithFlags } from './jasmine_util';
+import { complex, scalar, tensor2d } from './ops/ops';
+import { inferShape } from './tensor_util_env';
 import * as util from './util';
-import {env} from './environment';
 
 describe('Util', () => {
   it('Correctly gets size from shape', () => {
@@ -187,7 +187,9 @@ describe('util.flatten', () => {
       [new Uint8Array([5, 6]), new Uint8Array([7, 8])]
     ];
     expect(util.flatten(data, [], true)).toEqual([
+      // @ts-ignore
       new Uint8Array([1, 2]), new Uint8Array([3, 4]), new Uint8Array([5, 6]),
+      // @ts-ignore
       new Uint8Array([7, 8])
     ]);
   });

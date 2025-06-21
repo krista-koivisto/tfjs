@@ -8,5 +8,4 @@ export const BAZEL_PACKAGES = new Set([
   'tfjs-backend-webgpu',
   'tfjs-layers',
   'tfjs-data',
-  'tfjs-backend-wasm',
 ]);

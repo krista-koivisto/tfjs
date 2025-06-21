@@ -1,9 +1,9 @@
 :: Download TensorFlow GPU library and compile native node addon
-node scripts/install.js gpu download
+node scripts/install.cjs gpu download
 call yarn
 call yarn build-addon-from-source
 :: Compress and upload the GPU node addon to GCP bucket.
-for /f %%i in ('node scripts/get-addon-name.js') do set PACKAGE_NAME=%%i
+for /f %%i in ('node scripts/get-addon-name.cjs') do set PACKAGE_NAME=%%i
 :: Update addon tarball name to GPU
 set PACKAGE_NAME=%PACKAGE_NAME:CPU=GPU%
 for /f %%i in ('node -p "process.versions.napi"') do set NAPI_VERSION=%%i
