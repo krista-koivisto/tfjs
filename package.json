@@ -3,7 +3,8 @@
   "scripts": {
     "build": "yarn workspaces foreach --all --topological run build",
     "clean": "yarn workspaces foreach --all run clean && rm -rf node_modules dist yarn.lock .yarn/cache .yarn/install-state.gz",
-    "publish-local": "yarn workspaces foreach --all --topological run publish-local"
+    "publish-local": "yarn workspaces foreach --all --topological run publish-local",
+    "bump-version": "yarn workspaces foreach --all --topological run bump-version"
   },
   "workspaces": [
     "tfjs-core",

@@ -19,7 +19,8 @@
     "clean": "rm -rf dist && rm -rf node_modules",
     "build:addon": "node-pre-gyp install --build-from-source",
     "install": "node scripts/install.cjs",
-    "publish-local": "yarn version patch && yalc publish --push"
+    "publish-local": "yalc publish --push",
+    "bump-version": "yarn version patch"
   },
   "devDependencies": {
     "@types/node": "^18.0.0"

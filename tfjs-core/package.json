@@ -20,7 +20,8 @@
   "scripts": {
     "build": "tsc -p .",
     "clean": "rm -rf dist && rm -rf node_modules",
-    "publish-local": "yarn version patch && yalc publish --push"
+    "publish-local": "yalc publish --push",
+    "bump-version": "yarn version patch"
   },
   "dependencies": {
     "@types/long": "^4.0.1",
