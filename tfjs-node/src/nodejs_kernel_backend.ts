@@ -15,8 +15,8 @@
  * =============================================================================
  */
 
-import * as tf from '@tensorflow/tfjs';
-import { backend_util, DataId, DataType, KernelBackend, ScalarLike, Tensor, Tensor1D, Tensor2D, TensorInfo } from '@tensorflow/tfjs';
+import * as tf from '@tensorflow/tfjs-core';
+import { backend_util, DataId, DataType, KernelBackend, ScalarLike, Tensor, Tensor1D, Tensor2D, TensorInfo } from '@tensorflow/tfjs-core';
 
 import { Int64Scalar } from './int64_tensors';
 import { TensorMetadata, TFEOpAttr, TFJSBinding } from './tfjs_binding';

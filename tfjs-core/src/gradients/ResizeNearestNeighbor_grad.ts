@@ -14,16 +14,16 @@
  * limitations under the License.
  * =============================================================================
  */
-import {ENGINE} from '../engine';
-import {ResizeNearestNeighbor, ResizeNearestNeighborGrad, ResizeNearestNeighborGradInputs} from '../kernel_names';
-import {GradConfig} from '../kernel_registry';
-import {NamedAttrMap} from '../kernel_registry';
-import {Tensor, Tensor4D} from '../tensor';
-import {NamedTensorMap} from '../tensor_types';
+import { ENGINE } from '../engine';
+import { ResizeNearestNeighbor, ResizeNearestNeighborGrad, ResizeNearestNeighborGradInputs } from '../kernel_names';
+import { GradConfig, NamedAttrMap } from '../kernel_registry';
+import { Tensor, Tensor4D } from '../tensor';
+import { NamedTensorMap } from '../tensor_types';
 
 export const resizeNearestNeighborGradConfig: GradConfig = {
   kernelName: ResizeNearestNeighbor,
   inputsToSave: ['images'],
+  // @ts-expect-error TODO: Fix this.
   gradFunc: (dy: Tensor4D, saved: Tensor[], attrs: NamedAttrMap) => {
     const [images] = saved;
 

@@ -8,24 +8,10 @@
     "sourceMap": true,
     "strict": true,
     "rootDir": "./",
-    "outDir": "./dist",
+    "noEmit": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@tensorflow/tfjs-core": [
-        "./tfjs-core/src/index.ts",
-      ],
-      "@tensorflow/tfjs-node": [
-        "./tfjs-node/src/index.ts",
-      ],
-      "@tensorflow/tfjs-node-gpu": [
-        "./tfjs-node-gpu/src/index.ts",
-      ],
-      "@tensorflow/tfjs": [
-        "./tfjs/src/index.ts",
-      ]
-    },
   },
   "exclude": ["node_modules"]
 }

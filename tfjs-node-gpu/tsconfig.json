@@ -1,14 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "dist",
     "rootDir": "src",
     "baseUrl": ".",
     "paths": {
-      "@tensorflow/tfjs-core": ["../tfjs-core/dist"],
-      "@tensorflow/tfjs": ["../tfjs/dist"]
+      "@tensorflow/tfjs-core": ["../tfjs-core/src"],
+      "@tensorflow/tfjs": ["../tfjs/src"]
     }
-  },
+},
   "include": ["src"],
   "exclude": [
     "node_modules",

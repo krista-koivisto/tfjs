@@ -14,15 +14,16 @@
  * limitations under the License.
  * =============================================================================
  */
-import {Conv2DBackpropInput, Conv2DBackpropInputAttrs} from '../kernel_names';
-import {GradConfig, NamedAttrMap} from '../kernel_registry';
-import {conv2d} from '../ops/conv2d';
-import {conv2DBackpropFilter} from '../ops/conv2d_backprop_filter';
-import {Tensor, Tensor4D} from '../tensor';
+import { Conv2DBackpropInput, Conv2DBackpropInputAttrs } from '../kernel_names';
+import { GradConfig, NamedAttrMap } from '../kernel_registry';
+import { conv2d } from '../ops/conv2d';
+import { conv2DBackpropFilter } from '../ops/conv2d_backprop_filter';
+import { Tensor, Tensor4D } from '../tensor';
 
 export const conv2DBackpropInputGradConfig: GradConfig = {
   kernelName: Conv2DBackpropInput,
   inputsToSave: ['dy', 'filter'],
+  // @ts-expect-error TODO: Fix this.
   gradFunc: (ddx: Tensor4D, saved: Tensor[], attrs: NamedAttrMap) => {
     const [dy, filter] = saved as [Tensor4D, Tensor4D];
 

@@ -15,11 +15,11 @@
  * =============================================================================
  */
 
-import {CustomGradientFunc, ENGINE} from './engine';
-import {Scalar, Tensor, Variable} from './tensor';
-import {NamedTensorMap} from './tensor_types';
-import {convertToTensor, convertToTensorArray} from './tensor_util_env';
-import {TensorLike} from './types';
+import { CustomGradientFunc, ENGINE } from './engine';
+import { Scalar, Tensor, Variable } from './tensor';
+import { NamedTensorMap } from './tensor_types';
+import { convertToTensor, convertToTensorArray } from './tensor_util_env';
+import { TensorLike } from './types';
 import * as util from './util';
 
 /**
@@ -386,10 +386,8 @@ function checkGrads(grads: Tensor[]) {
 }
 
 export {
-  customGrad,
-  variableGrads,
-  valueAndGrad,
-  valueAndGrads,
-  grad,
-  grads,
+  customGrad, grad,
+  grads, valueAndGrad,
+  valueAndGrads, variableGrads
 };
+

@@ -362,7 +362,11 @@ export class Engine implements TensorTracker, DataMover {
       }
     } catch (err) {
       log.warn(`Initialization of backend ${backendName} failed`);
-      log.warn(err.stack || err.message);
+      if (err instanceof Error) {
+        log.warn(err.stack || err.message);
+      } else {
+        log.warn(err);
+      }
       return {success: false, asyncInit: false};
     }
   }
@@ -505,7 +509,7 @@ export class Engine implements TensorTracker, DataMover {
     const y: Tensor = ENGINE.runKernel(Identity,
                                        {x} as unknown as NamedTensorMap);
     const inputs = {x};
-    const grad = (dy: Tensor) => ({
+    const grad = (dy: Tensor[]) => ({
       x: () => {
         const dtype = 'float32';
         const gradInputs = {x: dy};
@@ -513,7 +517,6 @@ export class Engine implements TensorTracker, DataMover {
 
         return ENGINE.runKernel(
                    Cast, gradInputs as unknown as NamedTensorMap,
-                   // tslint:disable-next-line: no-unnecessary-type-assertion
                    attrs as unknown as NamedAttrMap) as Tensor;
       }
     });
@@ -722,6 +725,7 @@ export class Engine implements TensorTracker, DataMover {
 
     if (isTapeOn) {
       this.addTapeNode(
+        // @ts-expect-error TODO: Fix this. The type is too loose.
           kernelOrScopeName, inputs, outputs, backwardsFunc, saved, attrs);
     }
 
@@ -1002,12 +1006,13 @@ export class Engine implements TensorTracker, DataMover {
 
   private addTapeNode(
       kernelName: string, inputs: NamedTensorMap, outputs: Tensor[],
-      gradientsFunc: GradFunc, saved: Tensor[], attrs: NamedAttrMap): void {
+      gradientsFunc: GradFunc<Tensor[]>, saved: Tensor[], attrs: NamedAttrMap): void {
     const tapeNode: TapeNode =
         {id: this.state.nextTapeNodeId++, kernelName, inputs, outputs, saved};
 
     const gradConfig = getGradient(kernelName);
     if (gradConfig != null) {
+      // @ts-expect-error TODO: Fix this. The type is too loose.
       gradientsFunc = gradConfig.gradFunc;
     }
     if (gradientsFunc != null) {
@@ -1024,7 +1029,7 @@ export class Engine implements TensorTracker, DataMover {
         });
         // Grad functions of ops with single outputs expect a dy, while ops
         // with multiple outputs expect dys (array of dy).
-        return gradientsFunc(dys.length > 1 ? dys : dys[0], saved, attrs);
+        return gradientsFunc(dys.length > 1 ? dys : [dys[0]], saved, attrs);
       };
     }
     this.state.activeTape.push(tapeNode);
@@ -1158,6 +1163,7 @@ export class Engine implements TensorTracker, DataMover {
     util.assert(
         util.isFunction(f),
         () => 'The f passed in customGrad(f) must be a function.');
+    // @ts-expect-error TODO: Fix this. Why do we accept a GradSaveFunc if we don't actually accept it?
     return (...inputs: Tensor[]): T => {
       util.assert(
           inputs.every(t => t instanceof Tensor),

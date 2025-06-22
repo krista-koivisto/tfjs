@@ -15,21 +15,21 @@
  * =============================================================================
  */
 
-import {customGrad} from '../gradients';
+import { customGrad } from '../gradients';
 
-import {Tensor} from '../tensor';
-import {GradSaveFunc} from '../tensor_types';
-import {convertToTensor} from '../tensor_util_env';
-import {TensorLike} from '../types';
+import { Tensor } from '../tensor';
+import { GradSaveFunc } from '../tensor_types';
+import { convertToTensor } from '../tensor_util_env';
+import { TensorLike } from '../types';
 
-import {cast} from './cast';
-import {exp} from './exp';
-import {log} from './log';
-import {max} from './max';
-import {mul} from './mul';
-import {op} from './operation';
-import {sub} from './sub';
-import {sum} from './sum';
+import { cast } from './cast';
+import { exp } from './exp';
+import { log } from './log';
+import { max } from './max';
+import { mul } from './mul';
+import { op } from './operation';
+import { sub } from './sub';
+import { sum } from './sum';
 
 /**
  * Computes the log softmax.
@@ -76,6 +76,7 @@ function logSoftmax_<T extends Tensor>(logits: T|TensorLike, axis = -1): T {
   // };
 
   // Use a custom gradient for numerical stability.
+  // @ts-expect-error TODO: Fix this.
   const customOp = customGrad((logits: Tensor, save: GradSaveFunc) => {
     const keepDims = true;
     const xMax = max(logits, axis, true);

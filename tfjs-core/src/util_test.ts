@@ -41,7 +41,7 @@ describe('Util', () => {
 
   it('Arrays shuffle randomly', () => {
     // Create 1000 numbers ordered
-    const a = Array.apply(0, {length: 1000}).map(Number.call, Number).slice(1);
+    const a = Array.from({ length: 1001 }).map(Number).slice(1);
     const b = [].concat(a);  // copy ES5 style
     util.shuffle(a);
     expect(a).not.toEqual(b);
@@ -50,7 +50,7 @@ describe('Util', () => {
 
   it('Multiple arrays shuffle together', () => {
     // Create 1000 numbers ordered
-    const a = Array.apply(0, {length: 1000}).map(Number.call, Number).slice(1);
+    const a = Array.from({ length: 1000 }).map(Number).slice(1);
     const b = [].concat(a);  // copies
     const c = [].concat(a);
     util.shuffleCombo(a, b);

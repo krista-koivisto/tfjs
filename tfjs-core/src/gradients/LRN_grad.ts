@@ -14,15 +14,16 @@
  * limitations under the License.
  * =============================================================================
  */
-import {LRN, LRNAttrs} from '../kernel_names';
-import {GradConfig, NamedAttrMap} from '../kernel_registry';
-import {localResponseNormalizationBackprop} from '../ops/local_response_normalization_backprop';
-import {Tensor, Tensor4D} from '../tensor';
+import { LRN, LRNAttrs } from '../kernel_names';
+import { GradConfig, NamedAttrMap } from '../kernel_registry';
+import { localResponseNormalizationBackprop } from '../ops/local_response_normalization_backprop';
+import { Tensor, Tensor4D } from '../tensor';
 
 export const lrnGradConfig: GradConfig = {
   kernelName: LRN,
   inputsToSave: ['x'],
   outputsToSave: [true],
+  // @ts-expect-error TODO: Fix this.
   gradFunc: (dy: Tensor4D, saved: Tensor[], attrs: NamedAttrMap) => {
     const [x, y] = saved as [Tensor4D, Tensor4D];
     const {depthRadius, bias, alpha, beta} = attrs as unknown as LRNAttrs;

@@ -14,17 +14,18 @@
  * limitations under the License.
  * =============================================================================
  */
-import {DepthwiseConv2dNative, DepthwiseConv2dNativeAttrs} from '../kernel_names';
-import {GradConfig, NamedAttrMap} from '../kernel_registry';
+import { DepthwiseConv2dNative, DepthwiseConv2dNativeAttrs } from '../kernel_names';
+import { GradConfig, NamedAttrMap } from '../kernel_registry';
 import * as conv_util from '../ops/conv_util';
-import {depthwiseConv2dNativeBackpropFilter} from '../ops/depthwise_conv2d_native_backprop_filter';
-import {depthwiseConv2dNativeBackpropInput} from '../ops/depthwise_conv2d_native_backprop_input';
-import {Tensor, Tensor4D} from '../tensor';
+import { depthwiseConv2dNativeBackpropFilter } from '../ops/depthwise_conv2d_native_backprop_filter';
+import { depthwiseConv2dNativeBackpropInput } from '../ops/depthwise_conv2d_native_backprop_input';
+import { Tensor, Tensor4D } from '../tensor';
 import * as util from '../util';
 
 export const depthwiseConv2dNativeGradConfig: GradConfig = {
   kernelName: DepthwiseConv2dNative,
   inputsToSave: ['x', 'filter'],
+  // @ts-expect-error TODO: Fix this.
   gradFunc: (dy: Tensor4D, saved: Tensor[], attrs: NamedAttrMap) => {
     const {dilations, strides, pad, dimRoundingMode} =
         attrs as unknown as DepthwiseConv2dNativeAttrs;

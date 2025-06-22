@@ -14,28 +14,28 @@
  * limitations under the License.
  * =============================================================================
  */
-import {customGrad} from '../../gradients';
-import {Tensor} from '../../tensor';
-import {GradSaveFunc} from '../../tensor_types';
-import {convertToTensor} from '../../tensor_util_env';
-import {TensorLike} from '../../types';
-import {assertShapesMatch} from '../../util';
-import {add} from '../add';
-import {expandShapeToKeepDim} from '../axis_util';
-import {cast} from '../cast';
-import {div} from '../div';
-import {exp} from '../exp';
-import {logSumExp} from '../log_sum_exp';
-import {Reduction} from '../loss_ops_utils';
-import {mul} from '../mul';
-import {neg} from '../neg';
-import {op} from '../operation';
-import {reshape} from '../reshape';
-import {scalar} from '../scalar';
-import {sub} from '../sub';
-import {sum} from '../sum';
+import { customGrad } from '../../gradients';
+import { Tensor } from '../../tensor';
+import { GradSaveFunc } from '../../tensor_types';
+import { convertToTensor } from '../../tensor_util_env';
+import { TensorLike } from '../../types';
+import { assertShapesMatch } from '../../util';
+import { add } from '../add';
+import { expandShapeToKeepDim } from '../axis_util';
+import { cast } from '../cast';
+import { div } from '../div';
+import { exp } from '../exp';
+import { logSumExp } from '../log_sum_exp';
+import { Reduction } from '../loss_ops_utils';
+import { mul } from '../mul';
+import { neg } from '../neg';
+import { op } from '../operation';
+import { reshape } from '../reshape';
+import { scalar } from '../scalar';
+import { sub } from '../sub';
+import { sum } from '../sum';
 
-import {computeWeightedLoss} from './compute_weighted_loss';
+import { computeWeightedLoss } from './compute_weighted_loss';
 
 /**
  * Computes softmax cross entropy between logits and labels.
@@ -75,6 +75,7 @@ function softmaxCrossEntropyWithLogits_<T extends Tensor, O extends Tensor>(
   }
   // Use a custom gradient for numerical stability.
   const customOp =
+      // @ts-expect-error TODO: Fix this.
       customGrad((labels: Tensor, logits: Tensor, save: GradSaveFunc) => {
         // Reference:
         //   1. http://cs231n.github.io/linear-classify/#softmax

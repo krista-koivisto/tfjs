@@ -14,17 +14,18 @@
  * limitations under the License.
  * =============================================================================
  */
-import {Conv3D, Conv3DAttrs} from '../kernel_names';
-import {GradConfig, NamedAttrMap} from '../kernel_registry';
-import {conv3DBackpropFilter} from '../ops/conv3d_backprop_filter';
-import {conv3DBackpropInput} from '../ops/conv3d_backprop_input';
-import {tupleValuesAreOne} from '../ops/conv_util';
-import {Tensor, Tensor5D} from '../tensor';
+import { Conv3D, Conv3DAttrs } from '../kernel_names';
+import { GradConfig, NamedAttrMap } from '../kernel_registry';
+import { conv3DBackpropFilter } from '../ops/conv3d_backprop_filter';
+import { conv3DBackpropInput } from '../ops/conv3d_backprop_input';
+import { tupleValuesAreOne } from '../ops/conv_util';
+import { Tensor, Tensor5D } from '../tensor';
 import * as util from '../util';
 
 export const conv3DGradConfig: GradConfig = {
   kernelName: Conv3D,
   inputsToSave: ['x', 'filter'],
+  // @ts-expect-error TODO: Fix this.
   gradFunc: (dy: Tensor5D, saved: Tensor[], attrs: NamedAttrMap) => {
     const {dilations, strides, pad} = attrs as unknown as Conv3DAttrs;
     util.assert(

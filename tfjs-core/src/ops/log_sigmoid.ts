@@ -15,16 +15,16 @@
  * =============================================================================
  */
 
-import {customGrad} from '../gradients';
-import {Tensor} from '../tensor';
-import {convertToTensor} from '../tensor_util_env';
-import {TensorLike} from '../types';
+import { customGrad } from '../gradients';
+import { Tensor } from '../tensor';
+import { convertToTensor } from '../tensor_util_env';
+import { TensorLike } from '../types';
 
-import {mul} from './mul';
-import {neg} from './neg';
-import {op} from './operation';
-import {sigmoid} from './sigmoid';
-import {softplus} from './softplus';
+import { mul } from './mul';
+import { neg } from './neg';
+import { op } from './operation';
+import { sigmoid } from './sigmoid';
+import { softplus } from './softplus';
 
 /**
  * Computes log sigmoid of the input `tf.Tensor` element-wise:
@@ -44,7 +44,8 @@ function logSigmoid_<T extends Tensor>(x: T|TensorLike): T {
 
   // Use a custom gradient to maintain previous implementation.
   // There is no LogSigmoid kernel in TF so we can't use engine.runKernel
-  // directly
+  // directly.
+  // @ts-expect-error TODO: Fix this.
   const customOp = customGrad((x: Tensor) => {
     // TODO(yassogba) we can remove the chained softplus call here only
     // after backends have modualrized softplus at which point we can call

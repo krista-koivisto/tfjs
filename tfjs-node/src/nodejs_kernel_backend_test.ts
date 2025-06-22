@@ -15,11 +15,10 @@
  * =============================================================================
  */
 
-import * as tf from '@tensorflow/tfjs';
-// tslint:disable-next-line: no-imports-from-dist
-import {TestKernelBackend} from '@tensorflow/tfjs-core/dist/jasmine_util';
+import * as tf from '@tensorflow/tfjs-core';
+import { TestKernelBackend } from '@tensorflow/tfjs-core/jasmine_util';
 
-import {createTensorsTypeOpAttr, ensureTensorflowBackend, getTFDType, nodeBackend, NodeJSKernelBackend} from './nodejs_kernel_backend';
+import { createTensorsTypeOpAttr, ensureTensorflowBackend, getTFDType, nodeBackend, NodeJSKernelBackend } from './nodejs_kernel_backend';
 
 describe('delayed upload', () => {
   it('should handle data before op execution', async () => {

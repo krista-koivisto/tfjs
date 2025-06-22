@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import { util } from '@tensorflow/tfjs';
+import { util } from '@tensorflow/tfjs-core';
 import { endianness } from 'os';
 
 export type Shape = Array<null | number>;

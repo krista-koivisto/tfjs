@@ -14,13 +14,13 @@
  * limitations under the License.
  * =============================================================================
  */
-import {env} from './environment';
-import {getGlobal} from './global_util';
+import { env } from './environment';
+import { getGlobal } from './global_util';
 import * as log from './log';
-import {NamedGradientMap} from './tape';
-import {Tensor} from './tensor';
-import {TensorInfo} from './tensor_info';
-import {RecursiveArray} from './types';
+import { NamedGradientMap } from './tape';
+import { Tensor } from './tensor';
+import { TensorInfo } from './tensor_info';
+import { RecursiveArray } from './types';
 
 const kernelRegistry =
   getGlobal('kernelRegistry', () => new Map<`${string}_${string}`,
@@ -42,9 +42,11 @@ export type KernelFunc = (params: {
 }) => TensorInfo | TensorInfo[];
 
 /** The function to run when computing a gradient during backprop. */
-export type GradFunc =
-  (dy: Tensor | Tensor[], saved: Tensor[], attrs: NamedAttrMap) =>
+export type GradFunc<T extends Tensor | Tensor[]> =
+  (dy: T, saved: Tensor[], attrs: NamedAttrMap) =>
     NamedGradientMap;
+
+
 
 /** Function that gets called after the backend initializes. */
 export type KernelSetupFunc = (backend: {}) => void;
@@ -68,7 +70,7 @@ export interface GradConfig {
   // if inputs is an array of Tensors.
   saveAllInputs?: boolean;
   outputsToSave?: boolean[];
-  gradFunc: GradFunc;
+  gradFunc: GradFunc<Tensor> | GradFunc<Tensor[]>;
 }
 
 export interface NamedTensorInfoMap {

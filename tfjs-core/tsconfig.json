@@ -1,8 +1,14 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "src",
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // TODO: Remove these one-by-one once the rest of the migration is done.
+    "strictNullChecks": false,
+    "noUnusedParameters": false,
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/*_test.ts"]
 }

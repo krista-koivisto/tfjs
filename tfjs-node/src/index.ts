@@ -18,7 +18,7 @@
 // Register all kernels.
 import './register_all_kernels';
 
-import * as tf from '@tensorflow/tfjs';
+import * as tf from '@tensorflow/tfjs-core';
 import * as path from 'path';
 
 import * as nodeIo from './io/index';

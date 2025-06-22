@@ -15,14 +15,14 @@
  * =============================================================================
  */
 
-import {AdadeltaOptimizer} from './adadelta_optimizer';
-import {AdagradOptimizer} from './adagrad_optimizer';
-import {AdamOptimizer} from './adam_optimizer';
-import {AdamaxOptimizer} from './adamax_optimizer';
-import {MomentumOptimizer} from './momentum_optimizer';
-import {RMSPropOptimizer} from './rmsprop_optimizer';
-import {SGDOptimizer} from './sgd_optimizer';
-import {registerClass} from '../serialization';
+import { registerClass } from '../serialization';
+import { AdadeltaOptimizer } from './adadelta_optimizer';
+import { AdagradOptimizer } from './adagrad_optimizer';
+import { AdamOptimizer } from './adam_optimizer';
+import { AdamaxOptimizer } from './adamax_optimizer';
+import { MomentumOptimizer } from './momentum_optimizer';
+import { RMSPropOptimizer } from './rmsprop_optimizer';
+import { SGDOptimizer } from './sgd_optimizer';
 
 const OPTIMIZERS = [
   AdadeltaOptimizer,
@@ -36,6 +36,7 @@ const OPTIMIZERS = [
 
 export function registerOptimizers() {
   for (const optimizer of OPTIMIZERS) {
+    // @ts-expect-error TODO: Fix this.
     registerClass(optimizer);
   }
 }

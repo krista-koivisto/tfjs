@@ -15,14 +15,14 @@
  * =============================================================================
  */
 
-import {Acosh} from '../kernel_names';
-import {GradConfig} from '../kernel_registry';
-import {cast} from '../ops/cast';
-import {div} from '../ops/div';
-import {sqrt} from '../ops/sqrt';
-import {square} from '../ops/square';
-import {sub} from '../ops/sub';
-import {Tensor} from '../tensor';
+import { Acosh } from '../kernel_names';
+import { GradConfig } from '../kernel_registry';
+import { cast } from '../ops/cast';
+import { div } from '../ops/div';
+import { sqrt } from '../ops/sqrt';
+import { square } from '../ops/square';
+import { sub } from '../ops/sub';
+import { Tensor } from '../tensor';
 
 export const acoshGradConfig: GradConfig = {
   kernelName: Acosh,

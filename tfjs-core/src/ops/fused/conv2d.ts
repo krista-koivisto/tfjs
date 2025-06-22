@@ -15,26 +15,26 @@
  * =============================================================================
  */
 
-import {ENGINE} from '../../engine';
-import {customGrad} from '../../gradients';
-import {FusedConv2D, FusedConv2DAttrs, FusedConv2DInputs} from '../../kernel_names';
-import {NamedAttrMap} from '../../kernel_registry';
-import {Tensor, Tensor3D, Tensor4D} from '../../tensor';
-import {GradSaveFunc, NamedTensorMap} from '../../tensor_types';
-import {makeTypesMatch} from '../../tensor_util';
-import {convertToTensor} from '../../tensor_util_env';
-import {TensorLike} from '../../types';
+import { ENGINE } from '../../engine';
+import { customGrad } from '../../gradients';
+import { FusedConv2D, FusedConv2DAttrs, FusedConv2DInputs } from '../../kernel_names';
+import { NamedAttrMap } from '../../kernel_registry';
+import { Tensor, Tensor3D, Tensor4D } from '../../tensor';
+import { GradSaveFunc, NamedTensorMap } from '../../tensor_types';
+import { makeTypesMatch } from '../../tensor_util';
+import { convertToTensor } from '../../tensor_util_env';
+import { TensorLike } from '../../types';
 import * as util from '../../util';
-import {add} from '../add';
+import { add } from '../add';
 import * as broadcast_util from '../broadcast_util';
-import {conv2d as unfusedConv2d} from '../conv2d';
-import {conv2DBackpropFilter} from '../conv2d_backprop_filter';
-import {conv2DBackpropInput} from '../conv2d_backprop_input';
+import { conv2d as unfusedConv2d } from '../conv2d';
+import { conv2DBackpropFilter } from '../conv2d_backprop_filter';
+import { conv2DBackpropInput } from '../conv2d_backprop_input';
 import * as conv_util from '../conv_util';
-import {Activation} from '../fused_types';
-import {applyActivation, getFusedBiasGradient, getFusedDyActivation, shouldFuse} from '../fused_util';
-import {op} from '../operation';
-import {reshape} from '../reshape';
+import { Activation } from '../fused_types';
+import { applyActivation, getFusedBiasGradient, getFusedDyActivation, shouldFuse } from '../fused_util';
+import { op } from '../operation';
+import { reshape } from '../reshape';
 
 /**
  * Computes a 2D convolution over the input x, optionally fused with adding a
@@ -290,6 +290,7 @@ function fusedConv2d_<T extends Tensor3D|Tensor4D>({
   // inputs and thus a a different number of elements in the gradient.
   if (bias == null) {
     const customOp =
+        // @ts-expect-error TODO: Fix this.
         customGrad((x4D: Tensor4D, filter: Tensor4D, save: GradSaveFunc) => {
           let res: Tensor4D|Tensor3D =
               // tslint:disable-next-line: no-unnecessary-type-assertion
@@ -310,6 +311,7 @@ function fusedConv2d_<T extends Tensor3D|Tensor4D>({
     return customOp(x4D, $filter) as T;
   } else {
     const customOpWithBias = customGrad(
+      // @ts-expect-error TODO: Fix this.
         (x4D: Tensor4D, filter: Tensor4D, bias: Tensor, save: GradSaveFunc) => {
           let res: Tensor4D|Tensor3D = ENGINE.runKernel(
               FusedConv2D, inputs as unknown as NamedTensorMap,

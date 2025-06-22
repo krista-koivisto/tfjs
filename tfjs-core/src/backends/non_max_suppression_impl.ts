@@ -15,8 +15,8 @@
  * =============================================================================
  */
 
-import {TypedArray} from '../types';
-import {binaryInsert} from './non_max_suppression_util';
+import { TypedArray } from '../types';
+import { binaryInsert } from './non_max_suppression_util';
 
 /**
  * Implementation of the NonMaxSuppression kernel shared between webgl and cpu.
@@ -201,5 +201,5 @@ function ascendingComparator(c1: Candidate, c2: Candidate) {
   // the smaller index will be popped first. This ensures the same output as
   // the TensorFlow python version.
   return (c1.score - c2.score) ||
-      ((c1.score === c2.score) && (c2.boxIndex - c1.boxIndex));
+      ((c1.score === c2.score) && (c2.boxIndex - c1.boxIndex)) || 0;
 }

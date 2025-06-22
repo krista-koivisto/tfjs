@@ -15,24 +15,24 @@
  * =============================================================================
  */
 
-import {ENGINE} from '../../engine';
-import {customGrad} from '../../gradients';
-import {_FusedMatMul, _FusedMatMulAttrs, _FusedMatMulInputs} from '../../kernel_names';
-import {NamedAttrMap} from '../../kernel_registry';
-import {Tensor, Tensor3D} from '../../tensor';
-import {GradSaveFunc, NamedTensorMap} from '../../tensor_types';
-import {makeTypesMatch} from '../../tensor_util';
-import {convertToTensor} from '../../tensor_util_env';
-import {TensorLike} from '../../types';
+import { ENGINE } from '../../engine';
+import { customGrad } from '../../gradients';
+import { _FusedMatMul, _FusedMatMulAttrs, _FusedMatMulInputs } from '../../kernel_names';
+import { NamedAttrMap } from '../../kernel_registry';
+import { Tensor, Tensor3D } from '../../tensor';
+import { GradSaveFunc, NamedTensorMap } from '../../tensor_types';
+import { makeTypesMatch } from '../../tensor_util';
+import { convertToTensor } from '../../tensor_util_env';
+import { TensorLike } from '../../types';
 import * as util from '../../util';
 
-import {add} from '../add';
+import { add } from '../add';
 import * as broadcast_util from '../broadcast_util';
-import {Activation} from '../fused_types';
-import {applyActivation, getFusedBiasGradient, getFusedDyActivation, shouldFuse} from '../fused_util';
-import {matMul as unfusedMatMul} from '../mat_mul';
-import {op} from '../operation';
-import {reshape} from '../reshape';
+import { Activation } from '../fused_types';
+import { applyActivation, getFusedBiasGradient, getFusedDyActivation, shouldFuse } from '../fused_util';
+import { matMul as unfusedMatMul } from '../mat_mul';
+import { op } from '../operation';
+import { reshape } from '../reshape';
 
 /**
  * Computes the dot product of two matrices with optional activation and bias.
@@ -180,6 +180,7 @@ function fusedMatMul_({
     // inputs and thus a a different number of elements in the gradient.
     if (bias == null) {
       const customOp =
+        // @ts-expect-error TODO: Fix this.
           customGrad((a3D: Tensor3D, b3D: Tensor3D, save: GradSaveFunc) => {
             const res =
                 // tslint:disable-next-line: no-unnecessary-type-assertion
@@ -194,6 +195,7 @@ function fusedMatMul_({
       return customOp(a3D, b3D);
     } else {
       const customOpWithBias = customGrad(
+        // @ts-expect-error TODO: Fix this.
           (a3D: Tensor3D, b3D: Tensor3D, $bias: Tensor, save: GradSaveFunc) => {
             const res =
                 // tslint:disable-next-line: no-unnecessary-type-assertion

@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import {assert} from './util';
+import { assert } from './util';
 
 /**
  * Types to support JSON-esque data structures internally.
@@ -48,8 +48,9 @@ export declare interface ConfigDictArray extends Array<ConfigDictValue> {}
  * Source for this idea: https://stackoverflow.com/a/43607255
  */
 export declare type SerializableConstructor<T extends Serializable> = {
-  // tslint:disable-next-line:no-any
-  new (...args: any[]): T; className: string; fromConfig: FromConfigMethod<T>;
+  new (...args: unknown[]): T;
+  className: string;
+  fromConfig: FromConfigMethod<T>;
 };
 export declare type FromConfigMethod<T extends Serializable> =
     (cls: SerializableConstructor<T>, config: ConfigDict) => T;
@@ -152,8 +153,8 @@ export class SerializationMap {
    * Registers the class as serializable.
    */
   static register<T extends Serializable>(cls: SerializableConstructor<T>) {
-    SerializationMap.getMap().classNameMap[cls.className] =
-        [cls, cls.fromConfig];
+    // @ts-expect-error TODO: Fix this. The type is too loose.
+    SerializationMap.getMap().classNameMap[cls.className] = [cls, cls.fromConfig];
   }
 }
 
@@ -258,7 +259,9 @@ export function registerClass<T extends Serializable>(
   const registerName = pkg + '>' + className;
 
   SerializationMap.register(cls);
+  // @ts-expect-error TODO: Fix this. The type is too loose.
   GLOBAL_CUSTOM_OBJECT.set(registerName, cls);
+  // @ts-expect-error TODO: Fix this. The type is too loose.
   GLOBAL_CUSTOM_NAMES.set(cls, registerName);
 
   return cls;
@@ -274,7 +277,9 @@ export function registerClass<T extends Serializable>(
  */
 export function getRegisteredName<T extends Serializable>(
     cls: SerializableConstructor<T>) {
+  // @ts-expect-error TODO: Fix this. The type is too loose.
   if (GLOBAL_CUSTOM_NAMES.has(cls)) {
+    // @ts-expect-error TODO: Fix this. The type is too loose.
     return GLOBAL_CUSTOM_NAMES.get(cls);
   } else {
     return cls.className;

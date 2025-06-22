@@ -15,26 +15,26 @@
  * =============================================================================
  */
 
-import {ENGINE} from '../../engine';
-import {customGrad} from '../../gradients';
-import {FusedDepthwiseConv2D, FusedDepthwiseConv2DAttrs, FusedDepthwiseConv2DInputs} from '../../kernel_names';
-import {NamedAttrMap} from '../../kernel_registry';
-import {Tensor, Tensor3D, Tensor4D} from '../../tensor';
-import {GradSaveFunc, NamedTensorMap} from '../../tensor_types';
-import {makeTypesMatch} from '../../tensor_util';
-import {convertToTensor} from '../../tensor_util_env';
-import {TensorLike} from '../../types';
+import { ENGINE } from '../../engine';
+import { customGrad } from '../../gradients';
+import { FusedDepthwiseConv2D, FusedDepthwiseConv2DAttrs, FusedDepthwiseConv2DInputs } from '../../kernel_names';
+import { NamedAttrMap } from '../../kernel_registry';
+import { Tensor, Tensor3D, Tensor4D } from '../../tensor';
+import { GradSaveFunc, NamedTensorMap } from '../../tensor_types';
+import { makeTypesMatch } from '../../tensor_util';
+import { convertToTensor } from '../../tensor_util_env';
+import { TensorLike } from '../../types';
 import * as util from '../../util';
-import {add} from '../add';
+import { add } from '../add';
 import * as broadcast_util from '../broadcast_util';
 import * as conv_util from '../conv_util';
-import {depthwiseConv2d as unfusedDepthwiseConv2d} from '../depthwise_conv2d';
-import {depthwiseConv2dNativeBackpropFilter} from '../depthwise_conv2d_native_backprop_filter';
-import {depthwiseConv2dNativeBackpropInput} from '../depthwise_conv2d_native_backprop_input';
-import {Activation} from '../fused_types';
-import {applyActivation, getFusedBiasGradient, getFusedDyActivation, shouldFuse} from '../fused_util';
-import {op} from '../operation';
-import {reshape} from '../reshape';
+import { depthwiseConv2d as unfusedDepthwiseConv2d } from '../depthwise_conv2d';
+import { depthwiseConv2dNativeBackpropFilter } from '../depthwise_conv2d_native_backprop_filter';
+import { depthwiseConv2dNativeBackpropInput } from '../depthwise_conv2d_native_backprop_input';
+import { Activation } from '../fused_types';
+import { applyActivation, getFusedBiasGradient, getFusedDyActivation, shouldFuse } from '../fused_util';
+import { op } from '../operation';
+import { reshape } from '../reshape';
 
 /**
  * Computes depthwise 2D convolution, optionally fused with adding a
@@ -218,6 +218,7 @@ function fusedDepthwiseConv2d_<T extends Tensor3D|Tensor4D>({
   // inputs and thus a a different number of elements in the gradient.
   if (bias == null) {
     const customOp =
+        // @ts-expect-error TODO: Fix this.
         customGrad((x4D: Tensor4D, filter: Tensor4D, save: GradSaveFunc) => {
           // tslint:disable-next-line: no-unnecessary-type-assertion
           let res: Tensor4D|Tensor3D = ENGINE.runKernel(
@@ -237,6 +238,7 @@ function fusedDepthwiseConv2d_<T extends Tensor3D|Tensor4D>({
     return customOp(x4D, $filter) as T;
   } else {
     const customOpWithBias = customGrad(
+        // @ts-expect-error TODO: Fix this.
         (x4D: Tensor4D, filter: Tensor4D, bias: Tensor, save: GradSaveFunc) => {
           // tslint:disable-next-line: no-unnecessary-type-assertion
           let res: Tensor4D|Tensor3D = ENGINE.runKernel(

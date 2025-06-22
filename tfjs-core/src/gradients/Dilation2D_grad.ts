@@ -14,16 +14,16 @@
  * limitations under the License.
  * =============================================================================
  */
-import {ENGINE} from '../engine';
-import {Dilation2D, Dilation2DBackpropFilter, Dilation2DBackpropFilterInputs, Dilation2DBackpropInput, Dilation2DBackpropInputInputs} from '../kernel_names';
-import {GradConfig} from '../kernel_registry';
-import {NamedAttrMap} from '../kernel_registry';
-import {Tensor, Tensor3D, Tensor4D} from '../tensor';
-import {NamedTensorMap} from '../tensor_types';
+import { ENGINE } from '../engine';
+import { Dilation2D, Dilation2DBackpropFilter, Dilation2DBackpropFilterInputs, Dilation2DBackpropInput, Dilation2DBackpropInputInputs } from '../kernel_names';
+import { GradConfig, NamedAttrMap } from '../kernel_registry';
+import { Tensor, Tensor3D, Tensor4D } from '../tensor';
+import { NamedTensorMap } from '../tensor_types';
 
 export const dilation2dGradConfig: GradConfig = {
   kernelName: Dilation2D,
   inputsToSave: ['x', 'filter'],
+  // @ts-expect-error TODO: Fix this.
   gradFunc: (dy: Tensor4D, saved: Tensor[], attrs: NamedAttrMap) => {
     const [x, filter] = saved as [Tensor4D, Tensor3D];
 

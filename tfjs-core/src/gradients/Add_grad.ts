@@ -14,12 +14,12 @@
  * limitations under the License.
  * =============================================================================
  */
-import {Add} from '../kernel_names';
-import {GradConfig} from '../kernel_registry';
+import { Add } from '../kernel_names';
+import { GradConfig } from '../kernel_registry';
 import * as broadcast_util from '../ops/broadcast_util';
-import {reshape} from '../ops/reshape';
-import {sum} from '../ops/sum';
-import {Tensor} from '../tensor';
+import { reshape } from '../ops/reshape';
+import { sum } from '../ops/sum';
+import { Tensor } from '../tensor';
 
 export const addGradConfig: GradConfig = {
   kernelName: Add,

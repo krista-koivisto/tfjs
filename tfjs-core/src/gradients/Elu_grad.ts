@@ -14,15 +14,16 @@
  * limitations under the License.
  * =============================================================================
  */
-import {ENGINE} from '../engine';
-import {Elu, EluGrad, EluGradInputs} from '../kernel_names';
-import {GradConfig} from '../kernel_registry';
-import {Tensor} from '../tensor';
-import {NamedTensorMap} from '../tensor_types';
+import { ENGINE } from '../engine';
+import { Elu, EluGrad, EluGradInputs } from '../kernel_names';
+import { GradConfig } from '../kernel_registry';
+import { Tensor } from '../tensor';
+import { NamedTensorMap } from '../tensor_types';
 
 export const eluGradConfig: GradConfig = {
   kernelName: Elu,
   outputsToSave: [true],
+  // @ts-expect-error TODO: Fix this.
   gradFunc: (dy: Tensor, saved: Tensor[]) => {
     const [y] = saved;
 

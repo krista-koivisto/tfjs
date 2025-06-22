@@ -5,10 +5,15 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "lib": ["es2019"],
+    "rootDir": "./src",
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true
-  }
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "declaration": false,
+    "sourceMap": false,
+    "strict": true,
+    }
 }
