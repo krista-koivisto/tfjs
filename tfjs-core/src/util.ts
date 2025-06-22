@@ -15,12 +15,11 @@
  * =============================================================================
  */
 
-import {env} from './environment';
-import {isTypedArrayBrowser} from './platforms/is_typed_array_browser';
-import {BackendValues, DataType, RecursiveArray, TensorLike, TypedArray} from './types';
+import { env } from './environment';
+import { BackendValues, DataType, RecursiveArray, TensorLike, TypedArray } from './types';
 import * as base from './util_base';
-export * from './util_base';
 export * from './hash_util';
+export * from './util_base';
 
 /**
  * Create typed array for scalar value. Used for storing in `DataStorage`.
@@ -73,8 +72,7 @@ export function toTypedArray(a: TensorLike, dtype: DataType): TypedArray {
 
 /**
  * Returns the current high-resolution time in milliseconds relative to an
- * arbitrary time in the past. It works across different platforms (node.js,
- * browsers).
+ * arbitrary time in the past.
  *
  * ```js
  * console.log(tf.util.now());
@@ -139,7 +137,7 @@ export function isTypedArray(a: {}): a is Float32Array|Int32Array|Uint8Array|
   if (env().platform.isTypedArray != null) {
     return env().platform.isTypedArray(a);
   } else {
-    return isTypedArrayBrowser(a);
+    throw new Error('Platform is not supported');
   }
 }
 

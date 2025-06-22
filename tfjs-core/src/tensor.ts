@@ -18,12 +18,12 @@
 // Workaround for: https://github.com/bazelbuild/rules_nodejs/issues/1265
 /// <reference types="@webgpu/types/dist" />
 
-import {getGlobal} from './global_util';
-import {tensorToString} from './tensor_format';
-import {DataId, TensorInfo} from './tensor_info';
-import {ArrayMap, BackendValues, DataType, DataTypeMap, DataValues, NumericDataType, Rank, ShapeMap, SingleValueMap, TypedArray} from './types';
+import { getGlobal } from './global_util';
+import { tensorToString } from './tensor_format';
+import { DataId, TensorInfo } from './tensor_info';
+import { ArrayMap, BackendValues, DataType, DataTypeMap, DataValues, NumericDataType, Rank, ShapeMap, SingleValueMap, TypedArray } from './types';
 import * as util from './util';
-import {computeStrides, toNestedArray} from './util';
+import { computeStrides, toNestedArray } from './util';
 
 export interface TensorData<D extends DataType> {
   dataId?: DataId;
@@ -160,19 +160,6 @@ export class TensorBuffer<R extends Rank, D extends DataType = 'float32'> {
   }
 }
 
-export interface DataToGPUWebGLOption {
-  customTexShape?: [number, number];
-}
-
-export type DataToGPUOptions = DataToGPUWebGLOption;
-
-export interface GPUData {
-  tensorRef: Tensor;
-  texture?: WebGLTexture;
-  buffer?: GPUBuffer;
-  texShape?: [number, number];
-}
-
 export interface TensorTracker {
   makeTensor(
       values: DataValues, shape: number[], dtype: DataType,
@@ -185,7 +172,6 @@ export interface TensorTracker {
   disposeVariable(v: Variable): void;
   read(dataId: DataId): Promise<BackendValues>;
   readSync(dataId: DataId): BackendValues;
-  readToGPU(dataId: DataId, options?: DataToGPUOptions): GPUData;
 }
 
 /**
@@ -364,45 +350,6 @@ export class Tensor<R extends Rank = Rank> implements TensorInfo {
   }
 
   /**
-   * Copy the tensor's data to a new GPU resource. Comparing to the `dataSync()`
-   * and `data()`, this method prevents data from being downloaded to CPU.
-   *
-   * For WebGL backend, the data will be stored on a densely packed texture.
-   * This means that the texture will use the RGBA channels to store value.
-   *
-   * For WebGPU backend, the data will be stored on a buffer. There is no
-   * parameter, so can not use a user-defined size to create the buffer.
-   *
-   * @param options:
-   *     For WebGL,
-   *         - customTexShape: Optional. If set, will use the user defined
-   *     texture shape to create the texture.
-   *
-   * @returns For WebGL backend, a GPUData contains the new texture and
-   *     its information.
-   *     {
-   *        tensorRef: The tensor that is associated with this texture,
-   *        texture: WebGLTexture,
-   *        texShape: [number, number] // [height, width]
-   *     }
-   *
-   *     For WebGPU backend, a GPUData contains the new buffer.
-   *     {
-   *        tensorRef: The tensor that is associated with this buffer,
-   *        buffer: GPUBuffer,
-   *     }
-   *
-   *     Remember to dispose the GPUData after it is used by
-   *     `res.tensorRef.dispose()`.
-   *
-   * @doc {heading: 'Tensors', subheading: 'Classes'}
-   */
-  dataToGPU(options?: DataToGPUOptions): GPUData {
-    this.throwIfDisposed();
-    return trackerFn().readToGPU(this.dataId, options);
-  }
-
-  /**
    * Synchronously downloads the values from the `tf.Tensor`. This blocks the
    * UI thread until the values are ready, which can cause performance issues.
    *
@@ -532,7 +479,6 @@ export interface NumericTensor<R extends Rank = Rank> extends Tensor<R> {
   dtype: NumericDataType;
   dataSync<D extends DataType = NumericDataType>(): DataTypeMap[D];
   data<D extends DataType = NumericDataType>(): Promise<DataTypeMap[D]>;
-  dataToGPU(options?: DataToGPUOptions): GPUData;
 }
 
 export interface StringTensor<R extends Rank = Rank> extends Tensor<R> {

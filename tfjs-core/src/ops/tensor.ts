@@ -15,12 +15,11 @@
  * =============================================================================
  */
 
-import {Tensor} from '../tensor';
-import {inferShape} from '../tensor_util_env';
-import {TensorLike} from '../types';
-import {DataType, Rank, ShapeMap, WebGLData, WebGPUData} from '../types';
+import { Tensor } from '../tensor';
+import { inferShape } from '../tensor_util_env';
+import { DataType, Rank, ShapeMap, TensorLike } from '../types';
 
-import {makeTensor} from './tensor_ops_util';
+import { makeTensor } from './tensor_ops_util';
 
 /**
  * Creates a `tf.Tensor` with the provided values, shape and dtype.
@@ -183,9 +182,9 @@ import {makeTensor} from './tensor_ops_util';
  * for the input texture must be floating point or normalized integer; 2.
  * height, the height of the texture; 3. width, the width of the texture; 4.
  * channels, a non-empty subset of 'RGBA', indicating the values of which
- * channels will be passed to the tensor, such as 'R' or 'BR' (The order of the 
- * channels affect the order of tensor values. ). (If the values passed from 
- * texture is less than the tensor size, zeros will be padded at the rear.). If 
+ * channels will be passed to the tensor, such as 'R' or 'BR' (The order of the
+ * channels affect the order of tensor values. ). (If the values passed from
+ * texture is less than the tensor size, zeros will be padded at the rear.). If
  * the values is a `WebGPUData` object, the dtype could only be 'float32' or
  * 'int32 and the object has to have: buffer, a `GPUBuffer`. The buffer must:
  * 1. share the same `GPUDevice` with TFJS's WebGPU backend; 2. buffer.usage
@@ -202,7 +201,7 @@ import {makeTensor} from './tensor_ops_util';
  * @doc {heading: 'Tensors', subheading: 'Creation'}
  */
 export function tensor<R extends Rank>(
-    values: TensorLike|WebGLData|WebGPUData, shape?: ShapeMap[R],
+    values: TensorLike, shape?: ShapeMap[R],
     dtype?: DataType): Tensor<R> {
   const inferredShape = inferShape(values, dtype);
   return makeTensor(values, shape, inferredShape, dtype) as Tensor<R>;

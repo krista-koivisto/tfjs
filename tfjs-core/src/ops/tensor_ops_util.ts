@@ -15,15 +15,14 @@
  * =============================================================================
  */
 
-import {ENGINE} from '../engine';
-import {Tensor} from '../tensor';
-import {isWebGLData, isWebGPUData, TensorLike, TypedArray, WebGLData, WebGPUData} from '../types';
-import {DataType} from '../types';
-import {assert, assertNonNegativeIntegerDimensions, flatten, inferDtype, isTypedArray, sizeFromShape, toTypedArray} from '../util';
+import { ENGINE } from '../engine';
+import { Tensor } from '../tensor';
+import { DataType, TensorLike, TypedArray } from '../types';
+import { assert, assertNonNegativeIntegerDimensions, flatten, inferDtype, isTypedArray, sizeFromShape, toTypedArray } from '../util';
 
 /** This is shared code across all tensor creation methods. */
 export function makeTensor(
-    values: TensorLike|WebGLData|WebGPUData, shape: number[],
+    values: TensorLike, shape: number[],
     inferredShape: number[], dtype?: DataType): Tensor {
   if (dtype == null) {
     dtype = inferDtype(values);
@@ -31,16 +30,6 @@ export function makeTensor(
     throw new Error(
         `Cannot construct a complex64 tensor directly. ` +
         `Please use tf.complex(real, imag).`);
-  }
-
-  if (isWebGPUData(values) || isWebGLData(values)) {
-    if (dtype !== 'float32' && dtype !== 'int32') {
-      throw new Error(
-          `Creating tensor from GPU data only supports ` +
-          `'float32'|'int32' dtype, while the dtype is ${dtype}.`);
-    }
-    return ENGINE.backend.createTensorFromGPUData(
-        values, shape || inferredShape, dtype);
   }
 
   if (!isTypedArray(values) && !Array.isArray(values) &&

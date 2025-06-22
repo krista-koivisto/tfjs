@@ -15,14 +15,14 @@
  * =============================================================================
  */
 
-import {KernelBackend} from './backends/backend';
-import {ENGINE, Engine, MemoryInfo, ProfileInfo, ScopeFn, TimingInfo} from './engine';
-import {env} from './environment';
+import { KernelBackend } from './backends/backend';
+import { ENGINE, Engine, MemoryInfo, ProfileInfo, ScopeFn, TimingInfo } from './engine';
+import { env } from './environment';
 
-import {Platform} from './platforms/platform';
-import {setDeprecationWarningFn, Tensor} from './tensor';
-import {TensorContainer} from './tensor_types';
-import {getTensorsInContainer} from './tensor_util';
+import { Platform } from './platforms/platform';
+import { setDeprecationWarningFn, Tensor } from './tensor';
+import { TensorContainer } from './tensor_types';
+import { getTensorsInContainer } from './tensor_util';
 
 /**
  * Enables production mode which disables correctness checks in favor of
@@ -282,9 +282,8 @@ export function time(f: () => void): Promise<TimingInfo> {
  * associated with it. A new backend is initialized, even if it is of the
  * same type as the previous one.
  *
- * @param backendName The name of the backend. Currently supports
- *     `'webgl'|'cpu'` in the browser, `'tensorflow'` under node.js
- *     (requires tfjs-node), and `'wasm'` (requires tfjs-backend-wasm).
+ * @param backendName The name of the backend. Currently supports `'tensorflow'`
+ * only.
  *
  * @doc {heading: 'Backends'}
  */

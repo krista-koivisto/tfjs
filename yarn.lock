@@ -44,7 +44,11 @@ __metadata:
     "@tensorflow/tfjs": "workspace:^"
     "@tensorflow/tfjs-core": "workspace:^"
     "@types/node": "npm:^18.0.0"
+    adm-zip: "npm:^0.5.2"
+    https-proxy-agent: "npm:^2.2.1"
     ncp: "npm:^2.0.0"
+    progress: "npm:^2.0.0"
+    tar: "npm:^6.2.1"
   languageName: unknown
   linkType: soft
 

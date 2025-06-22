@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import {BackendValues, DataType, DataTypeMap, FlatVector, NumericDataType, TensorLike, TypedArray, WebGLData, WebGPUData} from './types';
+import { BackendValues, DataType, DataTypeMap, FlatVector, NumericDataType, TensorLike, TypedArray } from './types';
 
 /**
  * Shuffles the array in-place using Fisher-Yates algorithm.
@@ -529,7 +529,7 @@ export function isNumber(value: {}): boolean {
   return typeof value === 'number';
 }
 
-export function inferDtype(values: TensorLike|WebGLData|WebGPUData): DataType {
+export function inferDtype(values: TensorLike): DataType {
   if (Array.isArray(values)) {
     return inferDtype(values[0]);
   }

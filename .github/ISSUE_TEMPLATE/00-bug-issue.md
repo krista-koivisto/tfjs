@@ -16,9 +16,6 @@ build/installation issues on GitHub. tag:bug_template</em>
 - Mobile device (e.g. iPhone 8, Pixel 2, Samsung Galaxy) if the issue happens on mobile device:
 - TensorFlow.js installed from (npm or script link):
 - TensorFlow.js version (use command below):
-- Browser version:
-- Tensorflow.js Converter Version:
-
 
 
 **Describe the current behavior**

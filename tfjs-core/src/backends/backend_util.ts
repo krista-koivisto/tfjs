@@ -15,40 +15,40 @@
  * =============================================================================
  */
 
-import {decodeString, encodeString} from '../util';
+import { decodeString, encodeString } from '../util';
 
 // Utilities needed by backend consumers of tf-core.
 export * from '../ops/axis_util';
 export * from '../ops/broadcast_util';
 export * from '../ops/concat_util';
 export * from '../ops/conv_util';
-export * from '../ops/fused_util';
 export * from '../ops/fused_types';
+export * from '../ops/fused_util';
 export * from '../ops/ragged_to_dense_util';
 export * from '../ops/reduce_util';
+export { slice_util };
 
 import * as slice_util from '../ops/slice_util';
-export {slice_util};
 
-export {BackendValues, TypedArray, upcastType, PixelData} from '../types';
-export {MemoryInfo, TimingInfo} from '../engine';
-export * from '../ops/rotate_util';
-export * from '../ops/array_ops_util';
-export * from '../ops/gather_nd_util';
-export * from '../ops/scatter_nd_util';
-export * from '../ops/selu_util';
-export * from '../ops/fused_util';
-export * from '../ops/erf_util';
-export * from '../log';
-export * from '../backends/complex_util';
-export * from '../backends/einsum_util';
-export * from '../ops/split_util';
-export * from '../ops/sparse/sparse_fill_empty_rows_util';
-export * from '../ops/sparse/sparse_reshape_util';
-export * from '../ops/sparse/sparse_segment_reduction_util';
+  export * from '../backends/complex_util';
+  export * from '../backends/einsum_util';
+  export { MemoryInfo, TimingInfo } from '../engine';
+  export * from '../log';
+  export * from '../ops/array_ops_util';
+  export * from '../ops/erf_util';
+  export * from '../ops/fused_util';
+  export * from '../ops/gather_nd_util';
+  export * from '../ops/rotate_util';
+  export * from '../ops/scatter_nd_util';
+  export * from '../ops/selu_util';
+  export * from '../ops/sparse/sparse_fill_empty_rows_util';
+  export * from '../ops/sparse/sparse_reshape_util';
+  export * from '../ops/sparse/sparse_segment_reduction_util';
+  export * from '../ops/split_util';
+  export { BackendValues, TypedArray, upcastType } from '../types';
 
 import * as segment_util from '../ops/segment_util';
-export {segment_util};
+export { segment_util };
 
 export function fromUint8ToStringArray(vals: Uint8Array[]) {
   try {

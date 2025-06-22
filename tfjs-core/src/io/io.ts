@@ -15,51 +15,29 @@
  * =============================================================================
  */
 
-// Importing local_storage and indexed_db is necessary for the routers to be
-// registered.
-import './indexed_db';
-import './local_storage';
+import { CompositeArrayBuffer } from './composite_array_buffer';
+import { concatenateArrayBuffers, decodeWeights, decodeWeightsStream, encodeWeights, getModelArtifactsForJSON, getModelArtifactsForJSONSync, getModelArtifactsInfoForJSON, getWeightSpecs } from './io_utils';
+import { IOHandler, IOHandlerSync, LoadHandler, LoadOptions, ModelArtifacts, ModelArtifactsInfo, ModelJSON, ModelStoreManager, OnProgressCallback, RequestDetails, SaveConfig, SaveHandler, SaveResult, TrainingConfig, WeightData, WeightGroup, WeightsManifestConfig, WeightsManifestEntry } from './types';
 
-import {browserFiles} from './browser_files';
-import {browserHTTPRequest, http, isHTTPScheme} from './http';
-import {concatenateArrayBuffers, decodeWeights, decodeWeightsStream, encodeWeights, getModelArtifactsForJSON, getModelArtifactsForJSONSync, getModelArtifactsInfoForJSON, getWeightSpecs} from './io_utils';
-import {fromMemory, fromMemorySync, withSaveHandler, withSaveHandlerSync} from './passthrough';
-import {getLoadHandlers, getSaveHandlers, registerLoadRouter, registerSaveRouter} from './router_registry';
-import {IOHandler, IOHandlerSync, LoadHandler, LoadOptions, ModelArtifacts, ModelArtifactsInfo, ModelJSON, ModelStoreManager, OnProgressCallback, RequestDetails, SaveConfig, SaveHandler, SaveResult, TrainingConfig, WeightGroup, WeightsManifestConfig, WeightsManifestEntry, WeightData} from './types';
-import {loadWeights, weightsLoaderFactory} from './weights_loader';
-import {CompositeArrayBuffer} from './composite_array_buffer';
-
-export {copyModel, listModels, moveModel, removeModel} from './model_management';
 export {
-  browserFiles,
-  browserHTTPRequest,
   CompositeArrayBuffer,
   concatenateArrayBuffers,
   decodeWeights,
   decodeWeightsStream,
   encodeWeights,
-  fromMemory,
-  fromMemorySync,
-  getLoadHandlers,
   getModelArtifactsForJSON,
   getModelArtifactsForJSONSync,
   getModelArtifactsInfoForJSON,
-  getSaveHandlers,
   getWeightSpecs,
-  http,
   IOHandler,
   IOHandlerSync,
-  isHTTPScheme,
   LoadHandler,
   LoadOptions,
-  loadWeights,
   ModelArtifacts,
   ModelArtifactsInfo,
   ModelJSON,
   ModelStoreManager,
   OnProgressCallback,
-  registerLoadRouter,
-  registerSaveRouter,
   RequestDetails,
   SaveConfig,
   SaveHandler,
@@ -67,9 +45,7 @@ export {
   TrainingConfig,
   WeightData,
   WeightGroup,
-  weightsLoaderFactory,
   WeightsManifestConfig,
-  WeightsManifestEntry,
-  withSaveHandler,
-  withSaveHandlerSync,
+  WeightsManifestEntry
 };
+

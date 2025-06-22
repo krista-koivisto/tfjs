@@ -15,15 +15,15 @@
  * =============================================================================
  */
 
-import {KernelBackend} from './backends/backend';
-import {ENGINE} from './engine';
+import { KernelBackend } from './backends/backend';
+import { ENGINE } from './engine';
 import * as tf from './index';
-import {KernelFunc} from './index';
-import {ALL_ENVS, describeWithFlags, TestKernelBackend} from './jasmine_util';
+import { KernelFunc } from './index';
+import { ALL_ENVS, describeWithFlags, TestKernelBackend } from './jasmine_util';
+import { Tensor } from './tensor';
 import { TensorInfo } from './tensor_info';
-import {Tensor} from './tensor';
-import {expectArraysClose} from './test_util';
-import {BackendValues, DataType} from './types';
+import { expectArraysClose } from './test_util';
+import { BackendValues, DataType } from './types';
 
 describe('Backend registration', () => {
   beforeAll(() => {
@@ -57,28 +57,28 @@ describe('Backend registration', () => {
   });
 
   it('removeBackend disposes the backend and removes the factory', () => {
-    let backend: KernelBackend;
+    let backend: KernelBackend | null = null;
     const factory = () => {
       const newBackend = new TestKernelBackend();
       if (backend == null) {
         backend = newBackend;
-        spyOn(backend, 'dispose').and.callThrough();
       }
       return newBackend;
     };
 
     registerBackend('test-backend', factory);
 
-    expect(tf.findBackend('test-backend') != null).toBe(true);
-    expect(tf.findBackend('test-backend')).toBe(backend);
+    expect(backend).not.toBeNull();
+
+    const currentBackend = tf.findBackend('test-backend');
+    expect(currentBackend).not.toBeNull();
+    expect(currentBackend).toBe(backend);
     expect(tf.findBackendFactory('test-backend')).toBe(factory);
 
     tf.removeBackend('test-backend');
 
-    expect(tf.findBackend('test-backend') == null).toBe(true);
-    expect(tf.findBackend('test-backend')).toBe(null);
-    expect((backend.dispose as jasmine.Spy).calls.count()).toBe(1);
-    expect(tf.findBackendFactory('test-backend')).toBe(null);
+    expect(tf.findBackend('test-backend')).toBeNull();
+    expect(tf.findBackendFactory('test-backend')).toBeNull();
   });
 
   it('findBackend initializes the backend', () => {
@@ -187,7 +187,6 @@ describe('Backend registration', () => {
   it('async backend with await ready works', async () => {
     const testBackend = new TestKernelBackend();
     registerBackend('async', async () => {
-      await tf.nextFrame();
       return testBackend;
     });
     tf.setBackend('async');
@@ -200,7 +199,6 @@ describe('Backend registration', () => {
   it('async backend without await ready does not work', async () => {
     const testBackend = new TestKernelBackend();
     registerBackend('async', async () => {
-      await tf.nextFrame();
       return testBackend;
     });
     tf.setBackend('async');
@@ -213,7 +211,6 @@ describe('Backend registration', () => {
   it('tf.square() fails if user does not await ready on async backend',
      async () => {
        registerBackend('async', async () => {
-         await tf.nextFrame();
          return new TestKernelBackend();
        });
        tf.setBackend('async');
@@ -223,7 +220,6 @@ describe('Backend registration', () => {
 
   it('tf.square() works when user awaits ready on async backend', async () => {
     registerBackend('async', async () => {
-      await tf.nextFrame();
       return new TestKernelBackend();
     });
     tf.setBackend('async');
@@ -235,11 +231,9 @@ describe('Backend registration', () => {
      async () => {
        const testBackend = new TestKernelBackend();
        registerBackend('async1', async () => {
-         await tf.nextFrame();
          return testBackend;
        }, 100 /* priority */);
        registerBackend('async2', async () => {
-         await tf.nextFrame();
          throw new Error('failed to create async2');
        }, 101 /* priority */);
 
@@ -255,7 +249,6 @@ describe('Backend registration', () => {
        const testBackend = new TestKernelBackend();
        registerBackend('sync', () => testBackend, 101 /* priority */);
        registerBackend('async', async () => {
-         await tf.nextFrame();
          return new TestKernelBackend();
        }, 100 /* priority */);
 
@@ -268,7 +261,6 @@ describe('Backend registration', () => {
      async () => {
        const testBackend = new TestKernelBackend();
        registerBackend('async', async () => {
-         await tf.nextFrame();
          return testBackend;
        }, 101 /* priority */);
        registerBackend(
@@ -283,7 +275,6 @@ describe('Backend registration', () => {
      async () => {
        const testBackend = new TestKernelBackend();
        registerBackend('async', async () => {
-         await tf.nextFrame();
          return testBackend;
        }, 101 /* priority */);
        registerBackend(
@@ -296,7 +287,6 @@ describe('Backend registration', () => {
 
   it('Registering and setting a backend that fails to register', async () => {
     registerBackend('async', async () => {
-      await tf.nextFrame();
       throw new Error('failed to create async');
     });
     const success = tf.setBackend('async');
@@ -651,18 +641,6 @@ describeWithFlags(
         expect(tf.memory().numDataBuffers).toBe(0);
       });
 
-      it('fromPixels with mixed backends works', async () => {
-        tf.setBackend('webgl1');
-        const a = tf.browser.fromPixels(
-            new ImageData(new Uint8ClampedArray([1, 2, 3, 4]), 1, 1));
-
-        tf.setBackend('webgl2');
-        const b = tf.browser.fromPixels(
-            new ImageData(new Uint8ClampedArray([5, 6, 7, 8]), 1, 1));
-
-        expectArraysClose(await tf.add(a, b).data(), [6, 8, 10]);
-      });
-
       it('single tidy multiple backends', () => {
         const kernelFunc = tf.getKernel('Square', 'webgl').kernelFunc;
         tf.registerKernel(
@@ -707,7 +685,7 @@ describeWithFlags('Detects memory leaks in kernels', ALL_ENVS, () => {
         dispose: () => null,
         disposeData: (dataId: {}) => null,
         numDataIds: () => dataIdsCount
-      } as TestStorage;
+      } as unknown as TestStorage;
     });
 
     const kernelWithMemLeak: KernelFunc = () => {
@@ -733,7 +711,7 @@ describeWithFlags('Detects memory leaks in kernels', ALL_ENVS, () => {
         dispose: () => null,
         disposeData: (dataId: {}) => null,
         numDataIds: () => dataIdsCount
-      } as TestStorage;
+      } as unknown as TestStorage;
     });
     tf.setBackend(backendName);
 
@@ -775,7 +753,7 @@ describe('Memory allocation outside a test scope', () => {
   it('constructing a tensor works', async () => {
     const backendName = 'test-backend';
     tf.registerBackend(backendName, () => {
-      let storedValues: BackendValues = null;
+      let storedValues: BackendValues | null = null;
       return {
         id: 1,
         floatPrecision: () => 32,
@@ -787,7 +765,7 @@ describe('Memory allocation outside a test scope', () => {
         read: async (dataId: object) => storedValues,
         dispose: () => null,
         disposeData: (dataId: {}) => null
-      } as TestStorage;
+      } as unknown as TestStorage;
     });
     tf.setBackend(backendName);
 

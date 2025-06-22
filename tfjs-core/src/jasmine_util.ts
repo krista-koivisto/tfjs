@@ -22,11 +22,10 @@
 // tslint:disable-next-line:no-require-imports
 const jasmineRequire = require('jasmine-core/lib/jasmine-core/jasmine.js');
 const jasmineCore = jasmineRequire.core(jasmineRequire);
-import {KernelBackend} from './backends/backend';
-import {ENGINE} from './engine';
-import {env, Environment, Flags} from './environment';
-import {purgeLocalStorageArtifacts} from './io/local_storage';
-import {isPromise} from './util_base';
+import { KernelBackend } from './backends/backend';
+import { ENGINE } from './engine';
+import { env, Environment, Flags } from './environment';
+import { isPromise } from './util_base';
 
 Error.stackTraceLimit = Infinity;
 jasmineCore.DEFAULT_TIMEOUT_INTERVAL = 20000;
@@ -42,17 +41,13 @@ export const NODE_ENVS: Constraints = {
 export const CHROME_ENVS: Constraints = {
   flags: {'IS_CHROME': true}
 };
-export const BROWSER_ENVS: Constraints = {
-  predicate: () => env().platformName === 'browser'
-};
 
 export const SYNC_BACKEND_ENVS: Constraints = {
   predicate: (testEnv: TestEnv) => testEnv.isDataSync === true
 };
 
 export const HAS_WORKER = {
-  predicate: () => typeof (Worker) !== 'undefined' &&
-      typeof (Blob) !== 'undefined' && typeof (URL) !== 'undefined'
+  predicate: () => false
 };
 
 export const HAS_NODE_WORKER = {
@@ -312,7 +307,6 @@ export function runWithLock(spec: (done?: DoneFn) => Promise<void>| void) {
         };
       });
 
-      purgeLocalStorageArtifacts();
       const result = spec(done);
 
       if (isPromise(result)) {

@@ -16,8 +16,8 @@
  */
 
 import * as tf from '../index';
-import {ALL_ENVS, BROWSER_ENVS, describeWithFlags} from '../jasmine_util';
-import {expectArraysClose} from '../test_util';
+import { ALL_ENVS, describeWithFlags } from '../jasmine_util';
+import { expectArraysClose } from '../test_util';
 
 describeWithFlags('depthToSpace', ALL_ENVS, () => {
   it('tensor4d, input shape=[1, 1, 1, 4], blockSize=2, format=NHWC',
@@ -75,16 +75,5 @@ describeWithFlags('depthToSpace', ALL_ENVS, () => {
 
     expect(() => tf.depthToSpace(t, blockSize, dataFormat))
         .toThrowError(/Argument 'x' passed to 'depthToSpace' must be float32/);
-  });
-});
-
-describeWithFlags('depthToSpace', BROWSER_ENVS, () => {
-  it('throws when blocksize < 2', () => {
-    const t = tf.tensor4d([1, 2, 3, 4], [1, 1, 1, 4]);
-    const blockSize = 1;
-
-    expect(() => tf.depthToSpace(t, blockSize))
-        .toThrowError(
-            `blockSize should be > 1 for depthToSpace, but was: ${blockSize}`);
   });
 });

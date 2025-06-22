@@ -18,11 +18,11 @@
 // tslint:disable: variable-name
 // Unfortunately just enabling PascalCase per file (tslint:enable:
 // allow-pascal-case) doesn't work.
-import {NamedTensorInfoMap} from './kernel_registry';
-import {ExplicitPadding} from './ops/conv_util';
-import {Activation} from './ops/fused_types';
-import {TensorInfo} from './tensor_info';
-import {DataType, DrawOptions, PixelData} from './types';
+import { NamedTensorInfoMap } from './kernel_registry';
+import { ExplicitPadding } from './ops/conv_util';
+import { Activation } from './ops/fused_types';
+import { TensorInfo } from './tensor_info';
+import { DataType } from './types';
 
 export const Abs = 'Abs';
 export type AbsInputs = UnaryInputs;
@@ -334,13 +334,6 @@ export type Dilation2DBackpropInputInputs =
 export const Dilation2DBackpropFilter = 'Dilation2DBackpropFilter';
 export type Dilation2DBackpropFilterInputs =
     Pick<NamedTensorInfoMap, 'x'|'filter'|'dy'>;
-
-export const Draw = 'Draw';
-export type DrawInputs = Pick<NamedTensorInfoMap, 'image'>;
-export interface DrawAttrs {
-  canvas: HTMLCanvasElement;
-  options?: DrawOptions;
-}
 
 export const RealDiv = 'RealDiv';
 export type RealDivInputs = BinaryInputs;
@@ -978,15 +971,6 @@ export const Step = 'Step';
 export type StepInputs = UnaryInputs;
 export interface StepAttrs {
   alpha: number;
-}
-
-export const FromPixels = 'FromPixels';
-export interface FromPixelsInputs {
-  pixels: PixelData|ImageData|HTMLImageElement|HTMLCanvasElement|
-      HTMLVideoElement|ImageBitmap;
-}
-export interface FromPixelsAttrs {
-  numChannels: number;
 }
 
 export const RotateWithOffset = 'RotateWithOffset';

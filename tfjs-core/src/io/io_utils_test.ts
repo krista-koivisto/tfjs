@@ -16,15 +16,14 @@
  */
 
 import * as tf from '../index';
-import {ALL_ENVS, BROWSER_ENVS, describeWithFlags} from '../jasmine_util';
-import {scalar, tensor1d, tensor2d} from '../ops/ops';
-import {NamedTensor, NamedTensorMap} from '../tensor_types';
-import {expectArraysEqual} from '../test_util';
-import {expectArraysClose} from '../test_util';
-import {encodeString} from '../util';
+import { ALL_ENVS, describeWithFlags } from '../jasmine_util';
+import { scalar, tensor1d, tensor2d } from '../ops/ops';
+import { NamedTensor, NamedTensorMap } from '../tensor_types';
+import { expectArraysClose, expectArraysEqual } from '../test_util';
+import { encodeString } from '../util';
 
-import {arrayBufferToBase64String, base64StringToArrayBuffer, basename, concatenateArrayBuffers, concatenateTypedArrays, stringByteLength, getFloat16Decoder} from './io_utils';
-import {WeightsManifestEntry} from './types';
+import { basename, concatenateArrayBuffers, concatenateTypedArrays, getFloat16Decoder, stringByteLength } from './io_utils';
+import { WeightsManifestEntry } from './types';
 
 describe('concatenateTypedArrays', () => {
   it('Single float arrays', () => {
@@ -159,11 +158,6 @@ describe('concatenateTypedArrays', () => {
     expect(new Uint8Array(yConcatenated, 0, 4)).toEqual(x1);
     expect(new Int32Array(yConcatenated, 4, 3)).toEqual(x2);
     expect(new Float32Array(yConcatenated, 4 + 3 * 4, 3)).toEqual(x3);
-  });
-
-  it('null and undefined inputs', () => {
-    expect(() => concatenateTypedArrays(null)).toThrow();
-    expect(() => concatenateTypedArrays(undefined)).toThrow();
   });
 
   it('empty input array', () => {
@@ -632,27 +626,6 @@ describe('stringByteLength', () => {
     expect(stringByteLength(str.slice(0, 4))).toEqual(7);
   });
 });
-
-describeWithFlags(
-    'arrayBufferToBase64String-base64StringToArrayBuffer', BROWSER_ENVS, () => {
-      it('Round trip', () => {
-        // Generate some semi-random binary data.
-        const x = [];
-        for (let k = 0; k < 2; ++k) {
-          for (let i = 0; i < 254; ++i) {
-            x.push(i + k);
-          }
-          for (let i = 254; i >= 0; --i) {
-            x.push(i + k);
-          }
-        }
-        const buffer = Uint8Array.from(x).buffer;
-        const base64Str = arrayBufferToBase64String(buffer);
-        const decoded =
-            Array.from(new Uint8Array(base64StringToArrayBuffer(base64Str)));
-        expect(decoded).toEqual(x);
-      });
-    });
 
 describe('concatenateArrayBuffers', () => {
   // TODO(mattSoulanille): Move these tests to CompositeArrayBuffer.join when

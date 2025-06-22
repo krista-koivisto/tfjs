@@ -15,22 +15,21 @@
  * =============================================================================
  */
 
-import {BackendTimingInfo, DataMover, KernelBackend} from './backends/backend';
-import {Environment, setEnvironmentGlobal} from './environment';
-import {getGlobalNamespace} from './global_util';
-import {Add, Cast, Identity} from './kernel_names';
+import { BackendTimingInfo, DataMover, KernelBackend } from './backends/backend';
+import { Environment, setEnvironmentGlobal } from './environment';
+import { getGlobalNamespace } from './global_util';
+import { Add, Cast, Identity } from './kernel_names';
 import { getGradient, getKernel, getKernelsForBackend, GradFunc, NamedAttrMap } from './kernel_registry';
-import { TensorInfo } from './tensor_info';
 import * as log from './log';
-import {KernelProfile, Profiler} from './profiler';
-import {backpropagateGradients, getFilteredNodesXToY, TapeNode} from './tape';
-import {DataToGPUOptions, GPUData, setTensorTracker, Tensor, TensorTracker, Variable} from './tensor';
-import {DataId} from './tensor_info';
-import {GradSaveFunc, NamedTensorMap, NamedVariableMap, TensorContainer} from './tensor_types';
-import {getTensorsInContainer} from './tensor_util';
-import {BackendValues, DataType, DataValues} from './types';
+import { KernelProfile, Profiler } from './profiler';
+import { backpropagateGradients, getFilteredNodesXToY, TapeNode } from './tape';
+import { setTensorTracker, Tensor, TensorTracker, Variable } from './tensor';
+import { DataId, TensorInfo } from './tensor_info';
+import { GradSaveFunc, NamedTensorMap, NamedVariableMap, TensorContainer } from './tensor_types';
+import { getTensorsInContainer } from './tensor_util';
+import { BackendValues, DataType, DataValues } from './types';
 import * as util from './util';
-import {bytesFromStringArray, makeOnesTypedArray, now, sizeFromShape} from './util';
+import { bytesFromStringArray, makeOnesTypedArray, now, sizeFromShape } from './util';
 
 /**
  * A function that computes an output. The save function is for saving tensors
@@ -1224,12 +1223,6 @@ export class Engine implements TensorTracker, DataMover {
     // Route the read to the correct backend.
     const info = this.state.tensorInfo.get(dataId);
     return info.backend.read(dataId);
-  }
-
-  readToGPU(dataId: DataId, options?: DataToGPUOptions): GPUData {
-    // Route the read to the correct backend.
-    const info = this.state.tensorInfo.get(dataId);
-    return info.backend.readToGPU(dataId, options);
   }
 
   async time(query: () => void): Promise<TimingInfo> {

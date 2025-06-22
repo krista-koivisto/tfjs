@@ -14,8 +14,10 @@
  * limitations under the License.
  * =============================================================================
  */
-import {env} from '../environment';
-import {Platform} from './platform';
+import { TextEncoder, types as utilTypes } from 'node:util';
+import { env } from '../environment';
+import { Platform } from './platform';
+
 
 // We are wrapping this within an object so it can be stubbed by Jasmine.
 export const getNodeFetch = {
@@ -39,15 +41,11 @@ export function getSystemFetch(): FetchFn {
 
 export class PlatformNode implements Platform {
   private textEncoder: TextEncoder;
-  // tslint:disable-next-line:no-any
-  util: any;
 
   constructor() {
-    // tslint:disable-next-line:no-require-imports
-    this.util = require('util');
     // According to the spec, the built-in encoder can do only UTF-8 encoding.
     // https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder
-    this.textEncoder = new this.util.TextEncoder();
+    this.textEncoder = new TextEncoder();
   }
 
   fetch(path: string, requestInits?: RequestInit): Promise<Response> {
@@ -77,17 +75,17 @@ export class PlatformNode implements Platform {
     if (bytes.length === 0) {
       return '';
     }
-    return new this.util.TextDecoder(encoding).decode(bytes);
+    return new TextDecoder(encoding).decode(bytes);
   }
   isTypedArray(a: unknown): a is Float32Array | Int32Array | Uint8Array
     | Uint8ClampedArray {
-    return this.util.types.isFloat32Array(a)
-      || this.util.types.isInt32Array(a)
-      || this.util.types.isUint8Array(a)
-      || this.util.types.isUint8ClampedArray(a);
+    return utilTypes.isFloat32Array(a)
+      || utilTypes.isInt32Array(a)
+      || utilTypes.isUint8Array(a)
+      || utilTypes.isUint8ClampedArray(a);
   }
 }
 
-if (env().get('IS_NODE') && !env().get('IS_BROWSER')) {
+if (env().get('IS_NODE')) {
   env().setPlatform('node', new PlatformNode());
 }

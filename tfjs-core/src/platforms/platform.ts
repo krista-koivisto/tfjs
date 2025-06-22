@@ -15,12 +15,12 @@
  * =============================================================================
  */
 
-import {RequestDetails} from '../io/types';
+import { RequestDetails } from '../io/types';
 
 /**
  * At any given time a single platform is active and represents and
  * implementation of this interface. In practice, a platform is an environment
- * where TensorFlow.js can be executed, e.g. the browser or Node.js.
+ * where TensorFlow.js can be executed, e.g. Node.js.
  */
 export interface Platform {
   /**
@@ -34,8 +34,7 @@ export interface Platform {
 
   /**
    * Returns the current high-resolution time in milliseconds relative to an
-   * arbitrary time in the past. It works across different platforms (node.js,
-   * browsers).
+   * arbitrary time in the past.
    */
   now(): number;
 

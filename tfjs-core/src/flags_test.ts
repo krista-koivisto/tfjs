@@ -15,7 +15,6 @@
  * =============================================================================
  */
 
-import * as device_util from './device_util';
 import * as tf from './index';
 
 describe('DEBUG', () => {
@@ -39,28 +38,6 @@ describe('DEBUG', () => {
 
     expect(tf.env().getBool('DEBUG')).toBe(true);
     expect(consoleWarnSpy.calls.count()).toBe(1);
-  });
-});
-
-// TODO (yassogba) figure out why this spy is not working / fix this test.
-describe('IS_BROWSER', () => {
-  let isBrowser: boolean;
-  beforeEach(() => {
-    tf.env().reset();
-    spyOn(device_util, 'isBrowser').and.callFake(() => isBrowser);
-  });
-  afterAll(() => tf.env().reset());
-
-  // tslint:disable-next-line: ban
-  xit('isBrowser: true', () => {
-    isBrowser = true;
-    expect(tf.env().getBool('IS_BROWSER')).toBe(true);
-  });
-
-  // tslint:disable-next-line: ban
-  xit('isBrowser: false', () => {
-    isBrowser = false;
-    expect(tf.env().getBool('IS_BROWSER')).toBe(false);
   });
 });
 

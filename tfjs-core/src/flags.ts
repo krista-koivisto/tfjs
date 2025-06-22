@@ -16,8 +16,7 @@
  */
 import './engine';
 
-import * as device_util from './device_util';
-import {env} from './environment';
+import { env } from './environment';
 
 const ENV = env();
 
@@ -36,28 +35,8 @@ ENV.registerFlag('DEBUG', () => false, debugValue => {
 });
 
 /** Whether we are in a browser (as versus, say, node.js) environment. */
-ENV.registerFlag('IS_BROWSER', () => device_util.isBrowser());
+ENV.registerFlag('IS_NODE', () => true);
 
-/** Whether we are in a browser (as versus, say, node.js) environment. */
-ENV.registerFlag(
-    'IS_NODE',
-    () => (typeof process !== 'undefined') &&
-        (typeof process.versions !== 'undefined') &&
-        (typeof process.versions.node !== 'undefined'));
-
-/** Whether this browser is Chrome. */
-ENV.registerFlag(
-    'IS_CHROME',
-    () => typeof navigator !== 'undefined' && navigator != null &&
-        navigator.userAgent != null && /Chrome/.test(navigator.userAgent) &&
-        /Google Inc/.test(navigator.vendor));
-
-/** Whether this browser is Safari. */
-ENV.registerFlag(
-    'IS_SAFARI',
-    () => typeof navigator !== 'undefined' && navigator != null &&
-        navigator.userAgent != null && /Safari/.test(navigator.userAgent) &&
-        /Apple/.test(navigator.vendor));
 /**
  * True when the environment is "production" where we disable safety checks
  * to gain performance.

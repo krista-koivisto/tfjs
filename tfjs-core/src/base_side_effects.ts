@@ -18,21 +18,20 @@
 // Required side effectful code for tfjs-core
 
 // Set up Engine and ENV
-import {getOrMakeEngine} from './engine';
+import { getOrMakeEngine } from './engine';
 getOrMakeEngine();
 
 // Register backend-agnostic flags.
 import './flags';
 // Register platforms
-import './platforms/platform_browser';
 import './platforms/platform_node';
 
 // Set up OpHandler
-import {buffer} from './ops/buffer';
-import {cast} from './ops/cast';
-import {clone} from './ops/clone';
-import {print} from './ops/print';
-import {OpHandler, setOpHandler} from './tensor';
+import { buffer } from './ops/buffer';
+import { cast } from './ops/cast';
+import { clone } from './ops/clone';
+import { print } from './ops/print';
+import { OpHandler, setOpHandler } from './tensor';
 const opHandler: OpHandler = {
   buffer,
   cast,
