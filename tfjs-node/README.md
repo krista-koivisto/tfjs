@@ -154,36 +154,3 @@ yarn enable-gpu
 ## MNIST demo for Node.js
 
 See the [tfjs-examples repository](https://github.com/tensorflow/tfjs-examples/tree/master/mnist-node) for training the MNIST dataset using the Node.js bindings.
-
-### Optional: Build optimal TensorFlow from source
-
-To get the most optimal TensorFlow build that can take advantage of your specific hardware (AVX512, MKL-DNN), you can build the `libtensorflow` library from source:
-- [Install bazel](https://docs.bazel.build/versions/master/install.html)
-- Checkout the [main tensorflow repo](https://github.com/tensorflow/tensorflow) and follow the instructions in [here](https://www.tensorflow.org/install/source) with **one difference**: instead of building the pip package, build `libtensorflow`:
-
-```sh
-./configure
-bazel build --config=opt --config=monolithic //tensorflow/tools/lib_package:libtensorflow
-```
-
-The build might take a while and will produce a `bazel-bin/tensorflow/tools/lib_package/libtensorflow.tar.gz` file, which should be unpacked and replace the files in `deps` folder of `tfjs-node` repo:
-```sh
-cp bazel-bin/tensorflow/tools/lib_package/libtensorflow.tar.gz ~/myproject/node_modules/@tensorflow/tfjs-node/deps
-cd path-to-my-project/node_modules/@tensorflow/tfjs-node/deps
-tar -xf libtensorflow.tar.gz
-```
-
-If you want to publish an addon library with your own libtensorflow binary, you can host the custom libtensorflow binary and optional pre-compiled node addon module on the cloud service you choose, and add a `custom-binary.json` file in `scripts` folder with the following information:
-
-```js
-{
-  "tf-lib": "url-to-download-customized-binary",
-  "addon": {
-    "host": "host-of-pre-compiled-addon",
-    "remote_path": "remote-path-of-pre-compiled-addon",
-    "package_name": "file-name-of-pre-compile-addon"
-  }
-}
-```
-
-The installation scripts will automatically catch this file and use the custom libtensorflow binary and addon. If `addon` is not provided, the installation script will compile addon from source.

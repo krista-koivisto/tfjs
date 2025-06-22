@@ -22,38 +22,3 @@ import '@tensorflow/tfjs-core/dist/register_all_gradients';
 import '@tensorflow/tfjs-core/dist/public/chained_ops/register_all_chained_ops';
 
 export * from '@tensorflow/tfjs-core';
-// export { data };
-// export * from '@tensorflow/tfjs-layers';
-// export * from '@tensorflow/tfjs-converter';
-
-// Export data api as tf.data
-  // import * as data from '@tensorflow/tfjs-data';
-
-// Import and register backends.
-// export * from '@tensorflow/tfjs-backend-cpu';
-// export * from '@tensorflow/tfjs-backend-webgl';
-  // export * from '@tensorflow/tfjs-node';
-  // export * from '@tensorflow/tfjs-node-gpu';
-
-// Import versions of all sub-packages.
-  import { version_core } from '@tensorflow/tfjs-core';
-// import {version_cpu} from '@tensorflow/tfjs-backend-cpu';
-// import {version_webgl} from '@tensorflow/tfjs-backend-webgl';
-// import { version_data } from '@tensorflow/tfjs-data';
-// import { version_node } from '@tensorflow/tfjs-node';
-// import { version_node_gpu } from '@tensorflow/tfjs-node-gpu';
-// import {version_layers} from '@tensorflow/tfjs-layers';
-// import {version_converter} from '@tensorflow/tfjs-converter';
-import { version as version_union } from './version';
-
-export const version = {
-  'tfjs-core': version_core,
-  // 'tfjs-backend-cpu': version_cpu,
-  // 'tfjs-backend-webgl': version_webgl,
-  // 'tfjs-node': version_node,
-  // 'tfjs-node-gpu': version_node_gpu,
-  // 'tfjs-data': version_data,
-  // 'tfjs-layers': version_layers,
-  // 'tfjs-converter': version_converter,
-  'tfjs': version_union
-};

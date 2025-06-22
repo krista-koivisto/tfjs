@@ -1,6 +1,7 @@
 {
   "name": "@tensorflow/tfjs-node",
   "version": "4.22.9",
+  "license": "Apache-2.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,12 +11,8 @@
     "url": "https://github.com/tensorflow/tfjs.git",
     "directory": "tfjs-node"
   },
-  "license": "Apache-2.0",
-  "engines": {
-    "node": ">=8.11.0"
-  },
   "scripts": {
-    "build": "npx tsc -p . && npx mkdirp dist/proto && cp src/proto/api_pb.js dist/proto/api_pb.js",
+    "build": "npx tsc -p .",
     "clean": "rm -rf dist && rm -rf node_modules",
     "build:addon": "node-pre-gyp install --build-from-source",
     "install": "node scripts/install.cjs",
@@ -24,14 +21,14 @@
     "bump-version": "yarn version patch"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0"
+    "@types/node": "^18.0.0",
+    "progress": "^2.0.0"
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "1.0.9",
-    "@tensorflow/tfjs": "workspace:*",
-    "@tensorflow/tfjs-core": "workspace:*",
+    "@tensorflow/tfjs": "workspace:^",
+    "@tensorflow/tfjs-core": "workspace:^",
     "adm-zip": "^0.5.2",
-    "google-protobuf": "^3.9.2",
     "https-proxy-agent": "^2.2.1",
     "progress": "^2.0.0",
     "tar": "^6.2.1"

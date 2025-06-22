@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import {backend_util} from '@tensorflow/tfjs';
+import { backend_util } from '@tensorflow/tfjs';
 
 export declare class TensorMetadata {
   id: number;
@@ -49,18 +49,6 @@ export interface TFJSBinding {
       opName: string, opAttrs: TFEOpAttr[], inputTensorIds: number[],
       numOutputs: number): TensorMetadata[];
 
-  // Load a SavedModel from a path.
-  loadSavedModel(exportDir: string, tags: string): number;
-
-  // Remove a SavedModel from memory.
-  deleteSavedModel(savedModelId: number): void;
-
-  // Execute a SavedModel with input, returns an array of output TensorMetadata.
-  runSavedModel(
-      savedModelId: number, inputTensorIds: number[], inputOpNames: string,
-      outputOpNames: string): TensorMetadata[];
-
-  getNumOfSavedModels(): number;
   getNumOfTensors(): number;
   isUsingGpuDevice(): boolean;
 

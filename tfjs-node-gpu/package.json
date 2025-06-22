@@ -1,5 +1,6 @@
 {
   "name": "@tensorflow/tfjs-node-gpu",
+  "license": "Apache-2.0",
   "version": "4.22.9",
   "type": "module",
   "main": "dist/index.js",
@@ -10,18 +11,14 @@
     "url": "https://github.com/tensorflow/tfjs.git",
     "directory": "tfjs-node-gpu"
   },
-  "license": "Apache-2.0",
-  "engines": {
-    "node": ">=8.11.0"
-  },
   "scripts": {
     "preyalcpublish": "rm -rf lib/napi-v9/tensorflow{.dll,.lib}",
-    "build": "yarn clean && ncp ../tfjs-node/dist dist",
+    "build": "echo 'Nothing to build. If you want to build the addon, run `yarn build:addon`.'",
     "build:addon": "node-pre-gyp install --build-from-source",
-    "install": "node scripts/install.cjs gpu download",
+    "install": "yarn clean && ncp ../tfjs-node/src ./src && ncp ../tfjs-node/binding ./binding && ncp ../tfjs-node/scripts ./scripts && ncp ../tfjs-node/binding.gyp . && node scripts/install.cjs gpu download",
     "publish-local": "yalc publish --push",
     "unpublish-local": "yalc installations clean @tensorflow/tfjs-node-gpu",
-    "clean": "rm -rf dist && rm -rf node_modules",
+    "clean": "rm -rf dist && rm -rf src && rm -rf binding && rm -rf scripts && rm -rf binding.gyp && rm -rf node_modules",
     "bump-version": "yarn version patch"
   },
   "devDependencies": {
@@ -30,10 +27,9 @@
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "1.0.9",
-    "@tensorflow/tfjs": "workspace:*",
-    "@tensorflow/tfjs-core": "workspace:*",
+    "@tensorflow/tfjs": "workspace:^",
+    "@tensorflow/tfjs-core": "workspace:^",
     "adm-zip": "^0.5.2",
-    "google-protobuf": "^3.9.2",
     "https-proxy-agent": "^2.2.1",
     "progress": "^2.0.0",
     "tar": "^6.2.1"

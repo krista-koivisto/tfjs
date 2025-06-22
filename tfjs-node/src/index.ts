@@ -21,20 +21,21 @@ import './register_all_kernels';
 import * as tf from '@tensorflow/tfjs';
 import * as path from 'path';
 
-import { nodeFileSystemRouter } from './io/file_system';
 import * as nodeIo from './io/index';
 import { NodeJSKernelBackend } from './nodejs_kernel_backend';
 import { TFJSBinding } from './tfjs_binding';
-import * as nodeVersion from './version';
 
-// tslint:disable-next-line:no-require-imports
-const binary = require('@mapbox/node-pre-gyp');
+// Get the package name from the package.json file.
+import { name as packageName } from '../package.json';
+
+import binary from '@mapbox/node-pre-gyp';
+import fs from 'fs';
+
 const bindingPath =
     binary.find(path.resolve(path.join(__dirname, '/../package.json')));
 
 // Check if the node native addon module exists.
-// tslint:disable-next-line:no-require-imports
-const fs = require('fs');
+
 if (!fs.existsSync(bindingPath)) {
   throw new Error(
       `The Node.js native addon module (tfjs_binding.node) can not ` +
@@ -47,14 +48,20 @@ if (!fs.existsSync(bindingPath)) {
       `https://github.com/tensorflow/tfjs/blob/master/tfjs-node/` +
       `WINDOWS_TROUBLESHOOTING.md or file an issue.`);
 }
-// tslint:disable-next-line:no-require-imports
+
+/**
+ * TODO: Can we get rid of this `require`?
+ *
+ * ES-module import statements have to be static and resolve at compile time,
+ * but bindingPath is computed at runtime.
+ *
+ * Node’s dynamic import() returns a Promise and, as of today, does not reliably
+ * load native .node addons.
+ *
+ * require() is the officially supported way.
+ */
 const bindings = require(bindingPath);
 
-// Merge version and io namespaces.
-export const version = {
-  ...tf.version,
-  'tfjs-node': nodeVersion.version
-};
 export const io = {
   ...tf.io,
   ...nodeIo
@@ -62,24 +69,14 @@ export const io = {
 
 // Export all union package symbols
 export * from '@tensorflow/tfjs';
-export * from './node';
 
-// tslint:disable-next-line:no-require-imports
-const pjson = require('../package.json');
 
 // Side effects for default initialization of Node backend.
 tf.registerBackend('tensorflow', () => {
-  return new NodeJSKernelBackend(bindings as TFJSBinding, pjson.name);
+  return new NodeJSKernelBackend(bindings as TFJSBinding, packageName);
 }, 3 /* priority */);
 
 const success = tf.setBackend('tensorflow');
 if (!success) {
   throw new Error(`Could not initialize TensorFlow backend.`);
 }
-
-// Register the model saving and loading handlers for the 'file://' URL scheme.
-tf.io.registerLoadRouter(nodeFileSystemRouter);
-tf.io.registerSaveRouter(nodeFileSystemRouter);
-
-// Register the ProgbarLogger for Model.fit() at verbosity level 1.
-// tf.registerCallbackConstructor(1, ProgbarLogger);
