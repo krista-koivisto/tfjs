@@ -1,5 +1,4 @@
 {
-  "private": false,
   "scripts": {
     "build": "yarn workspaces foreach --all --topological run build",
     "clean": "yarn workspaces foreach --all run clean && rm -rf node_modules dist yarn.lock .yarn/cache .yarn/install-state.gz",

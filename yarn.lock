@@ -24,7 +24,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-core@workspace:^, @tensorflow/tfjs-core@workspace:tfjs-core":
+"@tensorflow/tfjs-core@workspace:*, @tensorflow/tfjs-core@workspace:tfjs-core":
   version: 0.0.0-use.local
   resolution: "@tensorflow/tfjs-core@workspace:tfjs-core"
   dependencies:
@@ -44,8 +44,8 @@ __metadata:
   resolution: "@tensorflow/tfjs-node-gpu@workspace:tfjs-node-gpu"
   dependencies:
     "@mapbox/node-pre-gyp": "npm:1.0.9"
-    "@tensorflow/tfjs": "workspace:^"
-    "@tensorflow/tfjs-core": "workspace:^"
+    "@tensorflow/tfjs": "workspace:*"
+    "@tensorflow/tfjs-core": "workspace:*"
     "@types/node": "npm:^18.0.0"
     adm-zip: "npm:^0.5.2"
     google-protobuf: "npm:^3.9.2"
@@ -61,8 +61,8 @@ __metadata:
   resolution: "@tensorflow/tfjs-node@workspace:tfjs-node"
   dependencies:
     "@mapbox/node-pre-gyp": "npm:1.0.9"
-    "@tensorflow/tfjs": "workspace:^"
-    "@tensorflow/tfjs-core": "workspace:^"
+    "@tensorflow/tfjs": "workspace:*"
+    "@tensorflow/tfjs-core": "workspace:*"
     "@types/node": "npm:^18.0.0"
     adm-zip: "npm:^0.5.2"
     google-protobuf: "npm:^3.9.2"
@@ -72,11 +72,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tensorflow/tfjs@workspace:^, @tensorflow/tfjs@workspace:tfjs":
+"@tensorflow/tfjs@workspace:*, @tensorflow/tfjs@workspace:tfjs":
   version: 0.0.0-use.local
   resolution: "@tensorflow/tfjs@workspace:tfjs"
   dependencies:
-    "@tensorflow/tfjs-core": "workspace:^"
+    "@tensorflow/tfjs-core": "workspace:*"
     argparse: "npm:^1.0.10"
     chalk: "npm:^4.1.0"
     core-js: "npm:3.29.1"

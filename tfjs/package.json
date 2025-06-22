@@ -9,7 +9,6 @@
   "unpkg": "dist/tf.min.js",
   "types": "dist/index.d.ts",
   "miniprogram": "dist/miniprogram",
-  "private": false,
   "bin": {
     "tfjs-custom-module": "dist/tools/custom_module/cli.js"
   },
