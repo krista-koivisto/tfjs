@@ -8,6 +8,8 @@ node_modules/
 *.log
 yalc.lock
 **/install-state.gz
+
+# Ignore NAPI build artifacts.
 build-tmp-napi-v*/
 
 # Ignore the src, binding, scripts of tfjs-node-gpu since those are copied over

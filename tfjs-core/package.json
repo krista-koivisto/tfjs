@@ -1,19 +1,16 @@
 {
   "name": "@tensorflow/tfjs-core",
   "version": "4.22.9",
+  "license": "Apache-2.0",
   "description": "Hardware-accelerated JavaScript library for machine intelligence",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "engines": {
-    "yarn": ">= 1.3.2"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/tensorflow/tfjs.git",
     "directory": "tfjs-core"
   },
-  "license": "Apache-2.0",
   "devDependencies": {
     "@types/jasmine": "~4.0.3"
   },
@@ -26,23 +23,8 @@
   },
   "dependencies": {
     "@types/long": "^4.0.1",
-    "@types/offscreencanvas": "~2019.7.0",
     "@types/seedrandom": "^2.4.28",
-    "@webgpu/types": "0.1.38",
     "long": "4.0.0",
-    "node-fetch": "~2.6.1",
     "seedrandom": "^3.0.5"
-  },
-  "browser": {
-    "crypto": false,
-    "node-fetch": false,
-    "util": false,
-    "worker_threads": false
-  },
-  "sideEffects": [
-    "./dist/index.js"
-  ],
-  "resolutions": {
-    "minimist": "1.2.6"
   }
 }
