@@ -21,8 +21,7 @@ import { backend_util, BackendTimingInfo, DataId, DataType, KernelBackend, Model
 import { encodeInt32ArrayAsInt64, Int64Scalar } from './int64_tensors';
 import { TensorMetadata, TFEOpAttr, TFJSBinding } from './tfjs_binding';
 
-// // tslint:disable-next-line:no-require-imports
-// const messages = require('./proto/api_pb');
+import messages from './proto/api_pb.js';
 
 type TensorData = {
   shape: number[],
@@ -579,36 +578,35 @@ export class NodeJSKernelBackend extends KernelBackend {
       // support these features. However, the trade-off is that we have to
       // implement our own "bucketization", and have to write the summary as a
       // protobuf message.
-      throw new Error('Not implemented');
-      // const content = new messages.HistogramPluginData().setVersion(0);
-      // const pluginData = new messages.SummaryMetadata.PluginData()
-      //                        .setPluginName('histograms')
-      //                        .setContent(content.serializeBinary());
-      // const summary = new messages.SummaryMetadata()
-      //                     .setPluginData(pluginData)
-      //                     .setDisplayName(null)
-      //                     .setSummaryDescription(description);
-      // const summaryTensor = scalar(summary.serializeBinary(), 'string');
-      // const nameTensor = scalar(name, 'string');
-      // const stepScalar = new Int64Scalar(step);
-      // const buckets = this.buckets(data, bucketCount);
-      // util.assert(
-      //     buckets.rank === 2 && buckets.shape[1] === 3,
-      //     () => `Expected buckets to have shape [k, 3], but they had shape ${
-      //         buckets.shape}`);
-      // util.assert(
-      //     buckets.dtype === 'float32',
-      //     () => `Expected buckets to have dtype float32, but they had dtype ${
-      //         buckets.dtype}`);
-      // const inputArgs: Array<Tensor|Int64Scalar> =
-      //     [resourceHandle, stepScalar, buckets, nameTensor, summaryTensor];
-      // const typeAttr = this.typeAttributeFromTensor(buckets);
-      // const opAttrs: TFEOpAttr[] =
-      //     [{name: 'T', type: this.binding.TF_ATTR_TYPE, value: typeAttr}];
-      // const ids = this.getInputTensorIds(inputArgs);
-      // this.binding.executeOp('WriteSummary', opAttrs, ids, 0);
-      // // release the tensorflow tensor for Int64Scalar value of step
-      // this.binding.deleteTensor(ids[1]);
+      const content = new messages.HistogramPluginData().setVersion(0);
+      const pluginData = new messages.SummaryMetadata.PluginData()
+                             .setPluginName('histograms')
+                             .setContent(content.serializeBinary());
+      const summary = new messages.SummaryMetadata()
+                          .setPluginData(pluginData)
+                          .setDisplayName(null)
+                          .setSummaryDescription(description);
+      const summaryTensor = scalar(summary.serializeBinary(), 'string');
+      const nameTensor = scalar(name, 'string');
+      const stepScalar = new Int64Scalar(step);
+      const buckets = this.buckets(data, bucketCount);
+      util.assert(
+          buckets.rank === 2 && buckets.shape[1] === 3,
+          () => `Expected buckets to have shape [k, 3], but they had shape ${
+              buckets.shape}`);
+      util.assert(
+          buckets.dtype === 'float32',
+          () => `Expected buckets to have dtype float32, but they had dtype ${
+              buckets.dtype}`);
+      const inputArgs: Array<Tensor|Int64Scalar> =
+          [resourceHandle, stepScalar, buckets, nameTensor, summaryTensor];
+      const typeAttr = this.typeAttributeFromTensor(buckets);
+      const opAttrs: TFEOpAttr[] =
+          [{name: 'T', type: this.binding.TF_ATTR_TYPE, value: typeAttr}];
+      const ids = this.getInputTensorIds(inputArgs);
+      this.binding.executeOp('WriteSummary', opAttrs, ids, 0);
+      // release the tensorflow tensor for Int64Scalar value of step
+      this.binding.deleteTensor(ids[1]);
     });
   }
 

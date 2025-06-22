@@ -1,6 +1,6 @@
 {
   "name": "@tensorflow/tfjs",
-  "version": "4.2.27",
+  "version": "4.22.9",
   "description": "An open-source machine learning framework.",
   "type": "module",
   "main": "dist/index.js",
@@ -9,6 +9,7 @@
   "unpkg": "dist/tf.min.js",
   "types": "dist/index.d.ts",
   "miniprogram": "dist/miniprogram",
+  "private": false,
   "bin": {
     "tfjs-custom-module": "dist/tools/custom_module/cli.js"
   },
@@ -21,13 +22,14 @@
     "typescript": "5.0.4"
   },
   "scripts": {
-    "build": "tsc -p .",
+    "build": "npx tsc -p .",
     "clean": "rm -rf dist && rm -rf node_modules",
     "publish-local": "yalc publish --push",
-    "bump-version": "yarn version patch"
+    "bump-version": "yarn version patch",
+    "unpublish-local": "yalc installations clean @tensorflow/tfjs"
   },
   "dependencies": {
-    "@tensorflow/tfjs-core": "workspace:^",
+    "@tensorflow/tfjs-core": "workspace:*",
     "argparse": "^1.0.10",
     "chalk": "^4.1.0",
     "core-js": "3.29.1",

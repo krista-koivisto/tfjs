@@ -42,6 +42,8 @@ e2e/benchmarks/browserstack-benchmark/benchmark_test_results.json
 tfjs-converter/python/tensorflowjs.egg-info
 tfjs-inference/binaries
 
+**/install-state.gz
+
 # Ignore the src, binding, scripts of tfjs-node-gpu since it is copied over when
 # building.
 /tfjs-node-gpu/src

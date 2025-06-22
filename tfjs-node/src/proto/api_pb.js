@@ -1,17 +1,7 @@
 // source: api.proto
-/**
- * @fileoverview
- * @enhanceable
- * @suppress {missingRequire} reports error on implicit type usages.
- * @suppress {messageConventions} JS Compiler reports an error if a variable or
- *     field starts with 'MSG_' and isn't a translatable message.
- * @public
- */
-// GENERATED CODE -- DO NOT EDIT!
-/* eslint-disable */
-// @ts-nocheck
 
-var jspb = require('google-protobuf');
+import jspb, { BinaryReader, BinaryWriter, Map, Message } from 'google-protobuf';
+
 var goog = jspb;
 var global = Function('return this')();
 
@@ -74,9 +64,9 @@ goog.exportSymbol('proto.tensorflow.VersionDef', null, global);
  * @constructor
  */
 proto.tensorflow.Any = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.Any, jspb.Message);
+goog.inherits(proto.tensorflow.Any, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -95,9 +85,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.TensorShape = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.TensorShape.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.TensorShape.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.TensorShape, jspb.Message);
+goog.inherits(proto.tensorflow.TensorShape, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -116,9 +106,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.TensorShape.Dim = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.TensorShape.Dim, jspb.Message);
+goog.inherits(proto.tensorflow.TensorShape.Dim, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -137,9 +127,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.Tensor = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.Tensor.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.Tensor.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.Tensor, jspb.Message);
+goog.inherits(proto.tensorflow.Tensor, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -158,9 +148,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.AttrValue = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.AttrValue.oneofGroups_);
+  Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.AttrValue.oneofGroups_);
 };
-goog.inherits(proto.tensorflow.AttrValue, jspb.Message);
+goog.inherits(proto.tensorflow.AttrValue, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -179,9 +169,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.AttrValue.ListValue = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.AttrValue.ListValue.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.AttrValue.ListValue.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.AttrValue.ListValue, jspb.Message);
+goog.inherits(proto.tensorflow.AttrValue.ListValue, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -200,9 +190,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.NameAttrList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.NameAttrList, jspb.Message);
+goog.inherits(proto.tensorflow.NameAttrList, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -221,9 +211,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.NodeDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.NodeDef.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.NodeDef.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.NodeDef, jspb.Message);
+goog.inherits(proto.tensorflow.NodeDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -242,9 +232,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.VersionDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.VersionDef.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.VersionDef.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.VersionDef, jspb.Message);
+goog.inherits(proto.tensorflow.VersionDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -263,9 +253,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.GraphDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.GraphDef.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.GraphDef.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.GraphDef, jspb.Message);
+goog.inherits(proto.tensorflow.GraphDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -284,9 +274,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.CollectionDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.CollectionDef.oneofGroups_);
+  Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.CollectionDef.oneofGroups_);
 };
-goog.inherits(proto.tensorflow.CollectionDef, jspb.Message);
+goog.inherits(proto.tensorflow.CollectionDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -305,9 +295,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.CollectionDef.NodeList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.NodeList.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.NodeList.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.CollectionDef.NodeList, jspb.Message);
+goog.inherits(proto.tensorflow.CollectionDef.NodeList, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -326,9 +316,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.CollectionDef.BytesList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.BytesList.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.BytesList.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.CollectionDef.BytesList, jspb.Message);
+goog.inherits(proto.tensorflow.CollectionDef.BytesList, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -347,9 +337,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.CollectionDef.Int64List = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.Int64List.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.Int64List.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.CollectionDef.Int64List, jspb.Message);
+goog.inherits(proto.tensorflow.CollectionDef.Int64List, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -368,9 +358,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.CollectionDef.FloatList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.FloatList.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.FloatList.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.CollectionDef.FloatList, jspb.Message);
+goog.inherits(proto.tensorflow.CollectionDef.FloatList, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -389,9 +379,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.CollectionDef.AnyList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.AnyList.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.CollectionDef.AnyList.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.CollectionDef.AnyList, jspb.Message);
+goog.inherits(proto.tensorflow.CollectionDef.AnyList, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -410,9 +400,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.SaverDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.SaverDef, jspb.Message);
+goog.inherits(proto.tensorflow.SaverDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -431,9 +421,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.TensorInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.TensorInfo.oneofGroups_);
+  Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.TensorInfo.oneofGroups_);
 };
-goog.inherits(proto.tensorflow.TensorInfo, jspb.Message);
+goog.inherits(proto.tensorflow.TensorInfo, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -452,9 +442,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.TensorInfo.CooSparse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.TensorInfo.CooSparse, jspb.Message);
+goog.inherits(proto.tensorflow.TensorInfo.CooSparse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -473,9 +463,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.SignatureDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.SignatureDef, jspb.Message);
+goog.inherits(proto.tensorflow.SignatureDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -494,9 +484,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.AssetFileDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.AssetFileDef, jspb.Message);
+goog.inherits(proto.tensorflow.AssetFileDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -515,9 +505,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.OpDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.OpDef.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.OpDef.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.OpDef, jspb.Message);
+goog.inherits(proto.tensorflow.OpDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -536,9 +526,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.OpDef.ArgDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.OpDef.ArgDef, jspb.Message);
+goog.inherits(proto.tensorflow.OpDef.ArgDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -557,9 +547,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.OpDef.AttrDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.OpDef.AttrDef, jspb.Message);
+goog.inherits(proto.tensorflow.OpDef.AttrDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -578,9 +568,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.OpDef.OpDeprecation = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.OpDef.OpDeprecation, jspb.Message);
+goog.inherits(proto.tensorflow.OpDef.OpDeprecation, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -599,9 +589,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.OpList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.OpList.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.OpList.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.OpList, jspb.Message);
+goog.inherits(proto.tensorflow.OpList, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -620,9 +610,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.MetaGraphDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.MetaGraphDef.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.MetaGraphDef.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.MetaGraphDef, jspb.Message);
+goog.inherits(proto.tensorflow.MetaGraphDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -641,9 +631,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.MetaGraphDef.MetaInfoDef.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.MetaGraphDef.MetaInfoDef.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.MetaGraphDef.MetaInfoDef, jspb.Message);
+goog.inherits(proto.tensorflow.MetaGraphDef.MetaInfoDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -662,9 +652,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.SavedModel = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.SavedModel.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.SavedModel.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.SavedModel, jspb.Message);
+goog.inherits(proto.tensorflow.SavedModel, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -683,9 +673,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.FunctionDefLibrary = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.FunctionDefLibrary.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.FunctionDefLibrary.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.FunctionDefLibrary, jspb.Message);
+goog.inherits(proto.tensorflow.FunctionDefLibrary, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -704,9 +694,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.FunctionDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.FunctionDef.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.FunctionDef.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.FunctionDef, jspb.Message);
+goog.inherits(proto.tensorflow.FunctionDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -725,9 +715,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.GradientDef = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.GradientDef, jspb.Message);
+goog.inherits(proto.tensorflow.GradientDef, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -746,9 +736,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.SummaryDescription = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.SummaryDescription, jspb.Message);
+goog.inherits(proto.tensorflow.SummaryDescription, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -767,9 +757,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.HistogramProto = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.HistogramProto.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.HistogramProto.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.HistogramProto, jspb.Message);
+goog.inherits(proto.tensorflow.HistogramProto, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -788,9 +778,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.SummaryMetadata = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.SummaryMetadata, jspb.Message);
+goog.inherits(proto.tensorflow.SummaryMetadata, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -809,9 +799,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.SummaryMetadata.PluginData = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.SummaryMetadata.PluginData, jspb.Message);
+goog.inherits(proto.tensorflow.SummaryMetadata.PluginData, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -830,9 +820,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.Summary = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.tensorflow.Summary.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.tensorflow.Summary.repeatedFields_, null);
 };
-goog.inherits(proto.tensorflow.Summary, jspb.Message);
+goog.inherits(proto.tensorflow.Summary, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -851,9 +841,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.Summary.Image = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.Summary.Image, jspb.Message);
+goog.inherits(proto.tensorflow.Summary.Image, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -872,9 +862,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.Summary.Audio = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.Summary.Audio, jspb.Message);
+goog.inherits(proto.tensorflow.Summary.Audio, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -893,9 +883,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.Summary.Value = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.Summary.Value.oneofGroups_);
+  Message.initialize(this, opt_data, 0, -1, null, proto.tensorflow.Summary.Value.oneofGroups_);
 };
-goog.inherits(proto.tensorflow.Summary.Value, jspb.Message);
+goog.inherits(proto.tensorflow.Summary.Value, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -914,9 +904,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.tensorflow.HistogramPluginData = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.tensorflow.HistogramPluginData, jspb.Message);
+goog.inherits(proto.tensorflow.HistogramPluginData, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -927,7 +917,7 @@ if (goog.DEBUG && !COMPILED) {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -956,7 +946,7 @@ proto.tensorflow.Any.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.Any.toObject = function(includeInstance, msg) {
   var f, obj = {
-    typeUrl: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    typeUrl: Message.getFieldWithDefault(msg, 1, ""),
     value: msg.getValue_asB64()
   };
 
@@ -974,7 +964,7 @@ proto.tensorflow.Any.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.Any}
  */
 proto.tensorflow.Any.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.Any;
   return proto.tensorflow.Any.deserializeBinaryFromReader(msg, reader);
 };
@@ -1016,7 +1006,7 @@ proto.tensorflow.Any.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.Any.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.Any.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1053,7 +1043,7 @@ proto.tensorflow.Any.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.tensorflow.Any.prototype.getTypeUrl = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1062,7 +1052,7 @@ proto.tensorflow.Any.prototype.getTypeUrl = function() {
  * @return {!proto.tensorflow.Any} returns this
  */
 proto.tensorflow.Any.prototype.setTypeUrl = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1071,7 +1061,7 @@ proto.tensorflow.Any.prototype.setTypeUrl = function(value) {
  * @return {!(string|Uint8Array)}
  */
 proto.tensorflow.Any.prototype.getValue = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -1081,7 +1071,7 @@ proto.tensorflow.Any.prototype.getValue = function() {
  * @return {string}
  */
 proto.tensorflow.Any.prototype.getValue_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
+  return /** @type {string} */ (Message.bytesAsB64(
       this.getValue()));
 };
 
@@ -1094,7 +1084,7 @@ proto.tensorflow.Any.prototype.getValue_asB64 = function() {
  * @return {!Uint8Array}
  */
 proto.tensorflow.Any.prototype.getValue_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+  return /** @type {!Uint8Array} */ (Message.bytesAsU8(
       this.getValue()));
 };
 
@@ -1104,7 +1094,7 @@ proto.tensorflow.Any.prototype.getValue_asU8 = function() {
  * @return {!proto.tensorflow.Any} returns this
  */
 proto.tensorflow.Any.prototype.setValue = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
+  return Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -1118,7 +1108,7 @@ proto.tensorflow.TensorShape.repeatedFields_ = [2];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1147,9 +1137,9 @@ proto.tensorflow.TensorShape.prototype.toObject = function(opt_includeInstance) 
  */
 proto.tensorflow.TensorShape.toObject = function(includeInstance, msg) {
   var f, obj = {
-    dimList: jspb.Message.toObjectList(msg.getDimList(),
+    dimList: Message.toObjectList(msg.getDimList(),
     proto.tensorflow.TensorShape.Dim.toObject, includeInstance),
-    unknownRank: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
+    unknownRank: Message.getBooleanFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -1166,7 +1156,7 @@ proto.tensorflow.TensorShape.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.TensorShape}
  */
 proto.tensorflow.TensorShape.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.TensorShape;
   return proto.tensorflow.TensorShape.deserializeBinaryFromReader(msg, reader);
 };
@@ -1209,7 +1199,7 @@ proto.tensorflow.TensorShape.deserializeBinaryFromReader = function(msg, reader)
  * @return {!Uint8Array}
  */
 proto.tensorflow.TensorShape.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.TensorShape.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1245,7 +1235,7 @@ proto.tensorflow.TensorShape.serializeBinaryToWriter = function(message, writer)
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1274,8 +1264,8 @@ proto.tensorflow.TensorShape.Dim.prototype.toObject = function(opt_includeInstan
  */
 proto.tensorflow.TensorShape.Dim.toObject = function(includeInstance, msg) {
   var f, obj = {
-    size: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 2, "")
+    size: Message.getFieldWithDefault(msg, 1, 0),
+    name: Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -1292,7 +1282,7 @@ proto.tensorflow.TensorShape.Dim.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.TensorShape.Dim}
  */
 proto.tensorflow.TensorShape.Dim.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.TensorShape.Dim;
   return proto.tensorflow.TensorShape.Dim.deserializeBinaryFromReader(msg, reader);
 };
@@ -1334,7 +1324,7 @@ proto.tensorflow.TensorShape.Dim.deserializeBinaryFromReader = function(msg, rea
  * @return {!Uint8Array}
  */
 proto.tensorflow.TensorShape.Dim.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.TensorShape.Dim.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1371,7 +1361,7 @@ proto.tensorflow.TensorShape.Dim.serializeBinaryToWriter = function(message, wri
  * @return {number}
  */
 proto.tensorflow.TensorShape.Dim.prototype.getSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -1380,7 +1370,7 @@ proto.tensorflow.TensorShape.Dim.prototype.getSize = function() {
  * @return {!proto.tensorflow.TensorShape.Dim} returns this
  */
 proto.tensorflow.TensorShape.Dim.prototype.setSize = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -1389,7 +1379,7 @@ proto.tensorflow.TensorShape.Dim.prototype.setSize = function(value) {
  * @return {string}
  */
 proto.tensorflow.TensorShape.Dim.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -1398,7 +1388,7 @@ proto.tensorflow.TensorShape.Dim.prototype.getName = function() {
  * @return {!proto.tensorflow.TensorShape.Dim} returns this
  */
 proto.tensorflow.TensorShape.Dim.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1408,7 +1398,7 @@ proto.tensorflow.TensorShape.Dim.prototype.setName = function(value) {
  */
 proto.tensorflow.TensorShape.prototype.getDimList = function() {
   return /** @type{!Array<!proto.tensorflow.TensorShape.Dim>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.TensorShape.Dim, 2));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.TensorShape.Dim, 2));
 };
 
 
@@ -1417,7 +1407,7 @@ proto.tensorflow.TensorShape.prototype.getDimList = function() {
  * @return {!proto.tensorflow.TensorShape} returns this
 */
 proto.tensorflow.TensorShape.prototype.setDimList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+  return Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
@@ -1427,7 +1417,7 @@ proto.tensorflow.TensorShape.prototype.setDimList = function(value) {
  * @return {!proto.tensorflow.TensorShape.Dim}
  */
 proto.tensorflow.TensorShape.prototype.addDim = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.TensorShape.Dim, opt_index);
+  return Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.TensorShape.Dim, opt_index);
 };
 
 
@@ -1445,7 +1435,7 @@ proto.tensorflow.TensorShape.prototype.clearDimList = function() {
  * @return {boolean}
  */
 proto.tensorflow.TensorShape.prototype.getUnknownRank = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
 
@@ -1454,7 +1444,7 @@ proto.tensorflow.TensorShape.prototype.getUnknownRank = function() {
  * @return {!proto.tensorflow.TensorShape} returns this
  */
 proto.tensorflow.TensorShape.prototype.setUnknownRank = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
+  return Message.setProto3BooleanField(this, 3, value);
 };
 
 
@@ -1468,7 +1458,7 @@ proto.tensorflow.Tensor.repeatedFields_ = [5,6,7,8,9,10,11,16,17];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1497,19 +1487,19 @@ proto.tensorflow.Tensor.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.Tensor.toObject = function(includeInstance, msg) {
   var f, obj = {
-    dtype: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    dtype: Message.getFieldWithDefault(msg, 1, 0),
     tensorShape: (f = msg.getTensorShape()) && proto.tensorflow.TensorShape.toObject(includeInstance, f),
-    versionNumber: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    versionNumber: Message.getFieldWithDefault(msg, 3, 0),
     tensorContent: msg.getTensorContent_asB64(),
-    floatValList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 5)) == null ? undefined : f,
-    doubleValList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 6)) == null ? undefined : f,
-    intValList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
+    floatValList: (f = Message.getRepeatedFloatingPointField(msg, 5)) == null ? undefined : f,
+    doubleValList: (f = Message.getRepeatedFloatingPointField(msg, 6)) == null ? undefined : f,
+    intValList: (f = Message.getRepeatedField(msg, 7)) == null ? undefined : f,
     stringValList: msg.getStringValList_asB64(),
-    scomplexValList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 9)) == null ? undefined : f,
-    int64ValList: (f = jspb.Message.getRepeatedField(msg, 10)) == null ? undefined : f,
-    boolValList: (f = jspb.Message.getRepeatedBooleanField(msg, 11)) == null ? undefined : f,
-    uint32ValList: (f = jspb.Message.getRepeatedField(msg, 16)) == null ? undefined : f,
-    uint64ValList: (f = jspb.Message.getRepeatedField(msg, 17)) == null ? undefined : f
+    scomplexValList: (f = Message.getRepeatedFloatingPointField(msg, 9)) == null ? undefined : f,
+    int64ValList: (f = Message.getRepeatedField(msg, 10)) == null ? undefined : f,
+    boolValList: (f = Message.getRepeatedBooleanField(msg, 11)) == null ? undefined : f,
+    uint32ValList: (f = Message.getRepeatedField(msg, 16)) == null ? undefined : f,
+    uint64ValList: (f = Message.getRepeatedField(msg, 17)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1526,7 +1516,7 @@ proto.tensorflow.Tensor.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.Tensor}
  */
 proto.tensorflow.Tensor.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.Tensor;
   return proto.tensorflow.Tensor.deserializeBinaryFromReader(msg, reader);
 };
@@ -1629,7 +1619,7 @@ proto.tensorflow.Tensor.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.Tensor.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.Tensor.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1744,7 +1734,7 @@ proto.tensorflow.Tensor.serializeBinaryToWriter = function(message, writer) {
  * @return {!proto.tensorflow.DataType}
  */
 proto.tensorflow.Tensor.prototype.getDtype = function() {
-  return /** @type {!proto.tensorflow.DataType} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {!proto.tensorflow.DataType} */ (Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -1753,7 +1743,7 @@ proto.tensorflow.Tensor.prototype.getDtype = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setDtype = function(value) {
-  return jspb.Message.setProto3EnumField(this, 1, value);
+  return Message.setProto3EnumField(this, 1, value);
 };
 
 
@@ -1763,7 +1753,7 @@ proto.tensorflow.Tensor.prototype.setDtype = function(value) {
  */
 proto.tensorflow.Tensor.prototype.getTensorShape = function() {
   return /** @type{?proto.tensorflow.TensorShape} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.TensorShape, 2));
+    Message.getWrapperField(this, proto.tensorflow.TensorShape, 2));
 };
 
 
@@ -1772,7 +1762,7 @@ proto.tensorflow.Tensor.prototype.getTensorShape = function() {
  * @return {!proto.tensorflow.Tensor} returns this
 */
 proto.tensorflow.Tensor.prototype.setTensorShape = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
+  return Message.setWrapperField(this, 2, value);
 };
 
 
@@ -1790,7 +1780,7 @@ proto.tensorflow.Tensor.prototype.clearTensorShape = function() {
  * @return {boolean}
  */
 proto.tensorflow.Tensor.prototype.hasTensorShape = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
@@ -1799,7 +1789,7 @@ proto.tensorflow.Tensor.prototype.hasTensorShape = function() {
  * @return {number}
  */
 proto.tensorflow.Tensor.prototype.getVersionNumber = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -1808,7 +1798,7 @@ proto.tensorflow.Tensor.prototype.getVersionNumber = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setVersionNumber = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -1817,7 +1807,7 @@ proto.tensorflow.Tensor.prototype.setVersionNumber = function(value) {
  * @return {!(string|Uint8Array)}
  */
 proto.tensorflow.Tensor.prototype.getTensorContent = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {!(string|Uint8Array)} */ (Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -1827,7 +1817,7 @@ proto.tensorflow.Tensor.prototype.getTensorContent = function() {
  * @return {string}
  */
 proto.tensorflow.Tensor.prototype.getTensorContent_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
+  return /** @type {string} */ (Message.bytesAsB64(
       this.getTensorContent()));
 };
 
@@ -1840,7 +1830,7 @@ proto.tensorflow.Tensor.prototype.getTensorContent_asB64 = function() {
  * @return {!Uint8Array}
  */
 proto.tensorflow.Tensor.prototype.getTensorContent_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+  return /** @type {!Uint8Array} */ (Message.bytesAsU8(
       this.getTensorContent()));
 };
 
@@ -1850,7 +1840,7 @@ proto.tensorflow.Tensor.prototype.getTensorContent_asU8 = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setTensorContent = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+  return Message.setProto3BytesField(this, 4, value);
 };
 
 
@@ -1859,7 +1849,7 @@ proto.tensorflow.Tensor.prototype.setTensorContent = function(value) {
  * @return {!Array<number>}
  */
 proto.tensorflow.Tensor.prototype.getFloatValList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 5));
+  return /** @type {!Array<number>} */ (Message.getRepeatedFloatingPointField(this, 5));
 };
 
 
@@ -1868,7 +1858,7 @@ proto.tensorflow.Tensor.prototype.getFloatValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setFloatValList = function(value) {
-  return jspb.Message.setField(this, 5, value || []);
+  return Message.setField(this, 5, value || []);
 };
 
 
@@ -1878,7 +1868,7 @@ proto.tensorflow.Tensor.prototype.setFloatValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addFloatVal = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+  return Message.addToRepeatedField(this, 5, value, opt_index);
 };
 
 
@@ -1896,7 +1886,7 @@ proto.tensorflow.Tensor.prototype.clearFloatValList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.Tensor.prototype.getDoubleValList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 6));
+  return /** @type {!Array<number>} */ (Message.getRepeatedFloatingPointField(this, 6));
 };
 
 
@@ -1905,7 +1895,7 @@ proto.tensorflow.Tensor.prototype.getDoubleValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setDoubleValList = function(value) {
-  return jspb.Message.setField(this, 6, value || []);
+  return Message.setField(this, 6, value || []);
 };
 
 
@@ -1915,7 +1905,7 @@ proto.tensorflow.Tensor.prototype.setDoubleValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addDoubleVal = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+  return Message.addToRepeatedField(this, 6, value, opt_index);
 };
 
 
@@ -1933,7 +1923,7 @@ proto.tensorflow.Tensor.prototype.clearDoubleValList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.Tensor.prototype.getIntValList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 7));
+  return /** @type {!Array<number>} */ (Message.getRepeatedField(this, 7));
 };
 
 
@@ -1942,7 +1932,7 @@ proto.tensorflow.Tensor.prototype.getIntValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setIntValList = function(value) {
-  return jspb.Message.setField(this, 7, value || []);
+  return Message.setField(this, 7, value || []);
 };
 
 
@@ -1952,7 +1942,7 @@ proto.tensorflow.Tensor.prototype.setIntValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addIntVal = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+  return Message.addToRepeatedField(this, 7, value, opt_index);
 };
 
 
@@ -1970,7 +1960,7 @@ proto.tensorflow.Tensor.prototype.clearIntValList = function() {
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
 proto.tensorflow.Tensor.prototype.getStringValList = function() {
-  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 8));
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (Message.getRepeatedField(this, 8));
 };
 
 
@@ -1980,7 +1970,7 @@ proto.tensorflow.Tensor.prototype.getStringValList = function() {
  * @return {!Array<string>}
  */
 proto.tensorflow.Tensor.prototype.getStringValList_asB64 = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
+  return /** @type {!Array<string>} */ (Message.bytesListAsB64(
       this.getStringValList()));
 };
 
@@ -1993,7 +1983,7 @@ proto.tensorflow.Tensor.prototype.getStringValList_asB64 = function() {
  * @return {!Array<!Uint8Array>}
  */
 proto.tensorflow.Tensor.prototype.getStringValList_asU8 = function() {
-  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+  return /** @type {!Array<!Uint8Array>} */ (Message.bytesListAsU8(
       this.getStringValList()));
 };
 
@@ -2003,7 +1993,7 @@ proto.tensorflow.Tensor.prototype.getStringValList_asU8 = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setStringValList = function(value) {
-  return jspb.Message.setField(this, 8, value || []);
+  return Message.setField(this, 8, value || []);
 };
 
 
@@ -2013,7 +2003,7 @@ proto.tensorflow.Tensor.prototype.setStringValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addStringVal = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 8, value, opt_index);
+  return Message.addToRepeatedField(this, 8, value, opt_index);
 };
 
 
@@ -2031,7 +2021,7 @@ proto.tensorflow.Tensor.prototype.clearStringValList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.Tensor.prototype.getScomplexValList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 9));
+  return /** @type {!Array<number>} */ (Message.getRepeatedFloatingPointField(this, 9));
 };
 
 
@@ -2040,7 +2030,7 @@ proto.tensorflow.Tensor.prototype.getScomplexValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setScomplexValList = function(value) {
-  return jspb.Message.setField(this, 9, value || []);
+  return Message.setField(this, 9, value || []);
 };
 
 
@@ -2050,7 +2040,7 @@ proto.tensorflow.Tensor.prototype.setScomplexValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addScomplexVal = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+  return Message.addToRepeatedField(this, 9, value, opt_index);
 };
 
 
@@ -2068,7 +2058,7 @@ proto.tensorflow.Tensor.prototype.clearScomplexValList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.Tensor.prototype.getInt64ValList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 10));
+  return /** @type {!Array<number>} */ (Message.getRepeatedField(this, 10));
 };
 
 
@@ -2077,7 +2067,7 @@ proto.tensorflow.Tensor.prototype.getInt64ValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setInt64ValList = function(value) {
-  return jspb.Message.setField(this, 10, value || []);
+  return Message.setField(this, 10, value || []);
 };
 
 
@@ -2087,7 +2077,7 @@ proto.tensorflow.Tensor.prototype.setInt64ValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addInt64Val = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 10, value, opt_index);
+  return Message.addToRepeatedField(this, 10, value, opt_index);
 };
 
 
@@ -2105,7 +2095,7 @@ proto.tensorflow.Tensor.prototype.clearInt64ValList = function() {
  * @return {!Array<boolean>}
  */
 proto.tensorflow.Tensor.prototype.getBoolValList = function() {
-  return /** @type {!Array<boolean>} */ (jspb.Message.getRepeatedBooleanField(this, 11));
+  return /** @type {!Array<boolean>} */ (Message.getRepeatedBooleanField(this, 11));
 };
 
 
@@ -2114,7 +2104,7 @@ proto.tensorflow.Tensor.prototype.getBoolValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setBoolValList = function(value) {
-  return jspb.Message.setField(this, 11, value || []);
+  return Message.setField(this, 11, value || []);
 };
 
 
@@ -2124,7 +2114,7 @@ proto.tensorflow.Tensor.prototype.setBoolValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addBoolVal = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 11, value, opt_index);
+  return Message.addToRepeatedField(this, 11, value, opt_index);
 };
 
 
@@ -2142,7 +2132,7 @@ proto.tensorflow.Tensor.prototype.clearBoolValList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.Tensor.prototype.getUint32ValList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 16));
+  return /** @type {!Array<number>} */ (Message.getRepeatedField(this, 16));
 };
 
 
@@ -2151,7 +2141,7 @@ proto.tensorflow.Tensor.prototype.getUint32ValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setUint32ValList = function(value) {
-  return jspb.Message.setField(this, 16, value || []);
+  return Message.setField(this, 16, value || []);
 };
 
 
@@ -2161,7 +2151,7 @@ proto.tensorflow.Tensor.prototype.setUint32ValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addUint32Val = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 16, value, opt_index);
+  return Message.addToRepeatedField(this, 16, value, opt_index);
 };
 
 
@@ -2179,7 +2169,7 @@ proto.tensorflow.Tensor.prototype.clearUint32ValList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.Tensor.prototype.getUint64ValList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 17));
+  return /** @type {!Array<number>} */ (Message.getRepeatedField(this, 17));
 };
 
 
@@ -2188,7 +2178,7 @@ proto.tensorflow.Tensor.prototype.getUint64ValList = function() {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.setUint64ValList = function(value) {
-  return jspb.Message.setField(this, 17, value || []);
+  return Message.setField(this, 17, value || []);
 };
 
 
@@ -2198,7 +2188,7 @@ proto.tensorflow.Tensor.prototype.setUint64ValList = function(value) {
  * @return {!proto.tensorflow.Tensor} returns this
  */
 proto.tensorflow.Tensor.prototype.addUint64Val = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 17, value, opt_index);
+  return Message.addToRepeatedField(this, 17, value, opt_index);
 };
 
 
@@ -2243,12 +2233,12 @@ proto.tensorflow.AttrValue.ValueCase = {
  * @return {proto.tensorflow.AttrValue.ValueCase}
  */
 proto.tensorflow.AttrValue.prototype.getValueCase = function() {
-  return /** @type {proto.tensorflow.AttrValue.ValueCase} */(jspb.Message.computeOneofCase(this, proto.tensorflow.AttrValue.oneofGroups_[0]));
+  return /** @type {proto.tensorflow.AttrValue.ValueCase} */(Message.computeOneofCase(this, proto.tensorflow.AttrValue.oneofGroups_[0]));
 };
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -2279,13 +2269,13 @@ proto.tensorflow.AttrValue.toObject = function(includeInstance, msg) {
   var f, obj = {
     list: (f = msg.getList()) && proto.tensorflow.AttrValue.ListValue.toObject(includeInstance, f),
     s: msg.getS_asB64(),
-    i: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    f: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
-    b: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
-    type: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    i: Message.getFieldWithDefault(msg, 3, 0),
+    f: Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    b: Message.getBooleanFieldWithDefault(msg, 5, false),
+    type: Message.getFieldWithDefault(msg, 6, 0),
     shape: (f = msg.getShape()) && proto.tensorflow.TensorShape.toObject(includeInstance, f),
     tensor: (f = msg.getTensor()) && proto.tensorflow.Tensor.toObject(includeInstance, f),
-    placeholder: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    placeholder: Message.getFieldWithDefault(msg, 9, ""),
     func: (f = msg.getFunc()) && proto.tensorflow.NameAttrList.toObject(includeInstance, f)
   };
 
@@ -2303,7 +2293,7 @@ proto.tensorflow.AttrValue.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.AttrValue}
  */
 proto.tensorflow.AttrValue.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.AttrValue;
   return proto.tensorflow.AttrValue.deserializeBinaryFromReader(msg, reader);
 };
@@ -2381,7 +2371,7 @@ proto.tensorflow.AttrValue.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.AttrValue.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.AttrValue.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -2404,35 +2394,35 @@ proto.tensorflow.AttrValue.serializeBinaryToWriter = function(message, writer) {
       proto.tensorflow.AttrValue.ListValue.serializeBinaryToWriter
     );
   }
-  f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 2));
+  f = /** @type {!(string|Uint8Array)} */ (Message.getField(message, 2));
   if (f != null) {
     writer.writeBytes(
       2,
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 3));
+  f = /** @type {number} */ (Message.getField(message, 3));
   if (f != null) {
     writer.writeInt64(
       3,
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 4));
+  f = /** @type {number} */ (Message.getField(message, 4));
   if (f != null) {
     writer.writeFloat(
       4,
       f
     );
   }
-  f = /** @type {boolean} */ (jspb.Message.getField(message, 5));
+  f = /** @type {boolean} */ (Message.getField(message, 5));
   if (f != null) {
     writer.writeBool(
       5,
       f
     );
   }
-  f = /** @type {!proto.tensorflow.DataType} */ (jspb.Message.getField(message, 6));
+  f = /** @type {!proto.tensorflow.DataType} */ (Message.getField(message, 6));
   if (f != null) {
     writer.writeEnum(
       6,
@@ -2455,7 +2445,7 @@ proto.tensorflow.AttrValue.serializeBinaryToWriter = function(message, writer) {
       proto.tensorflow.Tensor.serializeBinaryToWriter
     );
   }
-  f = /** @type {string} */ (jspb.Message.getField(message, 9));
+  f = /** @type {string} */ (Message.getField(message, 9));
   if (f != null) {
     writer.writeString(
       9,
@@ -2483,7 +2473,7 @@ proto.tensorflow.AttrValue.ListValue.repeatedFields_ = [2,3,4,5,6,7,8,9];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -2513,15 +2503,15 @@ proto.tensorflow.AttrValue.ListValue.prototype.toObject = function(opt_includeIn
 proto.tensorflow.AttrValue.ListValue.toObject = function(includeInstance, msg) {
   var f, obj = {
     sList: msg.getSList_asB64(),
-    iList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    fList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 4)) == null ? undefined : f,
-    bList: (f = jspb.Message.getRepeatedBooleanField(msg, 5)) == null ? undefined : f,
-    typeList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
-    shapeList: jspb.Message.toObjectList(msg.getShapeList(),
+    iList: (f = Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    fList: (f = Message.getRepeatedFloatingPointField(msg, 4)) == null ? undefined : f,
+    bList: (f = Message.getRepeatedBooleanField(msg, 5)) == null ? undefined : f,
+    typeList: (f = Message.getRepeatedField(msg, 6)) == null ? undefined : f,
+    shapeList: Message.toObjectList(msg.getShapeList(),
     proto.tensorflow.TensorShape.toObject, includeInstance),
-    tensorList: jspb.Message.toObjectList(msg.getTensorList(),
+    tensorList: Message.toObjectList(msg.getTensorList(),
     proto.tensorflow.Tensor.toObject, includeInstance),
-    funcList: jspb.Message.toObjectList(msg.getFuncList(),
+    funcList: Message.toObjectList(msg.getFuncList(),
     proto.tensorflow.NameAttrList.toObject, includeInstance)
   };
 
@@ -2539,7 +2529,7 @@ proto.tensorflow.AttrValue.ListValue.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.AttrValue.ListValue}
  */
 proto.tensorflow.AttrValue.ListValue.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.AttrValue.ListValue;
   return proto.tensorflow.AttrValue.ListValue.deserializeBinaryFromReader(msg, reader);
 };
@@ -2616,7 +2606,7 @@ proto.tensorflow.AttrValue.ListValue.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.AttrValue.ListValue.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -2698,7 +2688,7 @@ proto.tensorflow.AttrValue.ListValue.serializeBinaryToWriter = function(message,
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getSList = function() {
-  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 2));
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (Message.getRepeatedField(this, 2));
 };
 
 
@@ -2708,7 +2698,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getSList = function() {
  * @return {!Array<string>}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getSList_asB64 = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
+  return /** @type {!Array<string>} */ (Message.bytesListAsB64(
       this.getSList()));
 };
 
@@ -2721,7 +2711,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getSList_asB64 = function() {
  * @return {!Array<!Uint8Array>}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getSList_asU8 = function() {
-  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+  return /** @type {!Array<!Uint8Array>} */ (Message.bytesListAsU8(
       this.getSList()));
 };
 
@@ -2731,7 +2721,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getSList_asU8 = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.setSList = function(value) {
-  return jspb.Message.setField(this, 2, value || []);
+  return Message.setField(this, 2, value || []);
 };
 
 
@@ -2741,7 +2731,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setSList = function(value) {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addS = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+  return Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
@@ -2759,7 +2749,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearSList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getIList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 3));
+  return /** @type {!Array<number>} */ (Message.getRepeatedField(this, 3));
 };
 
 
@@ -2768,7 +2758,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getIList = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.setIList = function(value) {
-  return jspb.Message.setField(this, 3, value || []);
+  return Message.setField(this, 3, value || []);
 };
 
 
@@ -2778,7 +2768,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setIList = function(value) {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addI = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+  return Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 
@@ -2796,7 +2786,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearIList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getFList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 4));
+  return /** @type {!Array<number>} */ (Message.getRepeatedFloatingPointField(this, 4));
 };
 
 
@@ -2805,7 +2795,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getFList = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.setFList = function(value) {
-  return jspb.Message.setField(this, 4, value || []);
+  return Message.setField(this, 4, value || []);
 };
 
 
@@ -2815,7 +2805,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setFList = function(value) {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addF = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+  return Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
 
@@ -2833,7 +2823,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearFList = function() {
  * @return {!Array<boolean>}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getBList = function() {
-  return /** @type {!Array<boolean>} */ (jspb.Message.getRepeatedBooleanField(this, 5));
+  return /** @type {!Array<boolean>} */ (Message.getRepeatedBooleanField(this, 5));
 };
 
 
@@ -2842,7 +2832,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getBList = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.setBList = function(value) {
-  return jspb.Message.setField(this, 5, value || []);
+  return Message.setField(this, 5, value || []);
 };
 
 
@@ -2852,7 +2842,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setBList = function(value) {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addB = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+  return Message.addToRepeatedField(this, 5, value, opt_index);
 };
 
 
@@ -2870,7 +2860,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearBList = function() {
  * @return {!Array<!proto.tensorflow.DataType>}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getTypeList = function() {
-  return /** @type {!Array<!proto.tensorflow.DataType>} */ (jspb.Message.getRepeatedField(this, 6));
+  return /** @type {!Array<!proto.tensorflow.DataType>} */ (Message.getRepeatedField(this, 6));
 };
 
 
@@ -2879,7 +2869,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getTypeList = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.setTypeList = function(value) {
-  return jspb.Message.setField(this, 6, value || []);
+  return Message.setField(this, 6, value || []);
 };
 
 
@@ -2889,7 +2879,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setTypeList = function(value) {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addType = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+  return Message.addToRepeatedField(this, 6, value, opt_index);
 };
 
 
@@ -2908,7 +2898,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearTypeList = function() {
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getShapeList = function() {
   return /** @type{!Array<!proto.tensorflow.TensorShape>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.TensorShape, 7));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.TensorShape, 7));
 };
 
 
@@ -2917,7 +2907,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getShapeList = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
 */
 proto.tensorflow.AttrValue.ListValue.prototype.setShapeList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 7, value);
+  return Message.setRepeatedWrapperField(this, 7, value);
 };
 
 
@@ -2927,7 +2917,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setShapeList = function(value) {
  * @return {!proto.tensorflow.TensorShape}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addShape = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.tensorflow.TensorShape, opt_index);
+  return Message.addToRepeatedWrapperField(this, 7, opt_value, proto.tensorflow.TensorShape, opt_index);
 };
 
 
@@ -2946,7 +2936,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearShapeList = function() {
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getTensorList = function() {
   return /** @type{!Array<!proto.tensorflow.Tensor>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.Tensor, 8));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.Tensor, 8));
 };
 
 
@@ -2955,7 +2945,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getTensorList = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
 */
 proto.tensorflow.AttrValue.ListValue.prototype.setTensorList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 8, value);
+  return Message.setRepeatedWrapperField(this, 8, value);
 };
 
 
@@ -2965,7 +2955,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setTensorList = function(value) {
  * @return {!proto.tensorflow.Tensor}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addTensor = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 8, opt_value, proto.tensorflow.Tensor, opt_index);
+  return Message.addToRepeatedWrapperField(this, 8, opt_value, proto.tensorflow.Tensor, opt_index);
 };
 
 
@@ -2984,7 +2974,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearTensorList = function() {
  */
 proto.tensorflow.AttrValue.ListValue.prototype.getFuncList = function() {
   return /** @type{!Array<!proto.tensorflow.NameAttrList>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.NameAttrList, 9));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.NameAttrList, 9));
 };
 
 
@@ -2993,7 +2983,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.getFuncList = function() {
  * @return {!proto.tensorflow.AttrValue.ListValue} returns this
 */
 proto.tensorflow.AttrValue.ListValue.prototype.setFuncList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+  return Message.setRepeatedWrapperField(this, 9, value);
 };
 
 
@@ -3003,7 +2993,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.setFuncList = function(value) {
  * @return {!proto.tensorflow.NameAttrList}
  */
 proto.tensorflow.AttrValue.ListValue.prototype.addFunc = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.tensorflow.NameAttrList, opt_index);
+  return Message.addToRepeatedWrapperField(this, 9, opt_value, proto.tensorflow.NameAttrList, opt_index);
 };
 
 
@@ -3022,7 +3012,7 @@ proto.tensorflow.AttrValue.ListValue.prototype.clearFuncList = function() {
  */
 proto.tensorflow.AttrValue.prototype.getList = function() {
   return /** @type{?proto.tensorflow.AttrValue.ListValue} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.AttrValue.ListValue, 1));
+    Message.getWrapperField(this, proto.tensorflow.AttrValue.ListValue, 1));
 };
 
 
@@ -3031,7 +3021,7 @@ proto.tensorflow.AttrValue.prototype.getList = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
 */
 proto.tensorflow.AttrValue.prototype.setList = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 1, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 1, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3049,7 +3039,7 @@ proto.tensorflow.AttrValue.prototype.clearList = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasList = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
@@ -3058,7 +3048,7 @@ proto.tensorflow.AttrValue.prototype.hasList = function() {
  * @return {!(string|Uint8Array)}
  */
 proto.tensorflow.AttrValue.prototype.getS = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -3068,7 +3058,7 @@ proto.tensorflow.AttrValue.prototype.getS = function() {
  * @return {string}
  */
 proto.tensorflow.AttrValue.prototype.getS_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
+  return /** @type {string} */ (Message.bytesAsB64(
       this.getS()));
 };
 
@@ -3081,7 +3071,7 @@ proto.tensorflow.AttrValue.prototype.getS_asB64 = function() {
  * @return {!Uint8Array}
  */
 proto.tensorflow.AttrValue.prototype.getS_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+  return /** @type {!Uint8Array} */ (Message.bytesAsU8(
       this.getS()));
 };
 
@@ -3091,7 +3081,7 @@ proto.tensorflow.AttrValue.prototype.getS_asU8 = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.setS = function(value) {
-  return jspb.Message.setOneofField(this, 2, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofField(this, 2, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3100,7 +3090,7 @@ proto.tensorflow.AttrValue.prototype.setS = function(value) {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.clearS = function() {
-  return jspb.Message.setOneofField(this, 2, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 2, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
 };
 
 
@@ -3109,7 +3099,7 @@ proto.tensorflow.AttrValue.prototype.clearS = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasS = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
@@ -3118,7 +3108,7 @@ proto.tensorflow.AttrValue.prototype.hasS = function() {
  * @return {number}
  */
 proto.tensorflow.AttrValue.prototype.getI = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -3127,7 +3117,7 @@ proto.tensorflow.AttrValue.prototype.getI = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.setI = function(value) {
-  return jspb.Message.setOneofField(this, 3, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofField(this, 3, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3136,7 +3126,7 @@ proto.tensorflow.AttrValue.prototype.setI = function(value) {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.clearI = function() {
-  return jspb.Message.setOneofField(this, 3, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 3, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
 };
 
 
@@ -3145,7 +3135,7 @@ proto.tensorflow.AttrValue.prototype.clearI = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasI = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return Message.getField(this, 3) != null;
 };
 
 
@@ -3154,7 +3144,7 @@ proto.tensorflow.AttrValue.prototype.hasI = function() {
  * @return {number}
  */
 proto.tensorflow.AttrValue.prototype.getF = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
 };
 
 
@@ -3163,7 +3153,7 @@ proto.tensorflow.AttrValue.prototype.getF = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.setF = function(value) {
-  return jspb.Message.setOneofField(this, 4, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofField(this, 4, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3172,7 +3162,7 @@ proto.tensorflow.AttrValue.prototype.setF = function(value) {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.clearF = function() {
-  return jspb.Message.setOneofField(this, 4, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 4, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
 };
 
 
@@ -3181,7 +3171,7 @@ proto.tensorflow.AttrValue.prototype.clearF = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasF = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return Message.getField(this, 4) != null;
 };
 
 
@@ -3190,7 +3180,7 @@ proto.tensorflow.AttrValue.prototype.hasF = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.getB = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
 
@@ -3199,7 +3189,7 @@ proto.tensorflow.AttrValue.prototype.getB = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.setB = function(value) {
-  return jspb.Message.setOneofField(this, 5, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofField(this, 5, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3208,7 +3198,7 @@ proto.tensorflow.AttrValue.prototype.setB = function(value) {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.clearB = function() {
-  return jspb.Message.setOneofField(this, 5, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 5, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
 };
 
 
@@ -3217,7 +3207,7 @@ proto.tensorflow.AttrValue.prototype.clearB = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasB = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return Message.getField(this, 5) != null;
 };
 
 
@@ -3226,7 +3216,7 @@ proto.tensorflow.AttrValue.prototype.hasB = function() {
  * @return {!proto.tensorflow.DataType}
  */
 proto.tensorflow.AttrValue.prototype.getType = function() {
-  return /** @type {!proto.tensorflow.DataType} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+  return /** @type {!proto.tensorflow.DataType} */ (Message.getFieldWithDefault(this, 6, 0));
 };
 
 
@@ -3235,7 +3225,7 @@ proto.tensorflow.AttrValue.prototype.getType = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.setType = function(value) {
-  return jspb.Message.setOneofField(this, 6, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofField(this, 6, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3244,7 +3234,7 @@ proto.tensorflow.AttrValue.prototype.setType = function(value) {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.clearType = function() {
-  return jspb.Message.setOneofField(this, 6, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 6, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
 };
 
 
@@ -3253,7 +3243,7 @@ proto.tensorflow.AttrValue.prototype.clearType = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasType = function() {
-  return jspb.Message.getField(this, 6) != null;
+  return Message.getField(this, 6) != null;
 };
 
 
@@ -3263,7 +3253,7 @@ proto.tensorflow.AttrValue.prototype.hasType = function() {
  */
 proto.tensorflow.AttrValue.prototype.getShape = function() {
   return /** @type{?proto.tensorflow.TensorShape} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.TensorShape, 7));
+    Message.getWrapperField(this, proto.tensorflow.TensorShape, 7));
 };
 
 
@@ -3272,7 +3262,7 @@ proto.tensorflow.AttrValue.prototype.getShape = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
 */
 proto.tensorflow.AttrValue.prototype.setShape = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 7, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 7, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3290,7 +3280,7 @@ proto.tensorflow.AttrValue.prototype.clearShape = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasShape = function() {
-  return jspb.Message.getField(this, 7) != null;
+  return Message.getField(this, 7) != null;
 };
 
 
@@ -3300,7 +3290,7 @@ proto.tensorflow.AttrValue.prototype.hasShape = function() {
  */
 proto.tensorflow.AttrValue.prototype.getTensor = function() {
   return /** @type{?proto.tensorflow.Tensor} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.Tensor, 8));
+    Message.getWrapperField(this, proto.tensorflow.Tensor, 8));
 };
 
 
@@ -3309,7 +3299,7 @@ proto.tensorflow.AttrValue.prototype.getTensor = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
 */
 proto.tensorflow.AttrValue.prototype.setTensor = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 8, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 8, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3327,7 +3317,7 @@ proto.tensorflow.AttrValue.prototype.clearTensor = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasTensor = function() {
-  return jspb.Message.getField(this, 8) != null;
+  return Message.getField(this, 8) != null;
 };
 
 
@@ -3336,7 +3326,7 @@ proto.tensorflow.AttrValue.prototype.hasTensor = function() {
  * @return {string}
  */
 proto.tensorflow.AttrValue.prototype.getPlaceholder = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 9, ""));
 };
 
 
@@ -3345,7 +3335,7 @@ proto.tensorflow.AttrValue.prototype.getPlaceholder = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.setPlaceholder = function(value) {
-  return jspb.Message.setOneofField(this, 9, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofField(this, 9, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3354,7 +3344,7 @@ proto.tensorflow.AttrValue.prototype.setPlaceholder = function(value) {
  * @return {!proto.tensorflow.AttrValue} returns this
  */
 proto.tensorflow.AttrValue.prototype.clearPlaceholder = function() {
-  return jspb.Message.setOneofField(this, 9, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 9, proto.tensorflow.AttrValue.oneofGroups_[0], undefined);
 };
 
 
@@ -3363,7 +3353,7 @@ proto.tensorflow.AttrValue.prototype.clearPlaceholder = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasPlaceholder = function() {
-  return jspb.Message.getField(this, 9) != null;
+  return Message.getField(this, 9) != null;
 };
 
 
@@ -3373,7 +3363,7 @@ proto.tensorflow.AttrValue.prototype.hasPlaceholder = function() {
  */
 proto.tensorflow.AttrValue.prototype.getFunc = function() {
   return /** @type{?proto.tensorflow.NameAttrList} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.NameAttrList, 10));
+    Message.getWrapperField(this, proto.tensorflow.NameAttrList, 10));
 };
 
 
@@ -3382,7 +3372,7 @@ proto.tensorflow.AttrValue.prototype.getFunc = function() {
  * @return {!proto.tensorflow.AttrValue} returns this
 */
 proto.tensorflow.AttrValue.prototype.setFunc = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 10, proto.tensorflow.AttrValue.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 10, proto.tensorflow.AttrValue.oneofGroups_[0], value);
 };
 
 
@@ -3400,14 +3390,14 @@ proto.tensorflow.AttrValue.prototype.clearFunc = function() {
  * @return {boolean}
  */
 proto.tensorflow.AttrValue.prototype.hasFunc = function() {
-  return jspb.Message.getField(this, 10) != null;
+  return Message.getField(this, 10) != null;
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -3436,7 +3426,7 @@ proto.tensorflow.NameAttrList.prototype.toObject = function(opt_includeInstance)
  */
 proto.tensorflow.NameAttrList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: Message.getFieldWithDefault(msg, 1, ""),
     attrMap: (f = msg.getAttrMap()) ? f.toObject(includeInstance, proto.tensorflow.AttrValue.toObject) : []
   };
 
@@ -3454,7 +3444,7 @@ proto.tensorflow.NameAttrList.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.NameAttrList}
  */
 proto.tensorflow.NameAttrList.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.NameAttrList;
   return proto.tensorflow.NameAttrList.deserializeBinaryFromReader(msg, reader);
 };
@@ -3481,7 +3471,7 @@ proto.tensorflow.NameAttrList.deserializeBinaryFromReader = function(msg, reader
     case 2:
       var value = msg.getAttrMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.tensorflow.AttrValue.deserializeBinaryFromReader, "", new proto.tensorflow.AttrValue());
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readMessage, proto.tensorflow.AttrValue.deserializeBinaryFromReader, "", new proto.tensorflow.AttrValue());
          });
       break;
     default:
@@ -3498,7 +3488,7 @@ proto.tensorflow.NameAttrList.deserializeBinaryFromReader = function(msg, reader
  * @return {!Uint8Array}
  */
 proto.tensorflow.NameAttrList.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.NameAttrList.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -3522,7 +3512,7 @@ proto.tensorflow.NameAttrList.serializeBinaryToWriter = function(message, writer
   }
   f = message.getAttrMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.tensorflow.AttrValue.serializeBinaryToWriter);
+    f.serializeBinary(2, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeMessage, proto.tensorflow.AttrValue.serializeBinaryToWriter);
   }
 };
 
@@ -3532,7 +3522,7 @@ proto.tensorflow.NameAttrList.serializeBinaryToWriter = function(message, writer
  * @return {string}
  */
 proto.tensorflow.NameAttrList.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -3541,7 +3531,7 @@ proto.tensorflow.NameAttrList.prototype.getName = function() {
  * @return {!proto.tensorflow.NameAttrList} returns this
  */
 proto.tensorflow.NameAttrList.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3553,7 +3543,7 @@ proto.tensorflow.NameAttrList.prototype.setName = function(value) {
  */
 proto.tensorflow.NameAttrList.prototype.getAttrMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.tensorflow.AttrValue>} */ (
-      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
+      Message.getMapField(this, 2, opt_noLazyCreate,
       proto.tensorflow.AttrValue));
 };
 
@@ -3577,7 +3567,7 @@ proto.tensorflow.NodeDef.repeatedFields_ = [3];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -3606,10 +3596,10 @@ proto.tensorflow.NodeDef.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.NodeDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    op: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    inputList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    device: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    name: Message.getFieldWithDefault(msg, 1, ""),
+    op: Message.getFieldWithDefault(msg, 2, ""),
+    inputList: (f = Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+    device: Message.getFieldWithDefault(msg, 4, ""),
     attrMap: (f = msg.getAttrMap()) ? f.toObject(includeInstance, proto.tensorflow.AttrValue.toObject) : []
   };
 
@@ -3627,7 +3617,7 @@ proto.tensorflow.NodeDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.NodeDef}
  */
 proto.tensorflow.NodeDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.NodeDef;
   return proto.tensorflow.NodeDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -3666,7 +3656,7 @@ proto.tensorflow.NodeDef.deserializeBinaryFromReader = function(msg, reader) {
     case 5:
       var value = msg.getAttrMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.tensorflow.AttrValue.deserializeBinaryFromReader, "", new proto.tensorflow.AttrValue());
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readMessage, proto.tensorflow.AttrValue.deserializeBinaryFromReader, "", new proto.tensorflow.AttrValue());
          });
       break;
     default:
@@ -3683,7 +3673,7 @@ proto.tensorflow.NodeDef.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.NodeDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.NodeDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -3728,7 +3718,7 @@ proto.tensorflow.NodeDef.serializeBinaryToWriter = function(message, writer) {
   }
   f = message.getAttrMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.tensorflow.AttrValue.serializeBinaryToWriter);
+    f.serializeBinary(5, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeMessage, proto.tensorflow.AttrValue.serializeBinaryToWriter);
   }
 };
 
@@ -3738,7 +3728,7 @@ proto.tensorflow.NodeDef.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.tensorflow.NodeDef.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -3747,7 +3737,7 @@ proto.tensorflow.NodeDef.prototype.getName = function() {
  * @return {!proto.tensorflow.NodeDef} returns this
  */
 proto.tensorflow.NodeDef.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3756,7 +3746,7 @@ proto.tensorflow.NodeDef.prototype.setName = function(value) {
  * @return {string}
  */
 proto.tensorflow.NodeDef.prototype.getOp = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -3765,7 +3755,7 @@ proto.tensorflow.NodeDef.prototype.getOp = function() {
  * @return {!proto.tensorflow.NodeDef} returns this
  */
 proto.tensorflow.NodeDef.prototype.setOp = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -3774,7 +3764,7 @@ proto.tensorflow.NodeDef.prototype.setOp = function(value) {
  * @return {!Array<string>}
  */
 proto.tensorflow.NodeDef.prototype.getInputList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
+  return /** @type {!Array<string>} */ (Message.getRepeatedField(this, 3));
 };
 
 
@@ -3783,7 +3773,7 @@ proto.tensorflow.NodeDef.prototype.getInputList = function() {
  * @return {!proto.tensorflow.NodeDef} returns this
  */
 proto.tensorflow.NodeDef.prototype.setInputList = function(value) {
-  return jspb.Message.setField(this, 3, value || []);
+  return Message.setField(this, 3, value || []);
 };
 
 
@@ -3793,7 +3783,7 @@ proto.tensorflow.NodeDef.prototype.setInputList = function(value) {
  * @return {!proto.tensorflow.NodeDef} returns this
  */
 proto.tensorflow.NodeDef.prototype.addInput = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+  return Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 
@@ -3811,7 +3801,7 @@ proto.tensorflow.NodeDef.prototype.clearInputList = function() {
  * @return {string}
  */
 proto.tensorflow.NodeDef.prototype.getDevice = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -3820,7 +3810,7 @@ proto.tensorflow.NodeDef.prototype.getDevice = function() {
  * @return {!proto.tensorflow.NodeDef} returns this
  */
 proto.tensorflow.NodeDef.prototype.setDevice = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+  return Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -3832,7 +3822,7 @@ proto.tensorflow.NodeDef.prototype.setDevice = function(value) {
  */
 proto.tensorflow.NodeDef.prototype.getAttrMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.tensorflow.AttrValue>} */ (
-      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
+      Message.getMapField(this, 5, opt_noLazyCreate,
       proto.tensorflow.AttrValue));
 };
 
@@ -3856,7 +3846,7 @@ proto.tensorflow.VersionDef.repeatedFields_ = [3];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -3885,9 +3875,9 @@ proto.tensorflow.VersionDef.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.VersionDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    producer: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    minConsumer: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    badConsumersList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f
+    producer: Message.getFieldWithDefault(msg, 1, 0),
+    minConsumer: Message.getFieldWithDefault(msg, 2, 0),
+    badConsumersList: (f = Message.getRepeatedField(msg, 3)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3904,7 +3894,7 @@ proto.tensorflow.VersionDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.VersionDef}
  */
 proto.tensorflow.VersionDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.VersionDef;
   return proto.tensorflow.VersionDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -3952,7 +3942,7 @@ proto.tensorflow.VersionDef.deserializeBinaryFromReader = function(msg, reader) 
  * @return {!Uint8Array}
  */
 proto.tensorflow.VersionDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.VersionDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -3996,7 +3986,7 @@ proto.tensorflow.VersionDef.serializeBinaryToWriter = function(message, writer) 
  * @return {number}
  */
 proto.tensorflow.VersionDef.prototype.getProducer = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -4005,7 +3995,7 @@ proto.tensorflow.VersionDef.prototype.getProducer = function() {
  * @return {!proto.tensorflow.VersionDef} returns this
  */
 proto.tensorflow.VersionDef.prototype.setProducer = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -4014,7 +4004,7 @@ proto.tensorflow.VersionDef.prototype.setProducer = function(value) {
  * @return {number}
  */
 proto.tensorflow.VersionDef.prototype.getMinConsumer = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -4023,7 +4013,7 @@ proto.tensorflow.VersionDef.prototype.getMinConsumer = function() {
  * @return {!proto.tensorflow.VersionDef} returns this
  */
 proto.tensorflow.VersionDef.prototype.setMinConsumer = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -4032,7 +4022,7 @@ proto.tensorflow.VersionDef.prototype.setMinConsumer = function(value) {
  * @return {!Array<number>}
  */
 proto.tensorflow.VersionDef.prototype.getBadConsumersList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 3));
+  return /** @type {!Array<number>} */ (Message.getRepeatedField(this, 3));
 };
 
 
@@ -4041,7 +4031,7 @@ proto.tensorflow.VersionDef.prototype.getBadConsumersList = function() {
  * @return {!proto.tensorflow.VersionDef} returns this
  */
 proto.tensorflow.VersionDef.prototype.setBadConsumersList = function(value) {
-  return jspb.Message.setField(this, 3, value || []);
+  return Message.setField(this, 3, value || []);
 };
 
 
@@ -4051,7 +4041,7 @@ proto.tensorflow.VersionDef.prototype.setBadConsumersList = function(value) {
  * @return {!proto.tensorflow.VersionDef} returns this
  */
 proto.tensorflow.VersionDef.prototype.addBadConsumers = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+  return Message.addToRepeatedField(this, 3, value, opt_index);
 };
 
 
@@ -4074,7 +4064,7 @@ proto.tensorflow.GraphDef.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -4103,7 +4093,7 @@ proto.tensorflow.GraphDef.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.GraphDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    nodeList: jspb.Message.toObjectList(msg.getNodeList(),
+    nodeList: Message.toObjectList(msg.getNodeList(),
     proto.tensorflow.NodeDef.toObject, includeInstance),
     versions: (f = msg.getVersions()) && proto.tensorflow.VersionDef.toObject(includeInstance, f),
     library: (f = msg.getLibrary()) && proto.tensorflow.FunctionDefLibrary.toObject(includeInstance, f)
@@ -4123,7 +4113,7 @@ proto.tensorflow.GraphDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.GraphDef}
  */
 proto.tensorflow.GraphDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.GraphDef;
   return proto.tensorflow.GraphDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -4172,7 +4162,7 @@ proto.tensorflow.GraphDef.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.GraphDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.GraphDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -4220,7 +4210,7 @@ proto.tensorflow.GraphDef.serializeBinaryToWriter = function(message, writer) {
  */
 proto.tensorflow.GraphDef.prototype.getNodeList = function() {
   return /** @type{!Array<!proto.tensorflow.NodeDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.NodeDef, 1));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.NodeDef, 1));
 };
 
 
@@ -4229,7 +4219,7 @@ proto.tensorflow.GraphDef.prototype.getNodeList = function() {
  * @return {!proto.tensorflow.GraphDef} returns this
 */
 proto.tensorflow.GraphDef.prototype.setNodeList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -4239,7 +4229,7 @@ proto.tensorflow.GraphDef.prototype.setNodeList = function(value) {
  * @return {!proto.tensorflow.NodeDef}
  */
 proto.tensorflow.GraphDef.prototype.addNode = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.NodeDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.NodeDef, opt_index);
 };
 
 
@@ -4258,7 +4248,7 @@ proto.tensorflow.GraphDef.prototype.clearNodeList = function() {
  */
 proto.tensorflow.GraphDef.prototype.getVersions = function() {
   return /** @type{?proto.tensorflow.VersionDef} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.VersionDef, 4));
+    Message.getWrapperField(this, proto.tensorflow.VersionDef, 4));
 };
 
 
@@ -4267,7 +4257,7 @@ proto.tensorflow.GraphDef.prototype.getVersions = function() {
  * @return {!proto.tensorflow.GraphDef} returns this
 */
 proto.tensorflow.GraphDef.prototype.setVersions = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  return Message.setWrapperField(this, 4, value);
 };
 
 
@@ -4285,7 +4275,7 @@ proto.tensorflow.GraphDef.prototype.clearVersions = function() {
  * @return {boolean}
  */
 proto.tensorflow.GraphDef.prototype.hasVersions = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return Message.getField(this, 4) != null;
 };
 
 
@@ -4295,7 +4285,7 @@ proto.tensorflow.GraphDef.prototype.hasVersions = function() {
  */
 proto.tensorflow.GraphDef.prototype.getLibrary = function() {
   return /** @type{?proto.tensorflow.FunctionDefLibrary} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.FunctionDefLibrary, 2));
+    Message.getWrapperField(this, proto.tensorflow.FunctionDefLibrary, 2));
 };
 
 
@@ -4304,7 +4294,7 @@ proto.tensorflow.GraphDef.prototype.getLibrary = function() {
  * @return {!proto.tensorflow.GraphDef} returns this
 */
 proto.tensorflow.GraphDef.prototype.setLibrary = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
+  return Message.setWrapperField(this, 2, value);
 };
 
 
@@ -4322,7 +4312,7 @@ proto.tensorflow.GraphDef.prototype.clearLibrary = function() {
  * @return {boolean}
  */
 proto.tensorflow.GraphDef.prototype.hasLibrary = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
@@ -4353,12 +4343,12 @@ proto.tensorflow.CollectionDef.KindCase = {
  * @return {proto.tensorflow.CollectionDef.KindCase}
  */
 proto.tensorflow.CollectionDef.prototype.getKindCase = function() {
-  return /** @type {proto.tensorflow.CollectionDef.KindCase} */(jspb.Message.computeOneofCase(this, proto.tensorflow.CollectionDef.oneofGroups_[0]));
+  return /** @type {proto.tensorflow.CollectionDef.KindCase} */(Message.computeOneofCase(this, proto.tensorflow.CollectionDef.oneofGroups_[0]));
 };
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -4408,7 +4398,7 @@ proto.tensorflow.CollectionDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.CollectionDef}
  */
 proto.tensorflow.CollectionDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.CollectionDef;
   return proto.tensorflow.CollectionDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -4467,7 +4457,7 @@ proto.tensorflow.CollectionDef.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.tensorflow.CollectionDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.CollectionDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -4535,7 +4525,7 @@ proto.tensorflow.CollectionDef.NodeList.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -4564,7 +4554,7 @@ proto.tensorflow.CollectionDef.NodeList.prototype.toObject = function(opt_includ
  */
 proto.tensorflow.CollectionDef.NodeList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valueList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+    valueList: (f = Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -4581,7 +4571,7 @@ proto.tensorflow.CollectionDef.NodeList.toObject = function(includeInstance, msg
  * @return {!proto.tensorflow.CollectionDef.NodeList}
  */
 proto.tensorflow.CollectionDef.NodeList.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.CollectionDef.NodeList;
   return proto.tensorflow.CollectionDef.NodeList.deserializeBinaryFromReader(msg, reader);
 };
@@ -4619,7 +4609,7 @@ proto.tensorflow.CollectionDef.NodeList.deserializeBinaryFromReader = function(m
  * @return {!Uint8Array}
  */
 proto.tensorflow.CollectionDef.NodeList.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.CollectionDef.NodeList.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -4649,7 +4639,7 @@ proto.tensorflow.CollectionDef.NodeList.serializeBinaryToWriter = function(messa
  * @return {!Array<string>}
  */
 proto.tensorflow.CollectionDef.NodeList.prototype.getValueList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
+  return /** @type {!Array<string>} */ (Message.getRepeatedField(this, 1));
 };
 
 
@@ -4658,7 +4648,7 @@ proto.tensorflow.CollectionDef.NodeList.prototype.getValueList = function() {
  * @return {!proto.tensorflow.CollectionDef.NodeList} returns this
  */
 proto.tensorflow.CollectionDef.NodeList.prototype.setValueList = function(value) {
-  return jspb.Message.setField(this, 1, value || []);
+  return Message.setField(this, 1, value || []);
 };
 
 
@@ -4668,7 +4658,7 @@ proto.tensorflow.CollectionDef.NodeList.prototype.setValueList = function(value)
  * @return {!proto.tensorflow.CollectionDef.NodeList} returns this
  */
 proto.tensorflow.CollectionDef.NodeList.prototype.addValue = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+  return Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
@@ -4691,7 +4681,7 @@ proto.tensorflow.CollectionDef.BytesList.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -4737,7 +4727,7 @@ proto.tensorflow.CollectionDef.BytesList.toObject = function(includeInstance, ms
  * @return {!proto.tensorflow.CollectionDef.BytesList}
  */
 proto.tensorflow.CollectionDef.BytesList.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.CollectionDef.BytesList;
   return proto.tensorflow.CollectionDef.BytesList.deserializeBinaryFromReader(msg, reader);
 };
@@ -4775,7 +4765,7 @@ proto.tensorflow.CollectionDef.BytesList.deserializeBinaryFromReader = function(
  * @return {!Uint8Array}
  */
 proto.tensorflow.CollectionDef.BytesList.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.CollectionDef.BytesList.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -4805,7 +4795,7 @@ proto.tensorflow.CollectionDef.BytesList.serializeBinaryToWriter = function(mess
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
 proto.tensorflow.CollectionDef.BytesList.prototype.getValueList = function() {
-  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (Message.getRepeatedField(this, 1));
 };
 
 
@@ -4815,7 +4805,7 @@ proto.tensorflow.CollectionDef.BytesList.prototype.getValueList = function() {
  * @return {!Array<string>}
  */
 proto.tensorflow.CollectionDef.BytesList.prototype.getValueList_asB64 = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
+  return /** @type {!Array<string>} */ (Message.bytesListAsB64(
       this.getValueList()));
 };
 
@@ -4828,7 +4818,7 @@ proto.tensorflow.CollectionDef.BytesList.prototype.getValueList_asB64 = function
  * @return {!Array<!Uint8Array>}
  */
 proto.tensorflow.CollectionDef.BytesList.prototype.getValueList_asU8 = function() {
-  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+  return /** @type {!Array<!Uint8Array>} */ (Message.bytesListAsU8(
       this.getValueList()));
 };
 
@@ -4838,7 +4828,7 @@ proto.tensorflow.CollectionDef.BytesList.prototype.getValueList_asU8 = function(
  * @return {!proto.tensorflow.CollectionDef.BytesList} returns this
  */
 proto.tensorflow.CollectionDef.BytesList.prototype.setValueList = function(value) {
-  return jspb.Message.setField(this, 1, value || []);
+  return Message.setField(this, 1, value || []);
 };
 
 
@@ -4848,7 +4838,7 @@ proto.tensorflow.CollectionDef.BytesList.prototype.setValueList = function(value
  * @return {!proto.tensorflow.CollectionDef.BytesList} returns this
  */
 proto.tensorflow.CollectionDef.BytesList.prototype.addValue = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+  return Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
@@ -4871,7 +4861,7 @@ proto.tensorflow.CollectionDef.Int64List.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -4900,7 +4890,7 @@ proto.tensorflow.CollectionDef.Int64List.prototype.toObject = function(opt_inclu
  */
 proto.tensorflow.CollectionDef.Int64List.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valueList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+    valueList: (f = Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -4917,7 +4907,7 @@ proto.tensorflow.CollectionDef.Int64List.toObject = function(includeInstance, ms
  * @return {!proto.tensorflow.CollectionDef.Int64List}
  */
 proto.tensorflow.CollectionDef.Int64List.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.CollectionDef.Int64List;
   return proto.tensorflow.CollectionDef.Int64List.deserializeBinaryFromReader(msg, reader);
 };
@@ -4957,7 +4947,7 @@ proto.tensorflow.CollectionDef.Int64List.deserializeBinaryFromReader = function(
  * @return {!Uint8Array}
  */
 proto.tensorflow.CollectionDef.Int64List.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.CollectionDef.Int64List.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -4987,7 +4977,7 @@ proto.tensorflow.CollectionDef.Int64List.serializeBinaryToWriter = function(mess
  * @return {!Array<number>}
  */
 proto.tensorflow.CollectionDef.Int64List.prototype.getValueList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
+  return /** @type {!Array<number>} */ (Message.getRepeatedField(this, 1));
 };
 
 
@@ -4996,7 +4986,7 @@ proto.tensorflow.CollectionDef.Int64List.prototype.getValueList = function() {
  * @return {!proto.tensorflow.CollectionDef.Int64List} returns this
  */
 proto.tensorflow.CollectionDef.Int64List.prototype.setValueList = function(value) {
-  return jspb.Message.setField(this, 1, value || []);
+  return Message.setField(this, 1, value || []);
 };
 
 
@@ -5006,7 +4996,7 @@ proto.tensorflow.CollectionDef.Int64List.prototype.setValueList = function(value
  * @return {!proto.tensorflow.CollectionDef.Int64List} returns this
  */
 proto.tensorflow.CollectionDef.Int64List.prototype.addValue = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+  return Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
@@ -5029,7 +5019,7 @@ proto.tensorflow.CollectionDef.FloatList.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -5058,7 +5048,7 @@ proto.tensorflow.CollectionDef.FloatList.prototype.toObject = function(opt_inclu
  */
 proto.tensorflow.CollectionDef.FloatList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valueList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 1)) == null ? undefined : f
+    valueList: (f = Message.getRepeatedFloatingPointField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -5075,7 +5065,7 @@ proto.tensorflow.CollectionDef.FloatList.toObject = function(includeInstance, ms
  * @return {!proto.tensorflow.CollectionDef.FloatList}
  */
 proto.tensorflow.CollectionDef.FloatList.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.CollectionDef.FloatList;
   return proto.tensorflow.CollectionDef.FloatList.deserializeBinaryFromReader(msg, reader);
 };
@@ -5115,7 +5105,7 @@ proto.tensorflow.CollectionDef.FloatList.deserializeBinaryFromReader = function(
  * @return {!Uint8Array}
  */
 proto.tensorflow.CollectionDef.FloatList.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.CollectionDef.FloatList.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -5145,7 +5135,7 @@ proto.tensorflow.CollectionDef.FloatList.serializeBinaryToWriter = function(mess
  * @return {!Array<number>}
  */
 proto.tensorflow.CollectionDef.FloatList.prototype.getValueList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 1));
+  return /** @type {!Array<number>} */ (Message.getRepeatedFloatingPointField(this, 1));
 };
 
 
@@ -5154,7 +5144,7 @@ proto.tensorflow.CollectionDef.FloatList.prototype.getValueList = function() {
  * @return {!proto.tensorflow.CollectionDef.FloatList} returns this
  */
 proto.tensorflow.CollectionDef.FloatList.prototype.setValueList = function(value) {
-  return jspb.Message.setField(this, 1, value || []);
+  return Message.setField(this, 1, value || []);
 };
 
 
@@ -5164,7 +5154,7 @@ proto.tensorflow.CollectionDef.FloatList.prototype.setValueList = function(value
  * @return {!proto.tensorflow.CollectionDef.FloatList} returns this
  */
 proto.tensorflow.CollectionDef.FloatList.prototype.addValue = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+  return Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
@@ -5187,7 +5177,7 @@ proto.tensorflow.CollectionDef.AnyList.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -5216,7 +5206,7 @@ proto.tensorflow.CollectionDef.AnyList.prototype.toObject = function(opt_include
  */
 proto.tensorflow.CollectionDef.AnyList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valueList: jspb.Message.toObjectList(msg.getValueList(),
+    valueList: Message.toObjectList(msg.getValueList(),
     proto.tensorflow.Any.toObject, includeInstance)
   };
 
@@ -5234,7 +5224,7 @@ proto.tensorflow.CollectionDef.AnyList.toObject = function(includeInstance, msg)
  * @return {!proto.tensorflow.CollectionDef.AnyList}
  */
 proto.tensorflow.CollectionDef.AnyList.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.CollectionDef.AnyList;
   return proto.tensorflow.CollectionDef.AnyList.deserializeBinaryFromReader(msg, reader);
 };
@@ -5273,7 +5263,7 @@ proto.tensorflow.CollectionDef.AnyList.deserializeBinaryFromReader = function(ms
  * @return {!Uint8Array}
  */
 proto.tensorflow.CollectionDef.AnyList.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.CollectionDef.AnyList.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -5305,7 +5295,7 @@ proto.tensorflow.CollectionDef.AnyList.serializeBinaryToWriter = function(messag
  */
 proto.tensorflow.CollectionDef.AnyList.prototype.getValueList = function() {
   return /** @type{!Array<!proto.tensorflow.Any>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.Any, 1));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.Any, 1));
 };
 
 
@@ -5314,7 +5304,7 @@ proto.tensorflow.CollectionDef.AnyList.prototype.getValueList = function() {
  * @return {!proto.tensorflow.CollectionDef.AnyList} returns this
 */
 proto.tensorflow.CollectionDef.AnyList.prototype.setValueList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -5324,7 +5314,7 @@ proto.tensorflow.CollectionDef.AnyList.prototype.setValueList = function(value) 
  * @return {!proto.tensorflow.Any}
  */
 proto.tensorflow.CollectionDef.AnyList.prototype.addValue = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.Any, opt_index);
+  return Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.Any, opt_index);
 };
 
 
@@ -5343,7 +5333,7 @@ proto.tensorflow.CollectionDef.AnyList.prototype.clearValueList = function() {
  */
 proto.tensorflow.CollectionDef.prototype.getNodeList = function() {
   return /** @type{?proto.tensorflow.CollectionDef.NodeList} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.CollectionDef.NodeList, 1));
+    Message.getWrapperField(this, proto.tensorflow.CollectionDef.NodeList, 1));
 };
 
 
@@ -5352,7 +5342,7 @@ proto.tensorflow.CollectionDef.prototype.getNodeList = function() {
  * @return {!proto.tensorflow.CollectionDef} returns this
 */
 proto.tensorflow.CollectionDef.prototype.setNodeList = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 1, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 1, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
 };
 
 
@@ -5370,7 +5360,7 @@ proto.tensorflow.CollectionDef.prototype.clearNodeList = function() {
  * @return {boolean}
  */
 proto.tensorflow.CollectionDef.prototype.hasNodeList = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
@@ -5380,7 +5370,7 @@ proto.tensorflow.CollectionDef.prototype.hasNodeList = function() {
  */
 proto.tensorflow.CollectionDef.prototype.getBytesList = function() {
   return /** @type{?proto.tensorflow.CollectionDef.BytesList} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.CollectionDef.BytesList, 2));
+    Message.getWrapperField(this, proto.tensorflow.CollectionDef.BytesList, 2));
 };
 
 
@@ -5389,7 +5379,7 @@ proto.tensorflow.CollectionDef.prototype.getBytesList = function() {
  * @return {!proto.tensorflow.CollectionDef} returns this
 */
 proto.tensorflow.CollectionDef.prototype.setBytesList = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 2, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 2, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
 };
 
 
@@ -5407,7 +5397,7 @@ proto.tensorflow.CollectionDef.prototype.clearBytesList = function() {
  * @return {boolean}
  */
 proto.tensorflow.CollectionDef.prototype.hasBytesList = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
@@ -5417,7 +5407,7 @@ proto.tensorflow.CollectionDef.prototype.hasBytesList = function() {
  */
 proto.tensorflow.CollectionDef.prototype.getInt64List = function() {
   return /** @type{?proto.tensorflow.CollectionDef.Int64List} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.CollectionDef.Int64List, 3));
+    Message.getWrapperField(this, proto.tensorflow.CollectionDef.Int64List, 3));
 };
 
 
@@ -5426,7 +5416,7 @@ proto.tensorflow.CollectionDef.prototype.getInt64List = function() {
  * @return {!proto.tensorflow.CollectionDef} returns this
 */
 proto.tensorflow.CollectionDef.prototype.setInt64List = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 3, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 3, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
 };
 
 
@@ -5444,7 +5434,7 @@ proto.tensorflow.CollectionDef.prototype.clearInt64List = function() {
  * @return {boolean}
  */
 proto.tensorflow.CollectionDef.prototype.hasInt64List = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return Message.getField(this, 3) != null;
 };
 
 
@@ -5454,7 +5444,7 @@ proto.tensorflow.CollectionDef.prototype.hasInt64List = function() {
  */
 proto.tensorflow.CollectionDef.prototype.getFloatList = function() {
   return /** @type{?proto.tensorflow.CollectionDef.FloatList} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.CollectionDef.FloatList, 4));
+    Message.getWrapperField(this, proto.tensorflow.CollectionDef.FloatList, 4));
 };
 
 
@@ -5463,7 +5453,7 @@ proto.tensorflow.CollectionDef.prototype.getFloatList = function() {
  * @return {!proto.tensorflow.CollectionDef} returns this
 */
 proto.tensorflow.CollectionDef.prototype.setFloatList = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 4, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 4, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
 };
 
 
@@ -5481,7 +5471,7 @@ proto.tensorflow.CollectionDef.prototype.clearFloatList = function() {
  * @return {boolean}
  */
 proto.tensorflow.CollectionDef.prototype.hasFloatList = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return Message.getField(this, 4) != null;
 };
 
 
@@ -5491,7 +5481,7 @@ proto.tensorflow.CollectionDef.prototype.hasFloatList = function() {
  */
 proto.tensorflow.CollectionDef.prototype.getAnyList = function() {
   return /** @type{?proto.tensorflow.CollectionDef.AnyList} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.CollectionDef.AnyList, 5));
+    Message.getWrapperField(this, proto.tensorflow.CollectionDef.AnyList, 5));
 };
 
 
@@ -5500,7 +5490,7 @@ proto.tensorflow.CollectionDef.prototype.getAnyList = function() {
  * @return {!proto.tensorflow.CollectionDef} returns this
 */
 proto.tensorflow.CollectionDef.prototype.setAnyList = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 5, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 5, proto.tensorflow.CollectionDef.oneofGroups_[0], value);
 };
 
 
@@ -5518,14 +5508,14 @@ proto.tensorflow.CollectionDef.prototype.clearAnyList = function() {
  * @return {boolean}
  */
 proto.tensorflow.CollectionDef.prototype.hasAnyList = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return Message.getField(this, 5) != null;
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -5554,13 +5544,13 @@ proto.tensorflow.SaverDef.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.SaverDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    filenameTensorName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    saveTensorName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    restoreOpName: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    maxToKeep: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    sharded: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
-    keepCheckpointEveryNHours: jspb.Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
-    version: jspb.Message.getFieldWithDefault(msg, 7, 0)
+    filenameTensorName: Message.getFieldWithDefault(msg, 1, ""),
+    saveTensorName: Message.getFieldWithDefault(msg, 2, ""),
+    restoreOpName: Message.getFieldWithDefault(msg, 3, ""),
+    maxToKeep: Message.getFieldWithDefault(msg, 4, 0),
+    sharded: Message.getBooleanFieldWithDefault(msg, 5, false),
+    keepCheckpointEveryNHours: Message.getFloatingPointFieldWithDefault(msg, 6, 0.0),
+    version: Message.getFieldWithDefault(msg, 7, 0)
   };
 
   if (includeInstance) {
@@ -5577,7 +5567,7 @@ proto.tensorflow.SaverDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.SaverDef}
  */
 proto.tensorflow.SaverDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.SaverDef;
   return proto.tensorflow.SaverDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -5639,7 +5629,7 @@ proto.tensorflow.SaverDef.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.SaverDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.SaverDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -5720,7 +5710,7 @@ proto.tensorflow.SaverDef.CheckpointFormatVersion = {
  * @return {string}
  */
 proto.tensorflow.SaverDef.prototype.getFilenameTensorName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -5729,7 +5719,7 @@ proto.tensorflow.SaverDef.prototype.getFilenameTensorName = function() {
  * @return {!proto.tensorflow.SaverDef} returns this
  */
 proto.tensorflow.SaverDef.prototype.setFilenameTensorName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -5738,7 +5728,7 @@ proto.tensorflow.SaverDef.prototype.setFilenameTensorName = function(value) {
  * @return {string}
  */
 proto.tensorflow.SaverDef.prototype.getSaveTensorName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -5747,7 +5737,7 @@ proto.tensorflow.SaverDef.prototype.getSaveTensorName = function() {
  * @return {!proto.tensorflow.SaverDef} returns this
  */
 proto.tensorflow.SaverDef.prototype.setSaveTensorName = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -5756,7 +5746,7 @@ proto.tensorflow.SaverDef.prototype.setSaveTensorName = function(value) {
  * @return {string}
  */
 proto.tensorflow.SaverDef.prototype.getRestoreOpName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -5765,7 +5755,7 @@ proto.tensorflow.SaverDef.prototype.getRestoreOpName = function() {
  * @return {!proto.tensorflow.SaverDef} returns this
  */
 proto.tensorflow.SaverDef.prototype.setRestoreOpName = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -5774,7 +5764,7 @@ proto.tensorflow.SaverDef.prototype.setRestoreOpName = function(value) {
  * @return {number}
  */
 proto.tensorflow.SaverDef.prototype.getMaxToKeep = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 4, 0));
 };
 
 
@@ -5783,7 +5773,7 @@ proto.tensorflow.SaverDef.prototype.getMaxToKeep = function() {
  * @return {!proto.tensorflow.SaverDef} returns this
  */
 proto.tensorflow.SaverDef.prototype.setMaxToKeep = function(value) {
-  return jspb.Message.setProto3IntField(this, 4, value);
+  return Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -5792,7 +5782,7 @@ proto.tensorflow.SaverDef.prototype.setMaxToKeep = function(value) {
  * @return {boolean}
  */
 proto.tensorflow.SaverDef.prototype.getSharded = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
 
@@ -5801,7 +5791,7 @@ proto.tensorflow.SaverDef.prototype.getSharded = function() {
  * @return {!proto.tensorflow.SaverDef} returns this
  */
 proto.tensorflow.SaverDef.prototype.setSharded = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 5, value);
+  return Message.setProto3BooleanField(this, 5, value);
 };
 
 
@@ -5810,7 +5800,7 @@ proto.tensorflow.SaverDef.prototype.setSharded = function(value) {
  * @return {number}
  */
 proto.tensorflow.SaverDef.prototype.getKeepCheckpointEveryNHours = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 6, 0.0));
 };
 
 
@@ -5819,7 +5809,7 @@ proto.tensorflow.SaverDef.prototype.getKeepCheckpointEveryNHours = function() {
  * @return {!proto.tensorflow.SaverDef} returns this
  */
 proto.tensorflow.SaverDef.prototype.setKeepCheckpointEveryNHours = function(value) {
-  return jspb.Message.setProto3FloatField(this, 6, value);
+  return Message.setProto3FloatField(this, 6, value);
 };
 
 
@@ -5828,7 +5818,7 @@ proto.tensorflow.SaverDef.prototype.setKeepCheckpointEveryNHours = function(valu
  * @return {!proto.tensorflow.SaverDef.CheckpointFormatVersion}
  */
 proto.tensorflow.SaverDef.prototype.getVersion = function() {
-  return /** @type {!proto.tensorflow.SaverDef.CheckpointFormatVersion} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+  return /** @type {!proto.tensorflow.SaverDef.CheckpointFormatVersion} */ (Message.getFieldWithDefault(this, 7, 0));
 };
 
 
@@ -5837,7 +5827,7 @@ proto.tensorflow.SaverDef.prototype.getVersion = function() {
  * @return {!proto.tensorflow.SaverDef} returns this
  */
 proto.tensorflow.SaverDef.prototype.setVersion = function(value) {
-  return jspb.Message.setProto3EnumField(this, 7, value);
+  return Message.setProto3EnumField(this, 7, value);
 };
 
 
@@ -5865,12 +5855,12 @@ proto.tensorflow.TensorInfo.EncodingCase = {
  * @return {proto.tensorflow.TensorInfo.EncodingCase}
  */
 proto.tensorflow.TensorInfo.prototype.getEncodingCase = function() {
-  return /** @type {proto.tensorflow.TensorInfo.EncodingCase} */(jspb.Message.computeOneofCase(this, proto.tensorflow.TensorInfo.oneofGroups_[0]));
+  return /** @type {proto.tensorflow.TensorInfo.EncodingCase} */(Message.computeOneofCase(this, proto.tensorflow.TensorInfo.oneofGroups_[0]));
 };
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -5899,9 +5889,9 @@ proto.tensorflow.TensorInfo.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.TensorInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: Message.getFieldWithDefault(msg, 1, ""),
     cooSparse: (f = msg.getCooSparse()) && proto.tensorflow.TensorInfo.CooSparse.toObject(includeInstance, f),
-    dtype: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    dtype: Message.getFieldWithDefault(msg, 2, 0),
     tensorShape: (f = msg.getTensorShape()) && proto.tensorflow.TensorShape.toObject(includeInstance, f)
   };
 
@@ -5919,7 +5909,7 @@ proto.tensorflow.TensorInfo.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.TensorInfo}
  */
 proto.tensorflow.TensorInfo.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.TensorInfo;
   return proto.tensorflow.TensorInfo.deserializeBinaryFromReader(msg, reader);
 };
@@ -5971,7 +5961,7 @@ proto.tensorflow.TensorInfo.deserializeBinaryFromReader = function(msg, reader) 
  * @return {!Uint8Array}
  */
 proto.tensorflow.TensorInfo.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.TensorInfo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -5986,7 +5976,7 @@ proto.tensorflow.TensorInfo.prototype.serializeBinary = function() {
  */
 proto.tensorflow.TensorInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = /** @type {string} */ (jspb.Message.getField(message, 1));
+  f = /** @type {string} */ (Message.getField(message, 1));
   if (f != null) {
     writer.writeString(
       1,
@@ -6022,7 +6012,7 @@ proto.tensorflow.TensorInfo.serializeBinaryToWriter = function(message, writer) 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -6051,9 +6041,9 @@ proto.tensorflow.TensorInfo.CooSparse.prototype.toObject = function(opt_includeI
  */
 proto.tensorflow.TensorInfo.CooSparse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valuesTensorName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    indicesTensorName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    denseShapeTensorName: jspb.Message.getFieldWithDefault(msg, 3, "")
+    valuesTensorName: Message.getFieldWithDefault(msg, 1, ""),
+    indicesTensorName: Message.getFieldWithDefault(msg, 2, ""),
+    denseShapeTensorName: Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -6070,7 +6060,7 @@ proto.tensorflow.TensorInfo.CooSparse.toObject = function(includeInstance, msg) 
  * @return {!proto.tensorflow.TensorInfo.CooSparse}
  */
 proto.tensorflow.TensorInfo.CooSparse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.TensorInfo.CooSparse;
   return proto.tensorflow.TensorInfo.CooSparse.deserializeBinaryFromReader(msg, reader);
 };
@@ -6116,7 +6106,7 @@ proto.tensorflow.TensorInfo.CooSparse.deserializeBinaryFromReader = function(msg
  * @return {!Uint8Array}
  */
 proto.tensorflow.TensorInfo.CooSparse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.TensorInfo.CooSparse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -6160,7 +6150,7 @@ proto.tensorflow.TensorInfo.CooSparse.serializeBinaryToWriter = function(message
  * @return {string}
  */
 proto.tensorflow.TensorInfo.CooSparse.prototype.getValuesTensorName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -6169,7 +6159,7 @@ proto.tensorflow.TensorInfo.CooSparse.prototype.getValuesTensorName = function()
  * @return {!proto.tensorflow.TensorInfo.CooSparse} returns this
  */
 proto.tensorflow.TensorInfo.CooSparse.prototype.setValuesTensorName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -6178,7 +6168,7 @@ proto.tensorflow.TensorInfo.CooSparse.prototype.setValuesTensorName = function(v
  * @return {string}
  */
 proto.tensorflow.TensorInfo.CooSparse.prototype.getIndicesTensorName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -6187,7 +6177,7 @@ proto.tensorflow.TensorInfo.CooSparse.prototype.getIndicesTensorName = function(
  * @return {!proto.tensorflow.TensorInfo.CooSparse} returns this
  */
 proto.tensorflow.TensorInfo.CooSparse.prototype.setIndicesTensorName = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -6196,7 +6186,7 @@ proto.tensorflow.TensorInfo.CooSparse.prototype.setIndicesTensorName = function(
  * @return {string}
  */
 proto.tensorflow.TensorInfo.CooSparse.prototype.getDenseShapeTensorName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -6205,7 +6195,7 @@ proto.tensorflow.TensorInfo.CooSparse.prototype.getDenseShapeTensorName = functi
  * @return {!proto.tensorflow.TensorInfo.CooSparse} returns this
  */
 proto.tensorflow.TensorInfo.CooSparse.prototype.setDenseShapeTensorName = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -6214,7 +6204,7 @@ proto.tensorflow.TensorInfo.CooSparse.prototype.setDenseShapeTensorName = functi
  * @return {string}
  */
 proto.tensorflow.TensorInfo.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -6223,7 +6213,7 @@ proto.tensorflow.TensorInfo.prototype.getName = function() {
  * @return {!proto.tensorflow.TensorInfo} returns this
  */
 proto.tensorflow.TensorInfo.prototype.setName = function(value) {
-  return jspb.Message.setOneofField(this, 1, proto.tensorflow.TensorInfo.oneofGroups_[0], value);
+  return Message.setOneofField(this, 1, proto.tensorflow.TensorInfo.oneofGroups_[0], value);
 };
 
 
@@ -6232,7 +6222,7 @@ proto.tensorflow.TensorInfo.prototype.setName = function(value) {
  * @return {!proto.tensorflow.TensorInfo} returns this
  */
 proto.tensorflow.TensorInfo.prototype.clearName = function() {
-  return jspb.Message.setOneofField(this, 1, proto.tensorflow.TensorInfo.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 1, proto.tensorflow.TensorInfo.oneofGroups_[0], undefined);
 };
 
 
@@ -6241,7 +6231,7 @@ proto.tensorflow.TensorInfo.prototype.clearName = function() {
  * @return {boolean}
  */
 proto.tensorflow.TensorInfo.prototype.hasName = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
@@ -6251,7 +6241,7 @@ proto.tensorflow.TensorInfo.prototype.hasName = function() {
  */
 proto.tensorflow.TensorInfo.prototype.getCooSparse = function() {
   return /** @type{?proto.tensorflow.TensorInfo.CooSparse} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.TensorInfo.CooSparse, 4));
+    Message.getWrapperField(this, proto.tensorflow.TensorInfo.CooSparse, 4));
 };
 
 
@@ -6260,7 +6250,7 @@ proto.tensorflow.TensorInfo.prototype.getCooSparse = function() {
  * @return {!proto.tensorflow.TensorInfo} returns this
 */
 proto.tensorflow.TensorInfo.prototype.setCooSparse = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 4, proto.tensorflow.TensorInfo.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 4, proto.tensorflow.TensorInfo.oneofGroups_[0], value);
 };
 
 
@@ -6278,7 +6268,7 @@ proto.tensorflow.TensorInfo.prototype.clearCooSparse = function() {
  * @return {boolean}
  */
 proto.tensorflow.TensorInfo.prototype.hasCooSparse = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return Message.getField(this, 4) != null;
 };
 
 
@@ -6287,7 +6277,7 @@ proto.tensorflow.TensorInfo.prototype.hasCooSparse = function() {
  * @return {!proto.tensorflow.DataType}
  */
 proto.tensorflow.TensorInfo.prototype.getDtype = function() {
-  return /** @type {!proto.tensorflow.DataType} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {!proto.tensorflow.DataType} */ (Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -6296,7 +6286,7 @@ proto.tensorflow.TensorInfo.prototype.getDtype = function() {
  * @return {!proto.tensorflow.TensorInfo} returns this
  */
 proto.tensorflow.TensorInfo.prototype.setDtype = function(value) {
-  return jspb.Message.setProto3EnumField(this, 2, value);
+  return Message.setProto3EnumField(this, 2, value);
 };
 
 
@@ -6306,7 +6296,7 @@ proto.tensorflow.TensorInfo.prototype.setDtype = function(value) {
  */
 proto.tensorflow.TensorInfo.prototype.getTensorShape = function() {
   return /** @type{?proto.tensorflow.TensorShape} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.TensorShape, 3));
+    Message.getWrapperField(this, proto.tensorflow.TensorShape, 3));
 };
 
 
@@ -6315,7 +6305,7 @@ proto.tensorflow.TensorInfo.prototype.getTensorShape = function() {
  * @return {!proto.tensorflow.TensorInfo} returns this
 */
 proto.tensorflow.TensorInfo.prototype.setTensorShape = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return Message.setWrapperField(this, 3, value);
 };
 
 
@@ -6333,14 +6323,14 @@ proto.tensorflow.TensorInfo.prototype.clearTensorShape = function() {
  * @return {boolean}
  */
 proto.tensorflow.TensorInfo.prototype.hasTensorShape = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return Message.getField(this, 3) != null;
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -6371,7 +6361,7 @@ proto.tensorflow.SignatureDef.toObject = function(includeInstance, msg) {
   var f, obj = {
     inputsMap: (f = msg.getInputsMap()) ? f.toObject(includeInstance, proto.tensorflow.TensorInfo.toObject) : [],
     outputsMap: (f = msg.getOutputsMap()) ? f.toObject(includeInstance, proto.tensorflow.TensorInfo.toObject) : [],
-    methodName: jspb.Message.getFieldWithDefault(msg, 3, "")
+    methodName: Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -6388,7 +6378,7 @@ proto.tensorflow.SignatureDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.SignatureDef}
  */
 proto.tensorflow.SignatureDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.SignatureDef;
   return proto.tensorflow.SignatureDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -6411,13 +6401,13 @@ proto.tensorflow.SignatureDef.deserializeBinaryFromReader = function(msg, reader
     case 1:
       var value = msg.getInputsMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.tensorflow.TensorInfo.deserializeBinaryFromReader, "", new proto.tensorflow.TensorInfo());
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readMessage, proto.tensorflow.TensorInfo.deserializeBinaryFromReader, "", new proto.tensorflow.TensorInfo());
          });
       break;
     case 2:
       var value = msg.getOutputsMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.tensorflow.TensorInfo.deserializeBinaryFromReader, "", new proto.tensorflow.TensorInfo());
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readMessage, proto.tensorflow.TensorInfo.deserializeBinaryFromReader, "", new proto.tensorflow.TensorInfo());
          });
       break;
     case 3:
@@ -6438,7 +6428,7 @@ proto.tensorflow.SignatureDef.deserializeBinaryFromReader = function(msg, reader
  * @return {!Uint8Array}
  */
 proto.tensorflow.SignatureDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.SignatureDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -6455,11 +6445,11 @@ proto.tensorflow.SignatureDef.serializeBinaryToWriter = function(message, writer
   var f = undefined;
   f = message.getInputsMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.tensorflow.TensorInfo.serializeBinaryToWriter);
+    f.serializeBinary(1, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeMessage, proto.tensorflow.TensorInfo.serializeBinaryToWriter);
   }
   f = message.getOutputsMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.tensorflow.TensorInfo.serializeBinaryToWriter);
+    f.serializeBinary(2, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeMessage, proto.tensorflow.TensorInfo.serializeBinaryToWriter);
   }
   f = message.getMethodName();
   if (f.length > 0) {
@@ -6479,7 +6469,7 @@ proto.tensorflow.SignatureDef.serializeBinaryToWriter = function(message, writer
  */
 proto.tensorflow.SignatureDef.prototype.getInputsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.tensorflow.TensorInfo>} */ (
-      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      Message.getMapField(this, 1, opt_noLazyCreate,
       proto.tensorflow.TensorInfo));
 };
 
@@ -6501,7 +6491,7 @@ proto.tensorflow.SignatureDef.prototype.clearInputsMap = function() {
  */
 proto.tensorflow.SignatureDef.prototype.getOutputsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.tensorflow.TensorInfo>} */ (
-      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
+      Message.getMapField(this, 2, opt_noLazyCreate,
       proto.tensorflow.TensorInfo));
 };
 
@@ -6520,7 +6510,7 @@ proto.tensorflow.SignatureDef.prototype.clearOutputsMap = function() {
  * @return {string}
  */
 proto.tensorflow.SignatureDef.prototype.getMethodName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -6529,14 +6519,14 @@ proto.tensorflow.SignatureDef.prototype.getMethodName = function() {
  * @return {!proto.tensorflow.SignatureDef} returns this
  */
 proto.tensorflow.SignatureDef.prototype.setMethodName = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return Message.setProto3StringField(this, 3, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -6566,7 +6556,7 @@ proto.tensorflow.AssetFileDef.prototype.toObject = function(opt_includeInstance)
 proto.tensorflow.AssetFileDef.toObject = function(includeInstance, msg) {
   var f, obj = {
     tensorInfo: (f = msg.getTensorInfo()) && proto.tensorflow.TensorInfo.toObject(includeInstance, f),
-    filename: jspb.Message.getFieldWithDefault(msg, 2, "")
+    filename: Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -6583,7 +6573,7 @@ proto.tensorflow.AssetFileDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.AssetFileDef}
  */
 proto.tensorflow.AssetFileDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.AssetFileDef;
   return proto.tensorflow.AssetFileDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -6626,7 +6616,7 @@ proto.tensorflow.AssetFileDef.deserializeBinaryFromReader = function(msg, reader
  * @return {!Uint8Array}
  */
 proto.tensorflow.AssetFileDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.AssetFileDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -6665,7 +6655,7 @@ proto.tensorflow.AssetFileDef.serializeBinaryToWriter = function(message, writer
  */
 proto.tensorflow.AssetFileDef.prototype.getTensorInfo = function() {
   return /** @type{?proto.tensorflow.TensorInfo} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.TensorInfo, 1));
+    Message.getWrapperField(this, proto.tensorflow.TensorInfo, 1));
 };
 
 
@@ -6674,7 +6664,7 @@ proto.tensorflow.AssetFileDef.prototype.getTensorInfo = function() {
  * @return {!proto.tensorflow.AssetFileDef} returns this
 */
 proto.tensorflow.AssetFileDef.prototype.setTensorInfo = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  return Message.setWrapperField(this, 1, value);
 };
 
 
@@ -6692,7 +6682,7 @@ proto.tensorflow.AssetFileDef.prototype.clearTensorInfo = function() {
  * @return {boolean}
  */
 proto.tensorflow.AssetFileDef.prototype.hasTensorInfo = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
@@ -6701,7 +6691,7 @@ proto.tensorflow.AssetFileDef.prototype.hasTensorInfo = function() {
  * @return {string}
  */
 proto.tensorflow.AssetFileDef.prototype.getFilename = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -6710,7 +6700,7 @@ proto.tensorflow.AssetFileDef.prototype.getFilename = function() {
  * @return {!proto.tensorflow.AssetFileDef} returns this
  */
 proto.tensorflow.AssetFileDef.prototype.setFilename = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -6724,7 +6714,7 @@ proto.tensorflow.OpDef.repeatedFields_ = [2,3,4];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -6753,20 +6743,20 @@ proto.tensorflow.OpDef.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.OpDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    inputArgList: jspb.Message.toObjectList(msg.getInputArgList(),
+    name: Message.getFieldWithDefault(msg, 1, ""),
+    inputArgList: Message.toObjectList(msg.getInputArgList(),
     proto.tensorflow.OpDef.ArgDef.toObject, includeInstance),
-    outputArgList: jspb.Message.toObjectList(msg.getOutputArgList(),
+    outputArgList: Message.toObjectList(msg.getOutputArgList(),
     proto.tensorflow.OpDef.ArgDef.toObject, includeInstance),
-    attrList: jspb.Message.toObjectList(msg.getAttrList(),
+    attrList: Message.toObjectList(msg.getAttrList(),
     proto.tensorflow.OpDef.AttrDef.toObject, includeInstance),
     deprecation: (f = msg.getDeprecation()) && proto.tensorflow.OpDef.OpDeprecation.toObject(includeInstance, f),
-    summary: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    description: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    isCommutative: jspb.Message.getBooleanFieldWithDefault(msg, 18, false),
-    isAggregate: jspb.Message.getBooleanFieldWithDefault(msg, 16, false),
-    isStateful: jspb.Message.getBooleanFieldWithDefault(msg, 17, false),
-    allowsUninitializedInput: jspb.Message.getBooleanFieldWithDefault(msg, 19, false)
+    summary: Message.getFieldWithDefault(msg, 5, ""),
+    description: Message.getFieldWithDefault(msg, 6, ""),
+    isCommutative: Message.getBooleanFieldWithDefault(msg, 18, false),
+    isAggregate: Message.getBooleanFieldWithDefault(msg, 16, false),
+    isStateful: Message.getBooleanFieldWithDefault(msg, 17, false),
+    allowsUninitializedInput: Message.getBooleanFieldWithDefault(msg, 19, false)
   };
 
   if (includeInstance) {
@@ -6783,7 +6773,7 @@ proto.tensorflow.OpDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.OpDef}
  */
 proto.tensorflow.OpDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.OpDef;
   return proto.tensorflow.OpDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -6865,7 +6855,7 @@ proto.tensorflow.OpDef.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.OpDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.OpDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -6967,7 +6957,7 @@ proto.tensorflow.OpDef.serializeBinaryToWriter = function(message, writer) {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -6996,13 +6986,13 @@ proto.tensorflow.OpDef.ArgDef.prototype.toObject = function(opt_includeInstance)
  */
 proto.tensorflow.OpDef.ArgDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    description: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    type: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    typeAttr: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    numberAttr: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    typeListAttr: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    isRef: jspb.Message.getBooleanFieldWithDefault(msg, 16, false)
+    name: Message.getFieldWithDefault(msg, 1, ""),
+    description: Message.getFieldWithDefault(msg, 2, ""),
+    type: Message.getFieldWithDefault(msg, 3, 0),
+    typeAttr: Message.getFieldWithDefault(msg, 4, ""),
+    numberAttr: Message.getFieldWithDefault(msg, 5, ""),
+    typeListAttr: Message.getFieldWithDefault(msg, 6, ""),
+    isRef: Message.getBooleanFieldWithDefault(msg, 16, false)
   };
 
   if (includeInstance) {
@@ -7019,7 +7009,7 @@ proto.tensorflow.OpDef.ArgDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.OpDef.ArgDef}
  */
 proto.tensorflow.OpDef.ArgDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.OpDef.ArgDef;
   return proto.tensorflow.OpDef.ArgDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -7081,7 +7071,7 @@ proto.tensorflow.OpDef.ArgDef.deserializeBinaryFromReader = function(msg, reader
  * @return {!Uint8Array}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.OpDef.ArgDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -7153,7 +7143,7 @@ proto.tensorflow.OpDef.ArgDef.serializeBinaryToWriter = function(message, writer
  * @return {string}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -7162,7 +7152,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.getName = function() {
  * @return {!proto.tensorflow.OpDef.ArgDef} returns this
  */
 proto.tensorflow.OpDef.ArgDef.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -7171,7 +7161,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.setName = function(value) {
  * @return {string}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.getDescription = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -7180,7 +7170,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.getDescription = function() {
  * @return {!proto.tensorflow.OpDef.ArgDef} returns this
  */
 proto.tensorflow.OpDef.ArgDef.prototype.setDescription = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -7189,7 +7179,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.setDescription = function(value) {
  * @return {!proto.tensorflow.DataType}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.getType = function() {
-  return /** @type {!proto.tensorflow.DataType} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {!proto.tensorflow.DataType} */ (Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -7198,7 +7188,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.getType = function() {
  * @return {!proto.tensorflow.OpDef.ArgDef} returns this
  */
 proto.tensorflow.OpDef.ArgDef.prototype.setType = function(value) {
-  return jspb.Message.setProto3EnumField(this, 3, value);
+  return Message.setProto3EnumField(this, 3, value);
 };
 
 
@@ -7207,7 +7197,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.setType = function(value) {
  * @return {string}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.getTypeAttr = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -7216,7 +7206,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.getTypeAttr = function() {
  * @return {!proto.tensorflow.OpDef.ArgDef} returns this
  */
 proto.tensorflow.OpDef.ArgDef.prototype.setTypeAttr = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+  return Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -7225,7 +7215,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.setTypeAttr = function(value) {
  * @return {string}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.getNumberAttr = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 5, ""));
 };
 
 
@@ -7234,7 +7224,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.getNumberAttr = function() {
  * @return {!proto.tensorflow.OpDef.ArgDef} returns this
  */
 proto.tensorflow.OpDef.ArgDef.prototype.setNumberAttr = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -7243,7 +7233,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.setNumberAttr = function(value) {
  * @return {string}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.getTypeListAttr = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 6, ""));
 };
 
 
@@ -7252,7 +7242,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.getTypeListAttr = function() {
  * @return {!proto.tensorflow.OpDef.ArgDef} returns this
  */
 proto.tensorflow.OpDef.ArgDef.prototype.setTypeListAttr = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
+  return Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -7261,7 +7251,7 @@ proto.tensorflow.OpDef.ArgDef.prototype.setTypeListAttr = function(value) {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.ArgDef.prototype.getIsRef = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 16, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 16, false));
 };
 
 
@@ -7270,14 +7260,14 @@ proto.tensorflow.OpDef.ArgDef.prototype.getIsRef = function() {
  * @return {!proto.tensorflow.OpDef.ArgDef} returns this
  */
 proto.tensorflow.OpDef.ArgDef.prototype.setIsRef = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 16, value);
+  return Message.setProto3BooleanField(this, 16, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -7306,12 +7296,12 @@ proto.tensorflow.OpDef.AttrDef.prototype.toObject = function(opt_includeInstance
  */
 proto.tensorflow.OpDef.AttrDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    type: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    name: Message.getFieldWithDefault(msg, 1, ""),
+    type: Message.getFieldWithDefault(msg, 2, ""),
     defaultValue: (f = msg.getDefaultValue()) && proto.tensorflow.AttrValue.toObject(includeInstance, f),
-    description: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    hasMinimum: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
-    minimum: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    description: Message.getFieldWithDefault(msg, 4, ""),
+    hasMinimum: Message.getBooleanFieldWithDefault(msg, 5, false),
+    minimum: Message.getFieldWithDefault(msg, 6, 0),
     allowedValues: (f = msg.getAllowedValues()) && proto.tensorflow.AttrValue.toObject(includeInstance, f)
   };
 
@@ -7329,7 +7319,7 @@ proto.tensorflow.OpDef.AttrDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.OpDef.AttrDef}
  */
 proto.tensorflow.OpDef.AttrDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.OpDef.AttrDef;
   return proto.tensorflow.OpDef.AttrDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -7393,7 +7383,7 @@ proto.tensorflow.OpDef.AttrDef.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.OpDef.AttrDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -7467,7 +7457,7 @@ proto.tensorflow.OpDef.AttrDef.serializeBinaryToWriter = function(message, write
  * @return {string}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -7476,7 +7466,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.getName = function() {
  * @return {!proto.tensorflow.OpDef.AttrDef} returns this
  */
 proto.tensorflow.OpDef.AttrDef.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -7485,7 +7475,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.setName = function(value) {
  * @return {string}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.getType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -7494,7 +7484,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.getType = function() {
  * @return {!proto.tensorflow.OpDef.AttrDef} returns this
  */
 proto.tensorflow.OpDef.AttrDef.prototype.setType = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -7504,7 +7494,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.setType = function(value) {
  */
 proto.tensorflow.OpDef.AttrDef.prototype.getDefaultValue = function() {
   return /** @type{?proto.tensorflow.AttrValue} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.AttrValue, 3));
+    Message.getWrapperField(this, proto.tensorflow.AttrValue, 3));
 };
 
 
@@ -7513,7 +7503,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.getDefaultValue = function() {
  * @return {!proto.tensorflow.OpDef.AttrDef} returns this
 */
 proto.tensorflow.OpDef.AttrDef.prototype.setDefaultValue = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return Message.setWrapperField(this, 3, value);
 };
 
 
@@ -7531,7 +7521,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.clearDefaultValue = function() {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.hasDefaultValue = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return Message.getField(this, 3) != null;
 };
 
 
@@ -7540,7 +7530,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.hasDefaultValue = function() {
  * @return {string}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.getDescription = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -7549,7 +7539,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.getDescription = function() {
  * @return {!proto.tensorflow.OpDef.AttrDef} returns this
  */
 proto.tensorflow.OpDef.AttrDef.prototype.setDescription = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+  return Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -7558,7 +7548,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.setDescription = function(value) {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.getHasMinimum = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
 
@@ -7567,7 +7557,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.getHasMinimum = function() {
  * @return {!proto.tensorflow.OpDef.AttrDef} returns this
  */
 proto.tensorflow.OpDef.AttrDef.prototype.setHasMinimum = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 5, value);
+  return Message.setProto3BooleanField(this, 5, value);
 };
 
 
@@ -7576,7 +7566,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.setHasMinimum = function(value) {
  * @return {number}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.getMinimum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 6, 0));
 };
 
 
@@ -7585,7 +7575,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.getMinimum = function() {
  * @return {!proto.tensorflow.OpDef.AttrDef} returns this
  */
 proto.tensorflow.OpDef.AttrDef.prototype.setMinimum = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
+  return Message.setProto3IntField(this, 6, value);
 };
 
 
@@ -7595,7 +7585,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.setMinimum = function(value) {
  */
 proto.tensorflow.OpDef.AttrDef.prototype.getAllowedValues = function() {
   return /** @type{?proto.tensorflow.AttrValue} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.AttrValue, 7));
+    Message.getWrapperField(this, proto.tensorflow.AttrValue, 7));
 };
 
 
@@ -7604,7 +7594,7 @@ proto.tensorflow.OpDef.AttrDef.prototype.getAllowedValues = function() {
  * @return {!proto.tensorflow.OpDef.AttrDef} returns this
 */
 proto.tensorflow.OpDef.AttrDef.prototype.setAllowedValues = function(value) {
-  return jspb.Message.setWrapperField(this, 7, value);
+  return Message.setWrapperField(this, 7, value);
 };
 
 
@@ -7622,14 +7612,14 @@ proto.tensorflow.OpDef.AttrDef.prototype.clearAllowedValues = function() {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.AttrDef.prototype.hasAllowedValues = function() {
-  return jspb.Message.getField(this, 7) != null;
+  return Message.getField(this, 7) != null;
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -7658,8 +7648,8 @@ proto.tensorflow.OpDef.OpDeprecation.prototype.toObject = function(opt_includeIn
  */
 proto.tensorflow.OpDef.OpDeprecation.toObject = function(includeInstance, msg) {
   var f, obj = {
-    version: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    explanation: jspb.Message.getFieldWithDefault(msg, 2, "")
+    version: Message.getFieldWithDefault(msg, 1, 0),
+    explanation: Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -7676,7 +7666,7 @@ proto.tensorflow.OpDef.OpDeprecation.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.OpDef.OpDeprecation}
  */
 proto.tensorflow.OpDef.OpDeprecation.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.OpDef.OpDeprecation;
   return proto.tensorflow.OpDef.OpDeprecation.deserializeBinaryFromReader(msg, reader);
 };
@@ -7718,7 +7708,7 @@ proto.tensorflow.OpDef.OpDeprecation.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.tensorflow.OpDef.OpDeprecation.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.OpDef.OpDeprecation.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -7755,7 +7745,7 @@ proto.tensorflow.OpDef.OpDeprecation.serializeBinaryToWriter = function(message,
  * @return {number}
  */
 proto.tensorflow.OpDef.OpDeprecation.prototype.getVersion = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -7764,7 +7754,7 @@ proto.tensorflow.OpDef.OpDeprecation.prototype.getVersion = function() {
  * @return {!proto.tensorflow.OpDef.OpDeprecation} returns this
  */
 proto.tensorflow.OpDef.OpDeprecation.prototype.setVersion = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -7773,7 +7763,7 @@ proto.tensorflow.OpDef.OpDeprecation.prototype.setVersion = function(value) {
  * @return {string}
  */
 proto.tensorflow.OpDef.OpDeprecation.prototype.getExplanation = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -7782,7 +7772,7 @@ proto.tensorflow.OpDef.OpDeprecation.prototype.getExplanation = function() {
  * @return {!proto.tensorflow.OpDef.OpDeprecation} returns this
  */
 proto.tensorflow.OpDef.OpDeprecation.prototype.setExplanation = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -7791,7 +7781,7 @@ proto.tensorflow.OpDef.OpDeprecation.prototype.setExplanation = function(value) 
  * @return {string}
  */
 proto.tensorflow.OpDef.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -7800,7 +7790,7 @@ proto.tensorflow.OpDef.prototype.getName = function() {
  * @return {!proto.tensorflow.OpDef} returns this
  */
 proto.tensorflow.OpDef.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -7810,7 +7800,7 @@ proto.tensorflow.OpDef.prototype.setName = function(value) {
  */
 proto.tensorflow.OpDef.prototype.getInputArgList = function() {
   return /** @type{!Array<!proto.tensorflow.OpDef.ArgDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef.ArgDef, 2));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef.ArgDef, 2));
 };
 
 
@@ -7819,7 +7809,7 @@ proto.tensorflow.OpDef.prototype.getInputArgList = function() {
  * @return {!proto.tensorflow.OpDef} returns this
 */
 proto.tensorflow.OpDef.prototype.setInputArgList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+  return Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
@@ -7829,7 +7819,7 @@ proto.tensorflow.OpDef.prototype.setInputArgList = function(value) {
  * @return {!proto.tensorflow.OpDef.ArgDef}
  */
 proto.tensorflow.OpDef.prototype.addInputArg = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.OpDef.ArgDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.OpDef.ArgDef, opt_index);
 };
 
 
@@ -7848,7 +7838,7 @@ proto.tensorflow.OpDef.prototype.clearInputArgList = function() {
  */
 proto.tensorflow.OpDef.prototype.getOutputArgList = function() {
   return /** @type{!Array<!proto.tensorflow.OpDef.ArgDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef.ArgDef, 3));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef.ArgDef, 3));
 };
 
 
@@ -7857,7 +7847,7 @@ proto.tensorflow.OpDef.prototype.getOutputArgList = function() {
  * @return {!proto.tensorflow.OpDef} returns this
 */
 proto.tensorflow.OpDef.prototype.setOutputArgList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 3, value);
+  return Message.setRepeatedWrapperField(this, 3, value);
 };
 
 
@@ -7867,7 +7857,7 @@ proto.tensorflow.OpDef.prototype.setOutputArgList = function(value) {
  * @return {!proto.tensorflow.OpDef.ArgDef}
  */
 proto.tensorflow.OpDef.prototype.addOutputArg = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.tensorflow.OpDef.ArgDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 3, opt_value, proto.tensorflow.OpDef.ArgDef, opt_index);
 };
 
 
@@ -7886,7 +7876,7 @@ proto.tensorflow.OpDef.prototype.clearOutputArgList = function() {
  */
 proto.tensorflow.OpDef.prototype.getAttrList = function() {
   return /** @type{!Array<!proto.tensorflow.OpDef.AttrDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef.AttrDef, 4));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef.AttrDef, 4));
 };
 
 
@@ -7895,7 +7885,7 @@ proto.tensorflow.OpDef.prototype.getAttrList = function() {
  * @return {!proto.tensorflow.OpDef} returns this
 */
 proto.tensorflow.OpDef.prototype.setAttrList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 4, value);
+  return Message.setRepeatedWrapperField(this, 4, value);
 };
 
 
@@ -7905,7 +7895,7 @@ proto.tensorflow.OpDef.prototype.setAttrList = function(value) {
  * @return {!proto.tensorflow.OpDef.AttrDef}
  */
 proto.tensorflow.OpDef.prototype.addAttr = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.tensorflow.OpDef.AttrDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 4, opt_value, proto.tensorflow.OpDef.AttrDef, opt_index);
 };
 
 
@@ -7924,7 +7914,7 @@ proto.tensorflow.OpDef.prototype.clearAttrList = function() {
  */
 proto.tensorflow.OpDef.prototype.getDeprecation = function() {
   return /** @type{?proto.tensorflow.OpDef.OpDeprecation} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.OpDef.OpDeprecation, 8));
+    Message.getWrapperField(this, proto.tensorflow.OpDef.OpDeprecation, 8));
 };
 
 
@@ -7933,7 +7923,7 @@ proto.tensorflow.OpDef.prototype.getDeprecation = function() {
  * @return {!proto.tensorflow.OpDef} returns this
 */
 proto.tensorflow.OpDef.prototype.setDeprecation = function(value) {
-  return jspb.Message.setWrapperField(this, 8, value);
+  return Message.setWrapperField(this, 8, value);
 };
 
 
@@ -7951,7 +7941,7 @@ proto.tensorflow.OpDef.prototype.clearDeprecation = function() {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.prototype.hasDeprecation = function() {
-  return jspb.Message.getField(this, 8) != null;
+  return Message.getField(this, 8) != null;
 };
 
 
@@ -7960,7 +7950,7 @@ proto.tensorflow.OpDef.prototype.hasDeprecation = function() {
  * @return {string}
  */
 proto.tensorflow.OpDef.prototype.getSummary = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 5, ""));
 };
 
 
@@ -7969,7 +7959,7 @@ proto.tensorflow.OpDef.prototype.getSummary = function() {
  * @return {!proto.tensorflow.OpDef} returns this
  */
 proto.tensorflow.OpDef.prototype.setSummary = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -7978,7 +7968,7 @@ proto.tensorflow.OpDef.prototype.setSummary = function(value) {
  * @return {string}
  */
 proto.tensorflow.OpDef.prototype.getDescription = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 6, ""));
 };
 
 
@@ -7987,7 +7977,7 @@ proto.tensorflow.OpDef.prototype.getDescription = function() {
  * @return {!proto.tensorflow.OpDef} returns this
  */
 proto.tensorflow.OpDef.prototype.setDescription = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
+  return Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -7996,7 +7986,7 @@ proto.tensorflow.OpDef.prototype.setDescription = function(value) {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.prototype.getIsCommutative = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 18, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 18, false));
 };
 
 
@@ -8005,7 +7995,7 @@ proto.tensorflow.OpDef.prototype.getIsCommutative = function() {
  * @return {!proto.tensorflow.OpDef} returns this
  */
 proto.tensorflow.OpDef.prototype.setIsCommutative = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 18, value);
+  return Message.setProto3BooleanField(this, 18, value);
 };
 
 
@@ -8014,7 +8004,7 @@ proto.tensorflow.OpDef.prototype.setIsCommutative = function(value) {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.prototype.getIsAggregate = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 16, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 16, false));
 };
 
 
@@ -8023,7 +8013,7 @@ proto.tensorflow.OpDef.prototype.getIsAggregate = function() {
  * @return {!proto.tensorflow.OpDef} returns this
  */
 proto.tensorflow.OpDef.prototype.setIsAggregate = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 16, value);
+  return Message.setProto3BooleanField(this, 16, value);
 };
 
 
@@ -8032,7 +8022,7 @@ proto.tensorflow.OpDef.prototype.setIsAggregate = function(value) {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.prototype.getIsStateful = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 17, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 17, false));
 };
 
 
@@ -8041,7 +8031,7 @@ proto.tensorflow.OpDef.prototype.getIsStateful = function() {
  * @return {!proto.tensorflow.OpDef} returns this
  */
 proto.tensorflow.OpDef.prototype.setIsStateful = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 17, value);
+  return Message.setProto3BooleanField(this, 17, value);
 };
 
 
@@ -8050,7 +8040,7 @@ proto.tensorflow.OpDef.prototype.setIsStateful = function(value) {
  * @return {boolean}
  */
 proto.tensorflow.OpDef.prototype.getAllowsUninitializedInput = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 19, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 19, false));
 };
 
 
@@ -8059,7 +8049,7 @@ proto.tensorflow.OpDef.prototype.getAllowsUninitializedInput = function() {
  * @return {!proto.tensorflow.OpDef} returns this
  */
 proto.tensorflow.OpDef.prototype.setAllowsUninitializedInput = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 19, value);
+  return Message.setProto3BooleanField(this, 19, value);
 };
 
 
@@ -8073,7 +8063,7 @@ proto.tensorflow.OpList.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -8102,7 +8092,7 @@ proto.tensorflow.OpList.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.OpList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    opList: jspb.Message.toObjectList(msg.getOpList(),
+    opList: Message.toObjectList(msg.getOpList(),
     proto.tensorflow.OpDef.toObject, includeInstance)
   };
 
@@ -8120,7 +8110,7 @@ proto.tensorflow.OpList.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.OpList}
  */
 proto.tensorflow.OpList.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.OpList;
   return proto.tensorflow.OpList.deserializeBinaryFromReader(msg, reader);
 };
@@ -8159,7 +8149,7 @@ proto.tensorflow.OpList.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.OpList.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.OpList.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -8191,7 +8181,7 @@ proto.tensorflow.OpList.serializeBinaryToWriter = function(message, writer) {
  */
 proto.tensorflow.OpList.prototype.getOpList = function() {
   return /** @type{!Array<!proto.tensorflow.OpDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef, 1));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.OpDef, 1));
 };
 
 
@@ -8200,7 +8190,7 @@ proto.tensorflow.OpList.prototype.getOpList = function() {
  * @return {!proto.tensorflow.OpList} returns this
 */
 proto.tensorflow.OpList.prototype.setOpList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -8210,7 +8200,7 @@ proto.tensorflow.OpList.prototype.setOpList = function(value) {
  * @return {!proto.tensorflow.OpDef}
  */
 proto.tensorflow.OpList.prototype.addOp = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.OpDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.OpDef, opt_index);
 };
 
 
@@ -8233,7 +8223,7 @@ proto.tensorflow.MetaGraphDef.repeatedFields_ = [6];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -8267,7 +8257,7 @@ proto.tensorflow.MetaGraphDef.toObject = function(includeInstance, msg) {
     saverDef: (f = msg.getSaverDef()) && proto.tensorflow.SaverDef.toObject(includeInstance, f),
     collectionDefMap: (f = msg.getCollectionDefMap()) ? f.toObject(includeInstance, proto.tensorflow.CollectionDef.toObject) : [],
     signatureDefMap: (f = msg.getSignatureDefMap()) ? f.toObject(includeInstance, proto.tensorflow.SignatureDef.toObject) : [],
-    assetFileDefList: jspb.Message.toObjectList(msg.getAssetFileDefList(),
+    assetFileDefList: Message.toObjectList(msg.getAssetFileDefList(),
     proto.tensorflow.AssetFileDef.toObject, includeInstance)
   };
 
@@ -8285,7 +8275,7 @@ proto.tensorflow.MetaGraphDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.MetaGraphDef}
  */
 proto.tensorflow.MetaGraphDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.MetaGraphDef;
   return proto.tensorflow.MetaGraphDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -8323,13 +8313,13 @@ proto.tensorflow.MetaGraphDef.deserializeBinaryFromReader = function(msg, reader
     case 4:
       var value = msg.getCollectionDefMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.tensorflow.CollectionDef.deserializeBinaryFromReader, "", new proto.tensorflow.CollectionDef());
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readMessage, proto.tensorflow.CollectionDef.deserializeBinaryFromReader, "", new proto.tensorflow.CollectionDef());
          });
       break;
     case 5:
       var value = msg.getSignatureDefMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.tensorflow.SignatureDef.deserializeBinaryFromReader, "", new proto.tensorflow.SignatureDef());
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readMessage, proto.tensorflow.SignatureDef.deserializeBinaryFromReader, "", new proto.tensorflow.SignatureDef());
          });
       break;
     case 6:
@@ -8351,7 +8341,7 @@ proto.tensorflow.MetaGraphDef.deserializeBinaryFromReader = function(msg, reader
  * @return {!Uint8Array}
  */
 proto.tensorflow.MetaGraphDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.MetaGraphDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -8392,11 +8382,11 @@ proto.tensorflow.MetaGraphDef.serializeBinaryToWriter = function(message, writer
   }
   f = message.getCollectionDefMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.tensorflow.CollectionDef.serializeBinaryToWriter);
+    f.serializeBinary(4, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeMessage, proto.tensorflow.CollectionDef.serializeBinaryToWriter);
   }
   f = message.getSignatureDefMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.tensorflow.SignatureDef.serializeBinaryToWriter);
+    f.serializeBinary(5, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeMessage, proto.tensorflow.SignatureDef.serializeBinaryToWriter);
   }
   f = message.getAssetFileDefList();
   if (f.length > 0) {
@@ -8419,7 +8409,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.repeatedFields_ = [4];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -8448,12 +8438,12 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.toObject = function(opt_incl
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    metaGraphVersion: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    metaGraphVersion: Message.getFieldWithDefault(msg, 1, ""),
     strippedOpList: (f = msg.getStrippedOpList()) && proto.tensorflow.OpList.toObject(includeInstance, f),
     anyInfo: (f = msg.getAnyInfo()) && proto.tensorflow.Any.toObject(includeInstance, f),
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-    tensorflowVersion: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    tensorflowGitVersion: jspb.Message.getFieldWithDefault(msg, 6, "")
+    tagsList: (f = Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+    tensorflowVersion: Message.getFieldWithDefault(msg, 5, ""),
+    tensorflowGitVersion: Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -8470,7 +8460,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.toObject = function(includeInstance, m
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.MetaGraphDef.MetaInfoDef;
   return proto.tensorflow.MetaGraphDef.MetaInfoDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -8530,7 +8520,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.deserializeBinaryFromReader = function
  * @return {!Uint8Array}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.MetaGraphDef.MetaInfoDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -8597,7 +8587,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.serializeBinaryToWriter = function(mes
  * @return {string}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getMetaGraphVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -8606,7 +8596,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getMetaGraphVersion = functi
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef} returns this
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setMetaGraphVersion = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -8616,7 +8606,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setMetaGraphVersion = functi
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getStrippedOpList = function() {
   return /** @type{?proto.tensorflow.OpList} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.OpList, 2));
+    Message.getWrapperField(this, proto.tensorflow.OpList, 2));
 };
 
 
@@ -8625,7 +8615,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getStrippedOpList = function
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef} returns this
 */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setStrippedOpList = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
+  return Message.setWrapperField(this, 2, value);
 };
 
 
@@ -8643,7 +8633,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.clearStrippedOpList = functi
  * @return {boolean}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.hasStrippedOpList = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
@@ -8653,7 +8643,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.hasStrippedOpList = function
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getAnyInfo = function() {
   return /** @type{?proto.tensorflow.Any} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.Any, 3));
+    Message.getWrapperField(this, proto.tensorflow.Any, 3));
 };
 
 
@@ -8662,7 +8652,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getAnyInfo = function() {
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef} returns this
 */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setAnyInfo = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return Message.setWrapperField(this, 3, value);
 };
 
 
@@ -8680,7 +8670,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.clearAnyInfo = function() {
  * @return {boolean}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.hasAnyInfo = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return Message.getField(this, 3) != null;
 };
 
 
@@ -8689,7 +8679,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.hasAnyInfo = function() {
  * @return {!Array<string>}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getTagsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+  return /** @type {!Array<string>} */ (Message.getRepeatedField(this, 4));
 };
 
 
@@ -8698,7 +8688,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getTagsList = function() {
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef} returns this
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setTagsList = function(value) {
-  return jspb.Message.setField(this, 4, value || []);
+  return Message.setField(this, 4, value || []);
 };
 
 
@@ -8708,7 +8698,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setTagsList = function(value
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef} returns this
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.addTags = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+  return Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
 
@@ -8726,7 +8716,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.clearTagsList = function() {
  * @return {string}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getTensorflowVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 5, ""));
 };
 
 
@@ -8735,7 +8725,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getTensorflowVersion = funct
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef} returns this
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setTensorflowVersion = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -8744,7 +8734,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setTensorflowVersion = funct
  * @return {string}
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getTensorflowGitVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 6, ""));
 };
 
 
@@ -8753,7 +8743,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.getTensorflowGitVersion = fu
  * @return {!proto.tensorflow.MetaGraphDef.MetaInfoDef} returns this
  */
 proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setTensorflowGitVersion = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
+  return Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -8763,7 +8753,7 @@ proto.tensorflow.MetaGraphDef.MetaInfoDef.prototype.setTensorflowGitVersion = fu
  */
 proto.tensorflow.MetaGraphDef.prototype.getMetaInfoDef = function() {
   return /** @type{?proto.tensorflow.MetaGraphDef.MetaInfoDef} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.MetaGraphDef.MetaInfoDef, 1));
+    Message.getWrapperField(this, proto.tensorflow.MetaGraphDef.MetaInfoDef, 1));
 };
 
 
@@ -8772,7 +8762,7 @@ proto.tensorflow.MetaGraphDef.prototype.getMetaInfoDef = function() {
  * @return {!proto.tensorflow.MetaGraphDef} returns this
 */
 proto.tensorflow.MetaGraphDef.prototype.setMetaInfoDef = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  return Message.setWrapperField(this, 1, value);
 };
 
 
@@ -8790,7 +8780,7 @@ proto.tensorflow.MetaGraphDef.prototype.clearMetaInfoDef = function() {
  * @return {boolean}
  */
 proto.tensorflow.MetaGraphDef.prototype.hasMetaInfoDef = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
@@ -8800,7 +8790,7 @@ proto.tensorflow.MetaGraphDef.prototype.hasMetaInfoDef = function() {
  */
 proto.tensorflow.MetaGraphDef.prototype.getGraphDef = function() {
   return /** @type{?proto.tensorflow.GraphDef} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.GraphDef, 2));
+    Message.getWrapperField(this, proto.tensorflow.GraphDef, 2));
 };
 
 
@@ -8809,7 +8799,7 @@ proto.tensorflow.MetaGraphDef.prototype.getGraphDef = function() {
  * @return {!proto.tensorflow.MetaGraphDef} returns this
 */
 proto.tensorflow.MetaGraphDef.prototype.setGraphDef = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
+  return Message.setWrapperField(this, 2, value);
 };
 
 
@@ -8827,7 +8817,7 @@ proto.tensorflow.MetaGraphDef.prototype.clearGraphDef = function() {
  * @return {boolean}
  */
 proto.tensorflow.MetaGraphDef.prototype.hasGraphDef = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
@@ -8837,7 +8827,7 @@ proto.tensorflow.MetaGraphDef.prototype.hasGraphDef = function() {
  */
 proto.tensorflow.MetaGraphDef.prototype.getSaverDef = function() {
   return /** @type{?proto.tensorflow.SaverDef} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.SaverDef, 3));
+    Message.getWrapperField(this, proto.tensorflow.SaverDef, 3));
 };
 
 
@@ -8846,7 +8836,7 @@ proto.tensorflow.MetaGraphDef.prototype.getSaverDef = function() {
  * @return {!proto.tensorflow.MetaGraphDef} returns this
 */
 proto.tensorflow.MetaGraphDef.prototype.setSaverDef = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return Message.setWrapperField(this, 3, value);
 };
 
 
@@ -8864,7 +8854,7 @@ proto.tensorflow.MetaGraphDef.prototype.clearSaverDef = function() {
  * @return {boolean}
  */
 proto.tensorflow.MetaGraphDef.prototype.hasSaverDef = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return Message.getField(this, 3) != null;
 };
 
 
@@ -8876,7 +8866,7 @@ proto.tensorflow.MetaGraphDef.prototype.hasSaverDef = function() {
  */
 proto.tensorflow.MetaGraphDef.prototype.getCollectionDefMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.tensorflow.CollectionDef>} */ (
-      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
+      Message.getMapField(this, 4, opt_noLazyCreate,
       proto.tensorflow.CollectionDef));
 };
 
@@ -8898,7 +8888,7 @@ proto.tensorflow.MetaGraphDef.prototype.clearCollectionDefMap = function() {
  */
 proto.tensorflow.MetaGraphDef.prototype.getSignatureDefMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.tensorflow.SignatureDef>} */ (
-      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
+      Message.getMapField(this, 5, opt_noLazyCreate,
       proto.tensorflow.SignatureDef));
 };
 
@@ -8918,7 +8908,7 @@ proto.tensorflow.MetaGraphDef.prototype.clearSignatureDefMap = function() {
  */
 proto.tensorflow.MetaGraphDef.prototype.getAssetFileDefList = function() {
   return /** @type{!Array<!proto.tensorflow.AssetFileDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.AssetFileDef, 6));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.AssetFileDef, 6));
 };
 
 
@@ -8927,7 +8917,7 @@ proto.tensorflow.MetaGraphDef.prototype.getAssetFileDefList = function() {
  * @return {!proto.tensorflow.MetaGraphDef} returns this
 */
 proto.tensorflow.MetaGraphDef.prototype.setAssetFileDefList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 6, value);
+  return Message.setRepeatedWrapperField(this, 6, value);
 };
 
 
@@ -8937,7 +8927,7 @@ proto.tensorflow.MetaGraphDef.prototype.setAssetFileDefList = function(value) {
  * @return {!proto.tensorflow.AssetFileDef}
  */
 proto.tensorflow.MetaGraphDef.prototype.addAssetFileDef = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.tensorflow.AssetFileDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 6, opt_value, proto.tensorflow.AssetFileDef, opt_index);
 };
 
 
@@ -8960,7 +8950,7 @@ proto.tensorflow.SavedModel.repeatedFields_ = [2];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -8989,8 +8979,8 @@ proto.tensorflow.SavedModel.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.SavedModel.toObject = function(includeInstance, msg) {
   var f, obj = {
-    savedModelSchemaVersion: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    metaGraphsList: jspb.Message.toObjectList(msg.getMetaGraphsList(),
+    savedModelSchemaVersion: Message.getFieldWithDefault(msg, 1, 0),
+    metaGraphsList: Message.toObjectList(msg.getMetaGraphsList(),
     proto.tensorflow.MetaGraphDef.toObject, includeInstance)
   };
 
@@ -9008,7 +8998,7 @@ proto.tensorflow.SavedModel.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.SavedModel}
  */
 proto.tensorflow.SavedModel.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.SavedModel;
   return proto.tensorflow.SavedModel.deserializeBinaryFromReader(msg, reader);
 };
@@ -9051,7 +9041,7 @@ proto.tensorflow.SavedModel.deserializeBinaryFromReader = function(msg, reader) 
  * @return {!Uint8Array}
  */
 proto.tensorflow.SavedModel.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.SavedModel.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -9089,7 +9079,7 @@ proto.tensorflow.SavedModel.serializeBinaryToWriter = function(message, writer) 
  * @return {number}
  */
 proto.tensorflow.SavedModel.prototype.getSavedModelSchemaVersion = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -9098,7 +9088,7 @@ proto.tensorflow.SavedModel.prototype.getSavedModelSchemaVersion = function() {
  * @return {!proto.tensorflow.SavedModel} returns this
  */
 proto.tensorflow.SavedModel.prototype.setSavedModelSchemaVersion = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -9108,7 +9098,7 @@ proto.tensorflow.SavedModel.prototype.setSavedModelSchemaVersion = function(valu
  */
 proto.tensorflow.SavedModel.prototype.getMetaGraphsList = function() {
   return /** @type{!Array<!proto.tensorflow.MetaGraphDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.MetaGraphDef, 2));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.MetaGraphDef, 2));
 };
 
 
@@ -9117,7 +9107,7 @@ proto.tensorflow.SavedModel.prototype.getMetaGraphsList = function() {
  * @return {!proto.tensorflow.SavedModel} returns this
 */
 proto.tensorflow.SavedModel.prototype.setMetaGraphsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+  return Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
@@ -9127,7 +9117,7 @@ proto.tensorflow.SavedModel.prototype.setMetaGraphsList = function(value) {
  * @return {!proto.tensorflow.MetaGraphDef}
  */
 proto.tensorflow.SavedModel.prototype.addMetaGraphs = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.MetaGraphDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.MetaGraphDef, opt_index);
 };
 
 
@@ -9150,7 +9140,7 @@ proto.tensorflow.FunctionDefLibrary.repeatedFields_ = [1,2];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -9179,9 +9169,9 @@ proto.tensorflow.FunctionDefLibrary.prototype.toObject = function(opt_includeIns
  */
 proto.tensorflow.FunctionDefLibrary.toObject = function(includeInstance, msg) {
   var f, obj = {
-    functionList: jspb.Message.toObjectList(msg.getFunctionList(),
+    functionList: Message.toObjectList(msg.getFunctionList(),
     proto.tensorflow.FunctionDef.toObject, includeInstance),
-    gradientList: jspb.Message.toObjectList(msg.getGradientList(),
+    gradientList: Message.toObjectList(msg.getGradientList(),
     proto.tensorflow.GradientDef.toObject, includeInstance)
   };
 
@@ -9199,7 +9189,7 @@ proto.tensorflow.FunctionDefLibrary.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.FunctionDefLibrary}
  */
 proto.tensorflow.FunctionDefLibrary.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.FunctionDefLibrary;
   return proto.tensorflow.FunctionDefLibrary.deserializeBinaryFromReader(msg, reader);
 };
@@ -9243,7 +9233,7 @@ proto.tensorflow.FunctionDefLibrary.deserializeBinaryFromReader = function(msg, 
  * @return {!Uint8Array}
  */
 proto.tensorflow.FunctionDefLibrary.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.FunctionDefLibrary.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -9283,7 +9273,7 @@ proto.tensorflow.FunctionDefLibrary.serializeBinaryToWriter = function(message, 
  */
 proto.tensorflow.FunctionDefLibrary.prototype.getFunctionList = function() {
   return /** @type{!Array<!proto.tensorflow.FunctionDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.FunctionDef, 1));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.FunctionDef, 1));
 };
 
 
@@ -9292,7 +9282,7 @@ proto.tensorflow.FunctionDefLibrary.prototype.getFunctionList = function() {
  * @return {!proto.tensorflow.FunctionDefLibrary} returns this
 */
 proto.tensorflow.FunctionDefLibrary.prototype.setFunctionList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -9302,7 +9292,7 @@ proto.tensorflow.FunctionDefLibrary.prototype.setFunctionList = function(value) 
  * @return {!proto.tensorflow.FunctionDef}
  */
 proto.tensorflow.FunctionDefLibrary.prototype.addFunction = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.FunctionDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.FunctionDef, opt_index);
 };
 
 
@@ -9321,7 +9311,7 @@ proto.tensorflow.FunctionDefLibrary.prototype.clearFunctionList = function() {
  */
 proto.tensorflow.FunctionDefLibrary.prototype.getGradientList = function() {
   return /** @type{!Array<!proto.tensorflow.GradientDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.GradientDef, 2));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.GradientDef, 2));
 };
 
 
@@ -9330,7 +9320,7 @@ proto.tensorflow.FunctionDefLibrary.prototype.getGradientList = function() {
  * @return {!proto.tensorflow.FunctionDefLibrary} returns this
 */
 proto.tensorflow.FunctionDefLibrary.prototype.setGradientList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 2, value);
+  return Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
@@ -9340,7 +9330,7 @@ proto.tensorflow.FunctionDefLibrary.prototype.setGradientList = function(value) 
  * @return {!proto.tensorflow.GradientDef}
  */
 proto.tensorflow.FunctionDefLibrary.prototype.addGradient = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.GradientDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 2, opt_value, proto.tensorflow.GradientDef, opt_index);
 };
 
 
@@ -9363,7 +9353,7 @@ proto.tensorflow.FunctionDef.repeatedFields_ = [3];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -9394,7 +9384,7 @@ proto.tensorflow.FunctionDef.toObject = function(includeInstance, msg) {
   var f, obj = {
     signature: (f = msg.getSignature()) && proto.tensorflow.OpDef.toObject(includeInstance, f),
     attrMap: (f = msg.getAttrMap()) ? f.toObject(includeInstance, proto.tensorflow.AttrValue.toObject) : [],
-    nodeDefList: jspb.Message.toObjectList(msg.getNodeDefList(),
+    nodeDefList: Message.toObjectList(msg.getNodeDefList(),
     proto.tensorflow.NodeDef.toObject, includeInstance),
     retMap: (f = msg.getRetMap()) ? f.toObject(includeInstance, undefined) : []
   };
@@ -9413,7 +9403,7 @@ proto.tensorflow.FunctionDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.FunctionDef}
  */
 proto.tensorflow.FunctionDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.FunctionDef;
   return proto.tensorflow.FunctionDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -9441,7 +9431,7 @@ proto.tensorflow.FunctionDef.deserializeBinaryFromReader = function(msg, reader)
     case 5:
       var value = msg.getAttrMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.tensorflow.AttrValue.deserializeBinaryFromReader, "", new proto.tensorflow.AttrValue());
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readMessage, proto.tensorflow.AttrValue.deserializeBinaryFromReader, "", new proto.tensorflow.AttrValue());
          });
       break;
     case 3:
@@ -9452,7 +9442,7 @@ proto.tensorflow.FunctionDef.deserializeBinaryFromReader = function(msg, reader)
     case 4:
       var value = msg.getRetMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
+        Map.deserializeBinary(message, reader, BinaryReader.prototype.readString, BinaryReader.prototype.readString, null, "", "");
          });
       break;
     default:
@@ -9469,7 +9459,7 @@ proto.tensorflow.FunctionDef.deserializeBinaryFromReader = function(msg, reader)
  * @return {!Uint8Array}
  */
 proto.tensorflow.FunctionDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.FunctionDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -9494,7 +9484,7 @@ proto.tensorflow.FunctionDef.serializeBinaryToWriter = function(message, writer)
   }
   f = message.getAttrMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.tensorflow.AttrValue.serializeBinaryToWriter);
+    f.serializeBinary(5, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeMessage, proto.tensorflow.AttrValue.serializeBinaryToWriter);
   }
   f = message.getNodeDefList();
   if (f.length > 0) {
@@ -9506,7 +9496,7 @@ proto.tensorflow.FunctionDef.serializeBinaryToWriter = function(message, writer)
   }
   f = message.getRetMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(4, writer, BinaryWriter.prototype.writeString, BinaryWriter.prototype.writeString);
   }
 };
 
@@ -9517,7 +9507,7 @@ proto.tensorflow.FunctionDef.serializeBinaryToWriter = function(message, writer)
  */
 proto.tensorflow.FunctionDef.prototype.getSignature = function() {
   return /** @type{?proto.tensorflow.OpDef} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.OpDef, 1));
+    Message.getWrapperField(this, proto.tensorflow.OpDef, 1));
 };
 
 
@@ -9526,7 +9516,7 @@ proto.tensorflow.FunctionDef.prototype.getSignature = function() {
  * @return {!proto.tensorflow.FunctionDef} returns this
 */
 proto.tensorflow.FunctionDef.prototype.setSignature = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  return Message.setWrapperField(this, 1, value);
 };
 
 
@@ -9544,7 +9534,7 @@ proto.tensorflow.FunctionDef.prototype.clearSignature = function() {
  * @return {boolean}
  */
 proto.tensorflow.FunctionDef.prototype.hasSignature = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
@@ -9556,7 +9546,7 @@ proto.tensorflow.FunctionDef.prototype.hasSignature = function() {
  */
 proto.tensorflow.FunctionDef.prototype.getAttrMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,!proto.tensorflow.AttrValue>} */ (
-      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
+      Message.getMapField(this, 5, opt_noLazyCreate,
       proto.tensorflow.AttrValue));
 };
 
@@ -9576,7 +9566,7 @@ proto.tensorflow.FunctionDef.prototype.clearAttrMap = function() {
  */
 proto.tensorflow.FunctionDef.prototype.getNodeDefList = function() {
   return /** @type{!Array<!proto.tensorflow.NodeDef>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.NodeDef, 3));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.NodeDef, 3));
 };
 
 
@@ -9585,7 +9575,7 @@ proto.tensorflow.FunctionDef.prototype.getNodeDefList = function() {
  * @return {!proto.tensorflow.FunctionDef} returns this
 */
 proto.tensorflow.FunctionDef.prototype.setNodeDefList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 3, value);
+  return Message.setRepeatedWrapperField(this, 3, value);
 };
 
 
@@ -9595,7 +9585,7 @@ proto.tensorflow.FunctionDef.prototype.setNodeDefList = function(value) {
  * @return {!proto.tensorflow.NodeDef}
  */
 proto.tensorflow.FunctionDef.prototype.addNodeDef = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.tensorflow.NodeDef, opt_index);
+  return Message.addToRepeatedWrapperField(this, 3, opt_value, proto.tensorflow.NodeDef, opt_index);
 };
 
 
@@ -9616,7 +9606,7 @@ proto.tensorflow.FunctionDef.prototype.clearNodeDefList = function() {
  */
 proto.tensorflow.FunctionDef.prototype.getRetMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
+      Message.getMapField(this, 4, opt_noLazyCreate,
       null));
 };
 
@@ -9633,7 +9623,7 @@ proto.tensorflow.FunctionDef.prototype.clearRetMap = function() {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -9662,8 +9652,8 @@ proto.tensorflow.GradientDef.prototype.toObject = function(opt_includeInstance) 
  */
 proto.tensorflow.GradientDef.toObject = function(includeInstance, msg) {
   var f, obj = {
-    functionName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    gradientFunc: jspb.Message.getFieldWithDefault(msg, 2, "")
+    functionName: Message.getFieldWithDefault(msg, 1, ""),
+    gradientFunc: Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -9680,7 +9670,7 @@ proto.tensorflow.GradientDef.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.GradientDef}
  */
 proto.tensorflow.GradientDef.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.GradientDef;
   return proto.tensorflow.GradientDef.deserializeBinaryFromReader(msg, reader);
 };
@@ -9722,7 +9712,7 @@ proto.tensorflow.GradientDef.deserializeBinaryFromReader = function(msg, reader)
  * @return {!Uint8Array}
  */
 proto.tensorflow.GradientDef.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.GradientDef.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -9759,7 +9749,7 @@ proto.tensorflow.GradientDef.serializeBinaryToWriter = function(message, writer)
  * @return {string}
  */
 proto.tensorflow.GradientDef.prototype.getFunctionName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -9768,7 +9758,7 @@ proto.tensorflow.GradientDef.prototype.getFunctionName = function() {
  * @return {!proto.tensorflow.GradientDef} returns this
  */
 proto.tensorflow.GradientDef.prototype.setFunctionName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -9777,7 +9767,7 @@ proto.tensorflow.GradientDef.prototype.setFunctionName = function(value) {
  * @return {string}
  */
 proto.tensorflow.GradientDef.prototype.getGradientFunc = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -9786,14 +9776,14 @@ proto.tensorflow.GradientDef.prototype.getGradientFunc = function() {
  * @return {!proto.tensorflow.GradientDef} returns this
  */
 proto.tensorflow.GradientDef.prototype.setGradientFunc = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -9822,7 +9812,7 @@ proto.tensorflow.SummaryDescription.prototype.toObject = function(opt_includeIns
  */
 proto.tensorflow.SummaryDescription.toObject = function(includeInstance, msg) {
   var f, obj = {
-    typeHint: jspb.Message.getFieldWithDefault(msg, 1, "")
+    typeHint: Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -9839,7 +9829,7 @@ proto.tensorflow.SummaryDescription.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.SummaryDescription}
  */
 proto.tensorflow.SummaryDescription.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.SummaryDescription;
   return proto.tensorflow.SummaryDescription.deserializeBinaryFromReader(msg, reader);
 };
@@ -9877,7 +9867,7 @@ proto.tensorflow.SummaryDescription.deserializeBinaryFromReader = function(msg, 
  * @return {!Uint8Array}
  */
 proto.tensorflow.SummaryDescription.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.SummaryDescription.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -9907,7 +9897,7 @@ proto.tensorflow.SummaryDescription.serializeBinaryToWriter = function(message, 
  * @return {string}
  */
 proto.tensorflow.SummaryDescription.prototype.getTypeHint = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -9916,7 +9906,7 @@ proto.tensorflow.SummaryDescription.prototype.getTypeHint = function() {
  * @return {!proto.tensorflow.SummaryDescription} returns this
  */
 proto.tensorflow.SummaryDescription.prototype.setTypeHint = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -9930,7 +9920,7 @@ proto.tensorflow.HistogramProto.repeatedFields_ = [6,7];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -9959,13 +9949,13 @@ proto.tensorflow.HistogramProto.prototype.toObject = function(opt_includeInstanc
  */
 proto.tensorflow.HistogramProto.toObject = function(includeInstance, msg) {
   var f, obj = {
-    min: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
-    max: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
-    num: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
-    sum: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
-    sumSquares: jspb.Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
-    bucketLimitList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 6)) == null ? undefined : f,
-    bucketList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 7)) == null ? undefined : f
+    min: Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
+    max: Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+    num: Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+    sum: Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    sumSquares: Message.getFloatingPointFieldWithDefault(msg, 5, 0.0),
+    bucketLimitList: (f = Message.getRepeatedFloatingPointField(msg, 6)) == null ? undefined : f,
+    bucketList: (f = Message.getRepeatedFloatingPointField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -9982,7 +9972,7 @@ proto.tensorflow.HistogramProto.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.HistogramProto}
  */
 proto.tensorflow.HistogramProto.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.HistogramProto;
   return proto.tensorflow.HistogramProto.deserializeBinaryFromReader(msg, reader);
 };
@@ -10048,7 +10038,7 @@ proto.tensorflow.HistogramProto.deserializeBinaryFromReader = function(msg, read
  * @return {!Uint8Array}
  */
 proto.tensorflow.HistogramProto.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.HistogramProto.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -10120,7 +10110,7 @@ proto.tensorflow.HistogramProto.serializeBinaryToWriter = function(message, writ
  * @return {number}
  */
 proto.tensorflow.HistogramProto.prototype.getMin = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
 };
 
 
@@ -10129,7 +10119,7 @@ proto.tensorflow.HistogramProto.prototype.getMin = function() {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.setMin = function(value) {
-  return jspb.Message.setProto3FloatField(this, 1, value);
+  return Message.setProto3FloatField(this, 1, value);
 };
 
 
@@ -10138,7 +10128,7 @@ proto.tensorflow.HistogramProto.prototype.setMin = function(value) {
  * @return {number}
  */
 proto.tensorflow.HistogramProto.prototype.getMax = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
 };
 
 
@@ -10147,7 +10137,7 @@ proto.tensorflow.HistogramProto.prototype.getMax = function() {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.setMax = function(value) {
-  return jspb.Message.setProto3FloatField(this, 2, value);
+  return Message.setProto3FloatField(this, 2, value);
 };
 
 
@@ -10156,7 +10146,7 @@ proto.tensorflow.HistogramProto.prototype.setMax = function(value) {
  * @return {number}
  */
 proto.tensorflow.HistogramProto.prototype.getNum = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 3, 0.0));
 };
 
 
@@ -10165,7 +10155,7 @@ proto.tensorflow.HistogramProto.prototype.getNum = function() {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.setNum = function(value) {
-  return jspb.Message.setProto3FloatField(this, 3, value);
+  return Message.setProto3FloatField(this, 3, value);
 };
 
 
@@ -10174,7 +10164,7 @@ proto.tensorflow.HistogramProto.prototype.setNum = function(value) {
  * @return {number}
  */
 proto.tensorflow.HistogramProto.prototype.getSum = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 4, 0.0));
 };
 
 
@@ -10183,7 +10173,7 @@ proto.tensorflow.HistogramProto.prototype.getSum = function() {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.setSum = function(value) {
-  return jspb.Message.setProto3FloatField(this, 4, value);
+  return Message.setProto3FloatField(this, 4, value);
 };
 
 
@@ -10192,7 +10182,7 @@ proto.tensorflow.HistogramProto.prototype.setSum = function(value) {
  * @return {number}
  */
 proto.tensorflow.HistogramProto.prototype.getSumSquares = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 5, 0.0));
 };
 
 
@@ -10201,7 +10191,7 @@ proto.tensorflow.HistogramProto.prototype.getSumSquares = function() {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.setSumSquares = function(value) {
-  return jspb.Message.setProto3FloatField(this, 5, value);
+  return Message.setProto3FloatField(this, 5, value);
 };
 
 
@@ -10210,7 +10200,7 @@ proto.tensorflow.HistogramProto.prototype.setSumSquares = function(value) {
  * @return {!Array<number>}
  */
 proto.tensorflow.HistogramProto.prototype.getBucketLimitList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 6));
+  return /** @type {!Array<number>} */ (Message.getRepeatedFloatingPointField(this, 6));
 };
 
 
@@ -10219,7 +10209,7 @@ proto.tensorflow.HistogramProto.prototype.getBucketLimitList = function() {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.setBucketLimitList = function(value) {
-  return jspb.Message.setField(this, 6, value || []);
+  return Message.setField(this, 6, value || []);
 };
 
 
@@ -10229,7 +10219,7 @@ proto.tensorflow.HistogramProto.prototype.setBucketLimitList = function(value) {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.addBucketLimit = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+  return Message.addToRepeatedField(this, 6, value, opt_index);
 };
 
 
@@ -10247,7 +10237,7 @@ proto.tensorflow.HistogramProto.prototype.clearBucketLimitList = function() {
  * @return {!Array<number>}
  */
 proto.tensorflow.HistogramProto.prototype.getBucketList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 7));
+  return /** @type {!Array<number>} */ (Message.getRepeatedFloatingPointField(this, 7));
 };
 
 
@@ -10256,7 +10246,7 @@ proto.tensorflow.HistogramProto.prototype.getBucketList = function() {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.setBucketList = function(value) {
-  return jspb.Message.setField(this, 7, value || []);
+  return Message.setField(this, 7, value || []);
 };
 
 
@@ -10266,7 +10256,7 @@ proto.tensorflow.HistogramProto.prototype.setBucketList = function(value) {
  * @return {!proto.tensorflow.HistogramProto} returns this
  */
 proto.tensorflow.HistogramProto.prototype.addBucket = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+  return Message.addToRepeatedField(this, 7, value, opt_index);
 };
 
 
@@ -10282,7 +10272,7 @@ proto.tensorflow.HistogramProto.prototype.clearBucketList = function() {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -10312,9 +10302,9 @@ proto.tensorflow.SummaryMetadata.prototype.toObject = function(opt_includeInstan
 proto.tensorflow.SummaryMetadata.toObject = function(includeInstance, msg) {
   var f, obj = {
     pluginData: (f = msg.getPluginData()) && proto.tensorflow.SummaryMetadata.PluginData.toObject(includeInstance, f),
-    displayName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    summaryDescription: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    dataClass: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    displayName: Message.getFieldWithDefault(msg, 2, ""),
+    summaryDescription: Message.getFieldWithDefault(msg, 3, ""),
+    dataClass: Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -10331,7 +10321,7 @@ proto.tensorflow.SummaryMetadata.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.SummaryMetadata}
  */
 proto.tensorflow.SummaryMetadata.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.SummaryMetadata;
   return proto.tensorflow.SummaryMetadata.deserializeBinaryFromReader(msg, reader);
 };
@@ -10382,7 +10372,7 @@ proto.tensorflow.SummaryMetadata.deserializeBinaryFromReader = function(msg, rea
  * @return {!Uint8Array}
  */
 proto.tensorflow.SummaryMetadata.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.SummaryMetadata.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -10432,7 +10422,7 @@ proto.tensorflow.SummaryMetadata.serializeBinaryToWriter = function(message, wri
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -10461,7 +10451,7 @@ proto.tensorflow.SummaryMetadata.PluginData.prototype.toObject = function(opt_in
  */
 proto.tensorflow.SummaryMetadata.PluginData.toObject = function(includeInstance, msg) {
   var f, obj = {
-    pluginName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    pluginName: Message.getFieldWithDefault(msg, 1, ""),
     content: msg.getContent_asB64()
   };
 
@@ -10479,7 +10469,7 @@ proto.tensorflow.SummaryMetadata.PluginData.toObject = function(includeInstance,
  * @return {!proto.tensorflow.SummaryMetadata.PluginData}
  */
 proto.tensorflow.SummaryMetadata.PluginData.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.SummaryMetadata.PluginData;
   return proto.tensorflow.SummaryMetadata.PluginData.deserializeBinaryFromReader(msg, reader);
 };
@@ -10521,7 +10511,7 @@ proto.tensorflow.SummaryMetadata.PluginData.deserializeBinaryFromReader = functi
  * @return {!Uint8Array}
  */
 proto.tensorflow.SummaryMetadata.PluginData.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.SummaryMetadata.PluginData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -10558,7 +10548,7 @@ proto.tensorflow.SummaryMetadata.PluginData.serializeBinaryToWriter = function(m
  * @return {string}
  */
 proto.tensorflow.SummaryMetadata.PluginData.prototype.getPluginName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -10567,7 +10557,7 @@ proto.tensorflow.SummaryMetadata.PluginData.prototype.getPluginName = function()
  * @return {!proto.tensorflow.SummaryMetadata.PluginData} returns this
  */
 proto.tensorflow.SummaryMetadata.PluginData.prototype.setPluginName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -10576,7 +10566,7 @@ proto.tensorflow.SummaryMetadata.PluginData.prototype.setPluginName = function(v
  * @return {!(string|Uint8Array)}
  */
 proto.tensorflow.SummaryMetadata.PluginData.prototype.getContent = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -10586,7 +10576,7 @@ proto.tensorflow.SummaryMetadata.PluginData.prototype.getContent = function() {
  * @return {string}
  */
 proto.tensorflow.SummaryMetadata.PluginData.prototype.getContent_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
+  return /** @type {string} */ (Message.bytesAsB64(
       this.getContent()));
 };
 
@@ -10599,7 +10589,7 @@ proto.tensorflow.SummaryMetadata.PluginData.prototype.getContent_asB64 = functio
  * @return {!Uint8Array}
  */
 proto.tensorflow.SummaryMetadata.PluginData.prototype.getContent_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+  return /** @type {!Uint8Array} */ (Message.bytesAsU8(
       this.getContent()));
 };
 
@@ -10609,7 +10599,7 @@ proto.tensorflow.SummaryMetadata.PluginData.prototype.getContent_asU8 = function
  * @return {!proto.tensorflow.SummaryMetadata.PluginData} returns this
  */
 proto.tensorflow.SummaryMetadata.PluginData.prototype.setContent = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
+  return Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -10619,7 +10609,7 @@ proto.tensorflow.SummaryMetadata.PluginData.prototype.setContent = function(valu
  */
 proto.tensorflow.SummaryMetadata.prototype.getPluginData = function() {
   return /** @type{?proto.tensorflow.SummaryMetadata.PluginData} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.SummaryMetadata.PluginData, 1));
+    Message.getWrapperField(this, proto.tensorflow.SummaryMetadata.PluginData, 1));
 };
 
 
@@ -10628,7 +10618,7 @@ proto.tensorflow.SummaryMetadata.prototype.getPluginData = function() {
  * @return {!proto.tensorflow.SummaryMetadata} returns this
 */
 proto.tensorflow.SummaryMetadata.prototype.setPluginData = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  return Message.setWrapperField(this, 1, value);
 };
 
 
@@ -10646,7 +10636,7 @@ proto.tensorflow.SummaryMetadata.prototype.clearPluginData = function() {
  * @return {boolean}
  */
 proto.tensorflow.SummaryMetadata.prototype.hasPluginData = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
@@ -10655,7 +10645,7 @@ proto.tensorflow.SummaryMetadata.prototype.hasPluginData = function() {
  * @return {string}
  */
 proto.tensorflow.SummaryMetadata.prototype.getDisplayName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -10664,7 +10654,7 @@ proto.tensorflow.SummaryMetadata.prototype.getDisplayName = function() {
  * @return {!proto.tensorflow.SummaryMetadata} returns this
  */
 proto.tensorflow.SummaryMetadata.prototype.setDisplayName = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -10673,7 +10663,7 @@ proto.tensorflow.SummaryMetadata.prototype.setDisplayName = function(value) {
  * @return {string}
  */
 proto.tensorflow.SummaryMetadata.prototype.getSummaryDescription = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -10682,7 +10672,7 @@ proto.tensorflow.SummaryMetadata.prototype.getSummaryDescription = function() {
  * @return {!proto.tensorflow.SummaryMetadata} returns this
  */
 proto.tensorflow.SummaryMetadata.prototype.setSummaryDescription = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -10691,7 +10681,7 @@ proto.tensorflow.SummaryMetadata.prototype.setSummaryDescription = function(valu
  * @return {!proto.tensorflow.DataClass}
  */
 proto.tensorflow.SummaryMetadata.prototype.getDataClass = function() {
-  return /** @type {!proto.tensorflow.DataClass} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+  return /** @type {!proto.tensorflow.DataClass} */ (Message.getFieldWithDefault(this, 4, 0));
 };
 
 
@@ -10700,7 +10690,7 @@ proto.tensorflow.SummaryMetadata.prototype.getDataClass = function() {
  * @return {!proto.tensorflow.SummaryMetadata} returns this
  */
 proto.tensorflow.SummaryMetadata.prototype.setDataClass = function(value) {
-  return jspb.Message.setProto3EnumField(this, 4, value);
+  return Message.setProto3EnumField(this, 4, value);
 };
 
 
@@ -10714,7 +10704,7 @@ proto.tensorflow.Summary.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -10743,7 +10733,7 @@ proto.tensorflow.Summary.prototype.toObject = function(opt_includeInstance) {
  */
 proto.tensorflow.Summary.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valueList: jspb.Message.toObjectList(msg.getValueList(),
+    valueList: Message.toObjectList(msg.getValueList(),
     proto.tensorflow.Summary.Value.toObject, includeInstance)
   };
 
@@ -10761,7 +10751,7 @@ proto.tensorflow.Summary.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.Summary}
  */
 proto.tensorflow.Summary.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.Summary;
   return proto.tensorflow.Summary.deserializeBinaryFromReader(msg, reader);
 };
@@ -10800,7 +10790,7 @@ proto.tensorflow.Summary.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.tensorflow.Summary.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.Summary.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -10829,7 +10819,7 @@ proto.tensorflow.Summary.serializeBinaryToWriter = function(message, writer) {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -10858,9 +10848,9 @@ proto.tensorflow.Summary.Image.prototype.toObject = function(opt_includeInstance
  */
 proto.tensorflow.Summary.Image.toObject = function(includeInstance, msg) {
   var f, obj = {
-    height: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    width: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    colorspace: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    height: Message.getFieldWithDefault(msg, 1, 0),
+    width: Message.getFieldWithDefault(msg, 2, 0),
+    colorspace: Message.getFieldWithDefault(msg, 3, 0),
     encodedImageString: msg.getEncodedImageString_asB64()
   };
 
@@ -10878,7 +10868,7 @@ proto.tensorflow.Summary.Image.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.Summary.Image}
  */
 proto.tensorflow.Summary.Image.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.Summary.Image;
   return proto.tensorflow.Summary.Image.deserializeBinaryFromReader(msg, reader);
 };
@@ -10928,7 +10918,7 @@ proto.tensorflow.Summary.Image.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.tensorflow.Summary.Image.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.Summary.Image.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -10979,7 +10969,7 @@ proto.tensorflow.Summary.Image.serializeBinaryToWriter = function(message, write
  * @return {number}
  */
 proto.tensorflow.Summary.Image.prototype.getHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -10988,7 +10978,7 @@ proto.tensorflow.Summary.Image.prototype.getHeight = function() {
  * @return {!proto.tensorflow.Summary.Image} returns this
  */
 proto.tensorflow.Summary.Image.prototype.setHeight = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -10997,7 +10987,7 @@ proto.tensorflow.Summary.Image.prototype.setHeight = function(value) {
  * @return {number}
  */
 proto.tensorflow.Summary.Image.prototype.getWidth = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -11006,7 +10996,7 @@ proto.tensorflow.Summary.Image.prototype.getWidth = function() {
  * @return {!proto.tensorflow.Summary.Image} returns this
  */
 proto.tensorflow.Summary.Image.prototype.setWidth = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -11015,7 +11005,7 @@ proto.tensorflow.Summary.Image.prototype.setWidth = function(value) {
  * @return {number}
  */
 proto.tensorflow.Summary.Image.prototype.getColorspace = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -11024,7 +11014,7 @@ proto.tensorflow.Summary.Image.prototype.getColorspace = function() {
  * @return {!proto.tensorflow.Summary.Image} returns this
  */
 proto.tensorflow.Summary.Image.prototype.setColorspace = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -11033,7 +11023,7 @@ proto.tensorflow.Summary.Image.prototype.setColorspace = function(value) {
  * @return {!(string|Uint8Array)}
  */
 proto.tensorflow.Summary.Image.prototype.getEncodedImageString = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {!(string|Uint8Array)} */ (Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -11043,7 +11033,7 @@ proto.tensorflow.Summary.Image.prototype.getEncodedImageString = function() {
  * @return {string}
  */
 proto.tensorflow.Summary.Image.prototype.getEncodedImageString_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
+  return /** @type {string} */ (Message.bytesAsB64(
       this.getEncodedImageString()));
 };
 
@@ -11056,7 +11046,7 @@ proto.tensorflow.Summary.Image.prototype.getEncodedImageString_asB64 = function(
  * @return {!Uint8Array}
  */
 proto.tensorflow.Summary.Image.prototype.getEncodedImageString_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+  return /** @type {!Uint8Array} */ (Message.bytesAsU8(
       this.getEncodedImageString()));
 };
 
@@ -11066,14 +11056,14 @@ proto.tensorflow.Summary.Image.prototype.getEncodedImageString_asU8 = function()
  * @return {!proto.tensorflow.Summary.Image} returns this
  */
 proto.tensorflow.Summary.Image.prototype.setEncodedImageString = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+  return Message.setProto3BytesField(this, 4, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -11102,11 +11092,11 @@ proto.tensorflow.Summary.Audio.prototype.toObject = function(opt_includeInstance
  */
 proto.tensorflow.Summary.Audio.toObject = function(includeInstance, msg) {
   var f, obj = {
-    sampleRate: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
-    numChannels: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    lengthFrames: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    sampleRate: Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
+    numChannels: Message.getFieldWithDefault(msg, 2, 0),
+    lengthFrames: Message.getFieldWithDefault(msg, 3, 0),
     encodedAudioString: msg.getEncodedAudioString_asB64(),
-    contentType: jspb.Message.getFieldWithDefault(msg, 5, "")
+    contentType: Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -11123,7 +11113,7 @@ proto.tensorflow.Summary.Audio.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.Summary.Audio}
  */
 proto.tensorflow.Summary.Audio.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.Summary.Audio;
   return proto.tensorflow.Summary.Audio.deserializeBinaryFromReader(msg, reader);
 };
@@ -11177,7 +11167,7 @@ proto.tensorflow.Summary.Audio.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.tensorflow.Summary.Audio.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.Summary.Audio.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -11235,7 +11225,7 @@ proto.tensorflow.Summary.Audio.serializeBinaryToWriter = function(message, write
  * @return {number}
  */
 proto.tensorflow.Summary.Audio.prototype.getSampleRate = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
 };
 
 
@@ -11244,7 +11234,7 @@ proto.tensorflow.Summary.Audio.prototype.getSampleRate = function() {
  * @return {!proto.tensorflow.Summary.Audio} returns this
  */
 proto.tensorflow.Summary.Audio.prototype.setSampleRate = function(value) {
-  return jspb.Message.setProto3FloatField(this, 1, value);
+  return Message.setProto3FloatField(this, 1, value);
 };
 
 
@@ -11253,7 +11243,7 @@ proto.tensorflow.Summary.Audio.prototype.setSampleRate = function(value) {
  * @return {number}
  */
 proto.tensorflow.Summary.Audio.prototype.getNumChannels = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 2, 0));
 };
 
 
@@ -11262,7 +11252,7 @@ proto.tensorflow.Summary.Audio.prototype.getNumChannels = function() {
  * @return {!proto.tensorflow.Summary.Audio} returns this
  */
 proto.tensorflow.Summary.Audio.prototype.setNumChannels = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -11271,7 +11261,7 @@ proto.tensorflow.Summary.Audio.prototype.setNumChannels = function(value) {
  * @return {number}
  */
 proto.tensorflow.Summary.Audio.prototype.getLengthFrames = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 3, 0));
 };
 
 
@@ -11280,7 +11270,7 @@ proto.tensorflow.Summary.Audio.prototype.getLengthFrames = function() {
  * @return {!proto.tensorflow.Summary.Audio} returns this
  */
 proto.tensorflow.Summary.Audio.prototype.setLengthFrames = function(value) {
-  return jspb.Message.setProto3IntField(this, 3, value);
+  return Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -11289,7 +11279,7 @@ proto.tensorflow.Summary.Audio.prototype.setLengthFrames = function(value) {
  * @return {!(string|Uint8Array)}
  */
 proto.tensorflow.Summary.Audio.prototype.getEncodedAudioString = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {!(string|Uint8Array)} */ (Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -11299,7 +11289,7 @@ proto.tensorflow.Summary.Audio.prototype.getEncodedAudioString = function() {
  * @return {string}
  */
 proto.tensorflow.Summary.Audio.prototype.getEncodedAudioString_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
+  return /** @type {string} */ (Message.bytesAsB64(
       this.getEncodedAudioString()));
 };
 
@@ -11312,7 +11302,7 @@ proto.tensorflow.Summary.Audio.prototype.getEncodedAudioString_asB64 = function(
  * @return {!Uint8Array}
  */
 proto.tensorflow.Summary.Audio.prototype.getEncodedAudioString_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+  return /** @type {!Uint8Array} */ (Message.bytesAsU8(
       this.getEncodedAudioString()));
 };
 
@@ -11322,7 +11312,7 @@ proto.tensorflow.Summary.Audio.prototype.getEncodedAudioString_asU8 = function()
  * @return {!proto.tensorflow.Summary.Audio} returns this
  */
 proto.tensorflow.Summary.Audio.prototype.setEncodedAudioString = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+  return Message.setProto3BytesField(this, 4, value);
 };
 
 
@@ -11331,7 +11321,7 @@ proto.tensorflow.Summary.Audio.prototype.setEncodedAudioString = function(value)
  * @return {string}
  */
 proto.tensorflow.Summary.Audio.prototype.getContentType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 5, ""));
 };
 
 
@@ -11340,7 +11330,7 @@ proto.tensorflow.Summary.Audio.prototype.getContentType = function() {
  * @return {!proto.tensorflow.Summary.Audio} returns this
  */
 proto.tensorflow.Summary.Audio.prototype.setContentType = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -11372,12 +11362,12 @@ proto.tensorflow.Summary.Value.ValueCase = {
  * @return {proto.tensorflow.Summary.Value.ValueCase}
  */
 proto.tensorflow.Summary.Value.prototype.getValueCase = function() {
-  return /** @type {proto.tensorflow.Summary.Value.ValueCase} */(jspb.Message.computeOneofCase(this, proto.tensorflow.Summary.Value.oneofGroups_[0]));
+  return /** @type {proto.tensorflow.Summary.Value.ValueCase} */(Message.computeOneofCase(this, proto.tensorflow.Summary.Value.oneofGroups_[0]));
 };
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -11406,10 +11396,10 @@ proto.tensorflow.Summary.Value.prototype.toObject = function(opt_includeInstance
  */
 proto.tensorflow.Summary.Value.toObject = function(includeInstance, msg) {
   var f, obj = {
-    nodeName: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    tag: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    nodeName: Message.getFieldWithDefault(msg, 7, ""),
+    tag: Message.getFieldWithDefault(msg, 1, ""),
     metadata: (f = msg.getMetadata()) && proto.tensorflow.SummaryMetadata.toObject(includeInstance, f),
-    simpleValue: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
+    simpleValue: Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
     obsoleteOldStyleHistogram: msg.getObsoleteOldStyleHistogram_asB64(),
     image: (f = msg.getImage()) && proto.tensorflow.Summary.Image.toObject(includeInstance, f),
     histo: (f = msg.getHisto()) && proto.tensorflow.HistogramProto.toObject(includeInstance, f),
@@ -11431,7 +11421,7 @@ proto.tensorflow.Summary.Value.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.Summary.Value}
  */
 proto.tensorflow.Summary.Value.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.Summary.Value;
   return proto.tensorflow.Summary.Value.deserializeBinaryFromReader(msg, reader);
 };
@@ -11506,7 +11496,7 @@ proto.tensorflow.Summary.Value.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.tensorflow.Summary.Value.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.Summary.Value.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -11543,14 +11533,14 @@ proto.tensorflow.Summary.Value.serializeBinaryToWriter = function(message, write
       proto.tensorflow.SummaryMetadata.serializeBinaryToWriter
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 2));
+  f = /** @type {number} */ (Message.getField(message, 2));
   if (f != null) {
     writer.writeFloat(
       2,
       f
     );
   }
-  f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 3));
+  f = /** @type {!(string|Uint8Array)} */ (Message.getField(message, 3));
   if (f != null) {
     writer.writeBytes(
       3,
@@ -11597,7 +11587,7 @@ proto.tensorflow.Summary.Value.serializeBinaryToWriter = function(message, write
  * @return {string}
  */
 proto.tensorflow.Summary.Value.prototype.getNodeName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 7, ""));
 };
 
 
@@ -11606,7 +11596,7 @@ proto.tensorflow.Summary.Value.prototype.getNodeName = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
  */
 proto.tensorflow.Summary.Value.prototype.setNodeName = function(value) {
-  return jspb.Message.setProto3StringField(this, 7, value);
+  return Message.setProto3StringField(this, 7, value);
 };
 
 
@@ -11615,7 +11605,7 @@ proto.tensorflow.Summary.Value.prototype.setNodeName = function(value) {
  * @return {string}
  */
 proto.tensorflow.Summary.Value.prototype.getTag = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -11624,7 +11614,7 @@ proto.tensorflow.Summary.Value.prototype.getTag = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
  */
 proto.tensorflow.Summary.Value.prototype.setTag = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -11634,7 +11624,7 @@ proto.tensorflow.Summary.Value.prototype.setTag = function(value) {
  */
 proto.tensorflow.Summary.Value.prototype.getMetadata = function() {
   return /** @type{?proto.tensorflow.SummaryMetadata} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.SummaryMetadata, 9));
+    Message.getWrapperField(this, proto.tensorflow.SummaryMetadata, 9));
 };
 
 
@@ -11643,7 +11633,7 @@ proto.tensorflow.Summary.Value.prototype.getMetadata = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
 */
 proto.tensorflow.Summary.Value.prototype.setMetadata = function(value) {
-  return jspb.Message.setWrapperField(this, 9, value);
+  return Message.setWrapperField(this, 9, value);
 };
 
 
@@ -11661,7 +11651,7 @@ proto.tensorflow.Summary.Value.prototype.clearMetadata = function() {
  * @return {boolean}
  */
 proto.tensorflow.Summary.Value.prototype.hasMetadata = function() {
-  return jspb.Message.getField(this, 9) != null;
+  return Message.getField(this, 9) != null;
 };
 
 
@@ -11670,7 +11660,7 @@ proto.tensorflow.Summary.Value.prototype.hasMetadata = function() {
  * @return {number}
  */
 proto.tensorflow.Summary.Value.prototype.getSimpleValue = function() {
-  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
+  return /** @type {number} */ (Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
 };
 
 
@@ -11679,7 +11669,7 @@ proto.tensorflow.Summary.Value.prototype.getSimpleValue = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
  */
 proto.tensorflow.Summary.Value.prototype.setSimpleValue = function(value) {
-  return jspb.Message.setOneofField(this, 2, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
+  return Message.setOneofField(this, 2, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
 };
 
 
@@ -11688,7 +11678,7 @@ proto.tensorflow.Summary.Value.prototype.setSimpleValue = function(value) {
  * @return {!proto.tensorflow.Summary.Value} returns this
  */
 proto.tensorflow.Summary.Value.prototype.clearSimpleValue = function() {
-  return jspb.Message.setOneofField(this, 2, proto.tensorflow.Summary.Value.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 2, proto.tensorflow.Summary.Value.oneofGroups_[0], undefined);
 };
 
 
@@ -11697,7 +11687,7 @@ proto.tensorflow.Summary.Value.prototype.clearSimpleValue = function() {
  * @return {boolean}
  */
 proto.tensorflow.Summary.Value.prototype.hasSimpleValue = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
@@ -11706,7 +11696,7 @@ proto.tensorflow.Summary.Value.prototype.hasSimpleValue = function() {
  * @return {!(string|Uint8Array)}
  */
 proto.tensorflow.Summary.Value.prototype.getObsoleteOldStyleHistogram = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {!(string|Uint8Array)} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -11716,7 +11706,7 @@ proto.tensorflow.Summary.Value.prototype.getObsoleteOldStyleHistogram = function
  * @return {string}
  */
 proto.tensorflow.Summary.Value.prototype.getObsoleteOldStyleHistogram_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
+  return /** @type {string} */ (Message.bytesAsB64(
       this.getObsoleteOldStyleHistogram()));
 };
 
@@ -11729,7 +11719,7 @@ proto.tensorflow.Summary.Value.prototype.getObsoleteOldStyleHistogram_asB64 = fu
  * @return {!Uint8Array}
  */
 proto.tensorflow.Summary.Value.prototype.getObsoleteOldStyleHistogram_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+  return /** @type {!Uint8Array} */ (Message.bytesAsU8(
       this.getObsoleteOldStyleHistogram()));
 };
 
@@ -11739,7 +11729,7 @@ proto.tensorflow.Summary.Value.prototype.getObsoleteOldStyleHistogram_asU8 = fun
  * @return {!proto.tensorflow.Summary.Value} returns this
  */
 proto.tensorflow.Summary.Value.prototype.setObsoleteOldStyleHistogram = function(value) {
-  return jspb.Message.setOneofField(this, 3, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
+  return Message.setOneofField(this, 3, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
 };
 
 
@@ -11748,7 +11738,7 @@ proto.tensorflow.Summary.Value.prototype.setObsoleteOldStyleHistogram = function
  * @return {!proto.tensorflow.Summary.Value} returns this
  */
 proto.tensorflow.Summary.Value.prototype.clearObsoleteOldStyleHistogram = function() {
-  return jspb.Message.setOneofField(this, 3, proto.tensorflow.Summary.Value.oneofGroups_[0], undefined);
+  return Message.setOneofField(this, 3, proto.tensorflow.Summary.Value.oneofGroups_[0], undefined);
 };
 
 
@@ -11757,7 +11747,7 @@ proto.tensorflow.Summary.Value.prototype.clearObsoleteOldStyleHistogram = functi
  * @return {boolean}
  */
 proto.tensorflow.Summary.Value.prototype.hasObsoleteOldStyleHistogram = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return Message.getField(this, 3) != null;
 };
 
 
@@ -11767,7 +11757,7 @@ proto.tensorflow.Summary.Value.prototype.hasObsoleteOldStyleHistogram = function
  */
 proto.tensorflow.Summary.Value.prototype.getImage = function() {
   return /** @type{?proto.tensorflow.Summary.Image} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.Summary.Image, 4));
+    Message.getWrapperField(this, proto.tensorflow.Summary.Image, 4));
 };
 
 
@@ -11776,7 +11766,7 @@ proto.tensorflow.Summary.Value.prototype.getImage = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
 */
 proto.tensorflow.Summary.Value.prototype.setImage = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 4, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 4, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
 };
 
 
@@ -11794,7 +11784,7 @@ proto.tensorflow.Summary.Value.prototype.clearImage = function() {
  * @return {boolean}
  */
 proto.tensorflow.Summary.Value.prototype.hasImage = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return Message.getField(this, 4) != null;
 };
 
 
@@ -11804,7 +11794,7 @@ proto.tensorflow.Summary.Value.prototype.hasImage = function() {
  */
 proto.tensorflow.Summary.Value.prototype.getHisto = function() {
   return /** @type{?proto.tensorflow.HistogramProto} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.HistogramProto, 5));
+    Message.getWrapperField(this, proto.tensorflow.HistogramProto, 5));
 };
 
 
@@ -11813,7 +11803,7 @@ proto.tensorflow.Summary.Value.prototype.getHisto = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
 */
 proto.tensorflow.Summary.Value.prototype.setHisto = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 5, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 5, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
 };
 
 
@@ -11831,7 +11821,7 @@ proto.tensorflow.Summary.Value.prototype.clearHisto = function() {
  * @return {boolean}
  */
 proto.tensorflow.Summary.Value.prototype.hasHisto = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return Message.getField(this, 5) != null;
 };
 
 
@@ -11841,7 +11831,7 @@ proto.tensorflow.Summary.Value.prototype.hasHisto = function() {
  */
 proto.tensorflow.Summary.Value.prototype.getAudio = function() {
   return /** @type{?proto.tensorflow.Summary.Audio} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.Summary.Audio, 6));
+    Message.getWrapperField(this, proto.tensorflow.Summary.Audio, 6));
 };
 
 
@@ -11850,7 +11840,7 @@ proto.tensorflow.Summary.Value.prototype.getAudio = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
 */
 proto.tensorflow.Summary.Value.prototype.setAudio = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 6, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 6, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
 };
 
 
@@ -11868,7 +11858,7 @@ proto.tensorflow.Summary.Value.prototype.clearAudio = function() {
  * @return {boolean}
  */
 proto.tensorflow.Summary.Value.prototype.hasAudio = function() {
-  return jspb.Message.getField(this, 6) != null;
+  return Message.getField(this, 6) != null;
 };
 
 
@@ -11878,7 +11868,7 @@ proto.tensorflow.Summary.Value.prototype.hasAudio = function() {
  */
 proto.tensorflow.Summary.Value.prototype.getTensor = function() {
   return /** @type{?proto.tensorflow.Tensor} */ (
-    jspb.Message.getWrapperField(this, proto.tensorflow.Tensor, 8));
+    Message.getWrapperField(this, proto.tensorflow.Tensor, 8));
 };
 
 
@@ -11887,7 +11877,7 @@ proto.tensorflow.Summary.Value.prototype.getTensor = function() {
  * @return {!proto.tensorflow.Summary.Value} returns this
 */
 proto.tensorflow.Summary.Value.prototype.setTensor = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 8, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
+  return Message.setOneofWrapperField(this, 8, proto.tensorflow.Summary.Value.oneofGroups_[0], value);
 };
 
 
@@ -11905,7 +11895,7 @@ proto.tensorflow.Summary.Value.prototype.clearTensor = function() {
  * @return {boolean}
  */
 proto.tensorflow.Summary.Value.prototype.hasTensor = function() {
-  return jspb.Message.getField(this, 8) != null;
+  return Message.getField(this, 8) != null;
 };
 
 
@@ -11915,7 +11905,7 @@ proto.tensorflow.Summary.Value.prototype.hasTensor = function() {
  */
 proto.tensorflow.Summary.prototype.getValueList = function() {
   return /** @type{!Array<!proto.tensorflow.Summary.Value>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.tensorflow.Summary.Value, 1));
+    Message.getRepeatedWrapperField(this, proto.tensorflow.Summary.Value, 1));
 };
 
 
@@ -11924,7 +11914,7 @@ proto.tensorflow.Summary.prototype.getValueList = function() {
  * @return {!proto.tensorflow.Summary} returns this
 */
 proto.tensorflow.Summary.prototype.setValueList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -11934,7 +11924,7 @@ proto.tensorflow.Summary.prototype.setValueList = function(value) {
  * @return {!proto.tensorflow.Summary.Value}
  */
 proto.tensorflow.Summary.prototype.addValue = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.Summary.Value, opt_index);
+  return Message.addToRepeatedWrapperField(this, 1, opt_value, proto.tensorflow.Summary.Value, opt_index);
 };
 
 
@@ -11950,7 +11940,7 @@ proto.tensorflow.Summary.prototype.clearValueList = function() {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -11979,7 +11969,7 @@ proto.tensorflow.HistogramPluginData.prototype.toObject = function(opt_includeIn
  */
 proto.tensorflow.HistogramPluginData.toObject = function(includeInstance, msg) {
   var f, obj = {
-    version: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    version: Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -11996,7 +11986,7 @@ proto.tensorflow.HistogramPluginData.toObject = function(includeInstance, msg) {
  * @return {!proto.tensorflow.HistogramPluginData}
  */
 proto.tensorflow.HistogramPluginData.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.tensorflow.HistogramPluginData;
   return proto.tensorflow.HistogramPluginData.deserializeBinaryFromReader(msg, reader);
 };
@@ -12034,7 +12024,7 @@ proto.tensorflow.HistogramPluginData.deserializeBinaryFromReader = function(msg,
  * @return {!Uint8Array}
  */
 proto.tensorflow.HistogramPluginData.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.tensorflow.HistogramPluginData.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -12064,7 +12054,7 @@ proto.tensorflow.HistogramPluginData.serializeBinaryToWriter = function(message,
  * @return {number}
  */
 proto.tensorflow.HistogramPluginData.prototype.getVersion = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (Message.getFieldWithDefault(this, 1, 0));
 };
 
 
@@ -12073,7 +12063,7 @@ proto.tensorflow.HistogramPluginData.prototype.getVersion = function() {
  * @return {!proto.tensorflow.HistogramPluginData} returns this
  */
 proto.tensorflow.HistogramPluginData.prototype.setVersion = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return Message.setProto3IntField(this, 1, value);
 };
 
 

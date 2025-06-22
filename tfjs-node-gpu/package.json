@@ -1,9 +1,10 @@
 {
   "name": "@tensorflow/tfjs-node-gpu",
-  "version": "4.2.27",
+  "version": "4.22.9",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": false,
   "gypfile": true,
   "repository": {
     "type": "git",
@@ -15,10 +16,12 @@
     "node": ">=8.11.0"
   },
   "scripts": {
+    "preyalcpublish": "rm -rf lib/napi-v9/tensorflow{.dll,.lib}",
     "build": "yarn clean && ncp ../tfjs-node/dist dist",
     "build:addon": "node-pre-gyp install --build-from-source",
     "install": "node scripts/install.cjs gpu download",
     "publish-local": "yalc publish --push",
+    "unpublish-local": "yalc installations clean @tensorflow/tfjs-node-gpu",
     "clean": "rm -rf dist && rm -rf node_modules",
     "bump-version": "yarn version patch"
   },
@@ -28,8 +31,8 @@
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "1.0.9",
-    "@tensorflow/tfjs": "workspace:^",
-    "@tensorflow/tfjs-core": "workspace:^",
+    "@tensorflow/tfjs": "workspace:*",
+    "@tensorflow/tfjs-core": "workspace:*",
     "adm-zip": "^0.5.2",
     "google-protobuf": "^3.9.2",
     "https-proxy-agent": "^2.2.1",
@@ -50,6 +53,6 @@
       8,
       9
     ],
-    "package_name": "GPU-windows-4.2.27.zip"
+    "package_name": "GPU-windows-4.22.9.zip"
   }
 }
