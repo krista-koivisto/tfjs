@@ -1,22 +1,15 @@
 {
   "name": "@tensorflow/tfjs",
   "version": "4.22.9",
-  "description": "An open-source machine learning framework.",
+  "license": "Apache-2.0",
+  "description": "A simpler, purely Node.js-focused fork of TensorFlow.js.",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "jsdelivr": "dist/tf.min.js",
-  "unpkg": "dist/tf.min.js",
-  "types": "dist/index.d.ts",
-  "miniprogram": "dist/miniprogram",
-  "bin": {
-    "tfjs-custom-module": "dist/tools/custom_module/cli.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/tensorflow/tfjs.git"
   },
-  "license": "Apache-2.0",
   "devDependencies": {
     "typescript": "5.0.4"
   },
@@ -28,16 +21,6 @@
     "unpublish-local": "yalc installations clean @tensorflow/tfjs"
   },
   "dependencies": {
-    "@tensorflow/tfjs-core": "workspace:*",
-    "argparse": "^1.0.10",
-    "chalk": "^4.1.0",
-    "core-js": "3.29.1",
-    "regenerator-runtime": "^0.13.5",
-    "yargs": "^16.0.3"
-  },
-  "browser": {
-    "crypto": false,
-    "node-fetch": false,
-    "util": false
+    "@tensorflow/tfjs-core": "workspace:^"
   }
 }
