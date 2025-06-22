@@ -3,10 +3,12 @@
   "compilerOptions": {
     "rootDir": "src",
     "baseUrl": ".",
-    "paths": {
-      "@tensorflow/tfjs-core": ["../tfjs-core/src"],
-      "@tensorflow/tfjs": ["../tfjs-core/src"]
-    }
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // TODO: Remove these one-by-one once the rest of the migration is done.
+    "strictNullChecks": false,
+    "noUnusedParameters": false
   },
   "include": ["src"],
   "exclude": ["src/**/*_test.ts"]

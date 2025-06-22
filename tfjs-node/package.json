@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "progress": "^2.0.0"
+    "progress": "^2.0.0",
+    "yargs": "^17.7.2"
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "1.0.9",

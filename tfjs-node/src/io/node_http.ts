@@ -16,6 +16,7 @@
  */
 
 import { io } from '@tensorflow/tfjs-core';
+import { ModelArtifacts, SaveResult } from '@tensorflow/tfjs-core/src/io/types';
 
 /**
  * Factory function for HTTP IO Handler in Node.js.
@@ -28,18 +29,16 @@ import { io } from '@tensorflow/tfjs-core';
 export function nodeHTTPRequest(
     path: string, requestInit?: RequestInit,
     weightPathPrefix?: string): io.IOHandler {
-  return io.browserHTTPRequest(path, {requestInit, weightPathPrefix});
+  return {
+    save: async (modelArtifact: ModelArtifacts): Promise<SaveResult> => {
+      throw new Error('Not implemented');
+    },
+    load: async (): Promise<ModelArtifacts> => {
+      throw new Error('Not implemented');
+    }
+  };
 }
 
 export const nodeHTTPRequestRouter = (url: string) => {
-  let isHTTP = true;
-  if (Array.isArray(url)) {
-    isHTTP = url.every(urlItem => io.isHTTPScheme(urlItem));
-  } else {
-    isHTTP = io.isHTTPScheme(url);
-  }
-  if (isHTTP) {
-    return nodeHTTPRequest(url);
-  }
-  return null;
+  return nodeHTTPRequest(url);
 };

@@ -15,9 +15,9 @@
  * =============================================================================
  */
 
-import {ArgMax, ArgMaxAttrs, ArgMaxInputs, KernelConfig, scalar, Tensor} from '@tensorflow/tfjs';
+import { ArgMax, ArgMaxAttrs, ArgMaxInputs, KernelConfig, scalar, Tensor } from '@tensorflow/tfjs';
 
-import {createTensorsTypeOpAttr, NodeJSKernelBackend} from '../nodejs_kernel_backend';
+import { createTensorsTypeOpAttr, NodeJSKernelBackend } from '../nodejs_kernel_backend';
 
 export const argMaxConfig: KernelConfig = {
   kernelName: ArgMax,

@@ -439,6 +439,35 @@ export class Tensor<R extends Rank = Rank> implements TensorInfo {
     const vals = this.dataSync();
     return tensorToString(vals, this.shape, this.dtype, verbose);
   }
+/**
+ * Casts the array to type `int32`
+ *
+ * @doc {heading: 'Tensors', subheading: 'Classes'}
+ */
+  toInt<T extends Tensor>(this: T): T {
+    this.throwIfDisposed();
+    return opHandler.cast(this as T, 'int32');
+  }
+
+  /**
+   * Casts the array to type `float32`
+   *
+   * @doc {heading: 'Tensors', subheading: 'Classes'}
+   */
+  toFloat<T extends Tensor>(this: T): T {
+    this.throwIfDisposed();
+    return opHandler.cast(this as T, 'float32');
+  }
+
+  /**
+   * Casts the array to type `bool`
+   *
+   * @doc {heading: 'Tensors', subheading: 'Classes'}
+   */
+  toBool<T extends Tensor>(this: T): T {
+    this.throwIfDisposed();
+    return opHandler.cast(this as T, 'bool');
+  }
 
   cast<T extends this>(dtype: DataType): T {
     this.throwIfDisposed();

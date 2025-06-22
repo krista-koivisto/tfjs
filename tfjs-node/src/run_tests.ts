@@ -21,7 +21,10 @@ import '@tensorflow/tfjs-core/register_all_gradients';
 import './index';
 
 import * as tf from '@tensorflow/tfjs';
+// @ts-expect-error TODO: We should probably extract this util to its own
+// testing package.
 import * as jasmine_util from '@tensorflow/tfjs-core/jasmine_util';
+// @ts-expect-error TODO: Ensure that yargs is properly installed.
 import { argv } from 'yargs';
 
 import { NodeJSKernelBackend } from './nodejs_kernel_backend';

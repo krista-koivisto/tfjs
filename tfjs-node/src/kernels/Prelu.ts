@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import {abs, KernelConfig, Prelu, PreluInputs, relu, Tensor, tidy} from '@tensorflow/tfjs';
+import { abs, KernelConfig, Prelu, PreluInputs, relu, Tensor, tidy } from '@tensorflow/tfjs';
 
 export const preluConfig: KernelConfig = {
   kernelName: Prelu,
@@ -27,7 +27,9 @@ export const preluConfig: KernelConfig = {
 
     return tidy(() => {
       const pos = relu(x);
+      // @ts-expect-error TODO: Chained ops types are not defined at this location.
       const neg = alpha.mul(x.sub(abs(x))).mul(0.5);
+      // @ts-expect-error TODO: Chained ops types are not defined at this location.
       return pos.add(neg);
     });
   }

@@ -28,6 +28,7 @@ import { TFJSBinding } from './tfjs_binding';
 // Get the package name from the package.json file.
 import { name as packageName } from '../package.json';
 
+// @ts-expect-error TODO: node-pre-gyp does not have types.
 import binary from '@mapbox/node-pre-gyp';
 import fs from 'fs';
 
